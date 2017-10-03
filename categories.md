@@ -1,6 +1,6 @@
 ---
-title: Categories
+title: Разделы
 layout: categories
-excerpt: "Category index"
+excerpt: "Разделы"
 aside: true
 ---
