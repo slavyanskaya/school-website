@@ -4,7 +4,7 @@ body,html
     width: 100%;
     font-family: "SeguaIO" , "Arial" , "Helvetica" , sans-serif;
     font-size: 20px;
-    line-height: 130%;
+    line-height: 150%;
     position: relative;
 }
 .wrapper
@@ -14,7 +14,7 @@ body,html
     min-width: 980px;
     font-family: "SegoeUI";
     box-sizing: border-box;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     min-height: 100%;
     background-color: #fff;
     color: #000;
@@ -71,7 +71,7 @@ nav a
 {
     padding: 20px;
     display: block;
-    padding-top: 116px;
+    padding-top: 90px;
     font-size: 27px;
     letter-spacing: 0.5px;
 }
@@ -105,12 +105,12 @@ footer p
 p
 {
     /*padding-top: 40px;*/
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
  #index main
 {
-    padding-top: 392px;
+    padding-top: 320px;
 }
  h1
 {
@@ -167,7 +167,7 @@ h1+p {
 p > a
 {
     color: black;
-    font-size: 25px;    
+    /*font-size: 25px; */   
 }
 footer p
 {
@@ -248,8 +248,10 @@ main
 }
 h3
 {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-weight: bold;
+    padding-top: 10px;
+    font-size: 120%;
 }
 span
 {
@@ -319,6 +321,9 @@ strong
 .map
 {
  float: right;
+ border: 0;
+ width: 600px;
+ height: 450px;
 }
 section:after
 {
@@ -362,9 +367,10 @@ section:after
 }
 .content_header > p
 {
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 main ul {
     padding-left: 20px;
+    margin-bottom: 30px;
 }
