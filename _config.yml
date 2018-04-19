@@ -73,7 +73,7 @@ defaults:
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
 lang: ru-RU # Set the site language
-title: "Alembic" # Site name or title, also used in jekyll-seo-tag
+title: "Славянская школа" # Site name or title, also used in jekyll-seo-tag
 logo: "/images/common/school-logo.jpg" # Site logo, also used in jekyll-seo-tag
 description: "Официальный веб-сайт средней школы \"Славянская\" в Ереване. Славянская школа - единственная русская школа в Республике Армения." # Site description and default description, also used in jekyll-seo-tag
 url: "https://slavyanskay.am" # Site url, also used in jekyll-seo-tag
@@ -85,11 +85,11 @@ avatarurl: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c" # 
 
 # 8. Site navigation
 navigation_header:
-  Главная: /
-  События: /blog/
-  Разделы: /categories/
-  Контакты: /elements/
-  Поиск: /search/
+  О школе: /
+  Поступление: /blog/
+  Учителя: /categories/
+  Новости: /elements/
+  Контакты: /search/
 
 navigation_footer:
   Сайт создан учениками школы.: https://slavyanskaya.am
