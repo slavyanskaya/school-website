@@ -226,6 +226,7 @@ nav li:nth-child(5):hover, li:nth-child(5) .active
     background-size: cover;  
     background-repeat: no-repeat;
     background-position: top center ;
+    background-color: #14126e;
     height: 483px;
     width: 100%;
 }
