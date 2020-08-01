@@ -8,10 +8,8 @@
 		"start": "nuxt start",
 		"export": "nuxt export",
 		"serve": "nuxt serve",
-
 		"build:gh-pages": "SET DEPLOY_ENV='GH_PAGES' nuxt build --target static",
 		"generate:gh-pages": "SET DEPLOY_ENV='GH_PAGES' && nuxt build --target static && nuxt export",
-
 		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
@@ -19,7 +17,8 @@
 		"@nuxtjs/axios": "^5.11.0",
 		"nuxt": "^2.13.0",
 		"nuxt-sass-resources-loader": "^2.0.5",
-		"vue-fragment": "^1.5.1"
+		"vue-fragment": "^1.5.1",
+		"vue-slick-carousel": "^1.0.6"
 	},
 	"devDependencies": {
 		"@nuxtjs/style-resources": "^1.0.0",
