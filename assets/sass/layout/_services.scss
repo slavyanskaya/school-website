@@ -1,0 +1,40 @@
+/*==================
+ SERVICE SECTION
+====================*/
+#mu-service{
+    display: inline;
+    float: left;
+    margin-top: -80px;
+    width: 100%;
+    .mu-service-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-service-single{
+            background-color: #01bafd;
+            color: #fff;
+            display: inline;
+            float: left;
+            padding: 35px 25px;
+            text-align: center;
+            width: 33.33%;
+            &:nth-child(2){
+                background-color: #2ecc71;
+            }
+            &:nth-child(3){
+                background-color: #45a0de;
+            }
+            span{
+                font-size: 30px;
+            }
+            h3{
+                font-size: 25px;
+
+            }
+            p{
+                font-weight: lighter;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+/*==================
+ ABOUT US COUNTER SECTION
+====================*/
+#mu-abtus-counter{
+    background-image: url("~static/images/counter-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline;
+    float: left;
+    padding: 100px 0;
+    width: 100%;
+    .mu-abtus-counter-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-abtus-counter-single{
+            border-right: 2px solid #888;
+            display: inline;
+            float: left;
+            text-align: center;
+            width: 100%;
+
+
+            span{
+                color: #fff;
+                display: inline-block;
+                font-size: 50px;
+            }
+            h4{
+                color: #fff;
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                margin-top: 20px;
+            }
+            p{
+                color: #fff;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+        }
+        .no-border{
+            border: none;
+        }
+
+    }
+}

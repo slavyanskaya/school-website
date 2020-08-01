@@ -1,0 +1,30 @@
+{
+	"name": "slavyanskaya",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"export": "nuxt export",
+		"serve": "nuxt serve",
+
+		"build:gh-pages": "SET DEPLOY_ENV='GH_PAGES' nuxt build --target static",
+		"generate:gh-pages": "SET DEPLOY_ENV='GH_PAGES' && nuxt build --target static && nuxt export",
+
+		"deploy": "gh-pages -d dist"
+	},
+	"dependencies": {
+		"@nuxt/content": "^1.3.2",
+		"@nuxtjs/axios": "^5.11.0",
+		"nuxt": "^2.13.0",
+		"nuxt-sass-resources-loader": "^2.0.5",
+		"vue-fragment": "^1.5.1"
+	},
+	"devDependencies": {
+		"@nuxtjs/style-resources": "^1.0.0",
+		"gh-pages": "^3.1.0",
+		"node-sass": "^4.14.1",
+		"sass-loader": "^9.0.2"
+	}
+}

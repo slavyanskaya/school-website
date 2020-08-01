@@ -1,0 +1,122 @@
+.nav__item {
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    //color: #777;
+    //padding-bottom: 25px;
+    //padding-top: 25px;
+    //margin-bottom: -6px;
+    @include transition(all 0.5s);
+    height: 100%;
+
+    &--active {
+        border-bottom: 2px solid #01B1F1;
+    }
+
+    &:hover {
+        border-bottom: 2px solid #01B1F1;
+    }
+}
+
+.nav__link {
+    color: #777;
+    padding-top: 10px;
+    white-space: nowrap; // Запретить перенос строки (тохадарц ебаный)
+    @include transition(all 0.5s);
+
+    &--active, &:hover {
+        color: #01B1F1;
+    }
+}
+
+
+//.nav__link {
+//    border-bottom: 2px solid transparent;
+//    color: #777;
+//    padding-bottom: 25px;
+//    padding-top: 25px;
+//    margin-bottom: -1px;
+//    @include transition(all 0.5s);
+//
+//    &:hover {
+//        border-bottom: 2px solid transparent;
+//    }
+//
+//    &--active {
+//        border-bottom: 2px solid #01B1F1;
+//        background-color: #E7E7E7;
+//    }
+//}
+
+
+
+
+    ////.navbar-header{
+    //.navbar_brand{
+    //    color: #333;
+    //    //font-family: $heading-font;
+    //    font-size: 26px;
+    //    font-weight: bold;
+    //    text-transform: uppercase;
+    //    padding-top: 20px;
+    //    letter-spacing: 0.5px;
+    //    i{
+    //        font-size: 35px;
+    //    }
+    //    span{
+    //        margin-left: 4px;
+    //    }
+    //}
+    ////}
+    //.navbar_default{
+    //    background-color: #fff;
+    //    border-radius: 0;
+    //    border-left: none;
+    //    border-right: none;
+    //    margin-bottom: 0px;
+    //    .navbar_nav{
+    //        li{
+    //            & > a{
+    //                border-bottom: 2px solid transparent;
+    //                color: #777;
+    //                padding-bottom: 25px;
+    //                padding-top: 25px;
+    //                margin-bottom: -1px;
+    //                @include transition(all 0.5s);
+    //            }
+    //            #mu-search-icon{
+    //
+    //                &:hover,
+    //                &:focus{
+    //                    border: none;
+    //
+    //                }
+    //            }
+    //            .dropdown-menu {
+    //
+    //                border-radius: 0px;
+    //                li{
+    //                    a{
+    //                        color: $base-color;
+    //                        padding-top: 10px;
+    //                        padding-bottom: 10px;
+    //                        &:hover,
+    //                        &:focus{
+    //                            color: #fff;
+    //                        }
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        .open{
+    //            a{
+    //                &:hover,
+    //                &:focus{
+    //                    color: #fff;
+    //                }
+    //            }
+    //        }
+    //
+    //    }
+    //
+    //}
+    //

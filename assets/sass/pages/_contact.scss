@@ -1,0 +1,73 @@
+/*==================
+ CONTACT PAGE
+====================*/
+#mu-contact{
+    display: inline;
+    float: left;
+    padding: 100px 0;
+    width: 100%;
+    .mu-contact-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-contact-content{
+            display: inline;
+            float: left;
+            margin-top: 50px;
+            width: 100%;
+            .mu-contact-left{
+                display: inline;
+                float: left;
+                width: 100%;
+                .contactform{
+                    display: inline;
+                    float: left;
+                    width: 100%;
+                    .reply-title {
+                        font-size: 25px;
+                        margin-top: 0;
+                    }
+                    label{
+                        display: block;
+                        .required{
+                            color: #f60;
+                        }
+                    }
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="url"] {
+                        border: none;
+                        border: 1px solid #ddd;
+                        color: #555;
+                        margin-bottom: 10px;
+                        height: 35px;
+                        padding: 5px;
+                        width: 100%;
+                        @include transition(all 0.5s);
+                    }
+                    textarea {
+                        border: none;
+                        border: 1px solid #ddd;
+                        color: #555;
+                        margin-bottom: 5px;
+                        padding: 10px;
+                        height: 150px;
+                        width: 100%;
+                        @include transition(all 0.5s);
+                    }
+                    .form-submit input {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .mu-contact-right{
+                display: inline;
+                float: left;
+                width: 100%;
+                iframe{
+                    height: 500px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,155 @@
+/*==================
+ GALLERY PAGE
+====================*/
+#mu-gallery{
+    display: inline;
+    float: left;
+    padding: 100px 0;
+    width: 100%;
+    .mu-gallery-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-gallery-content{
+            display: inline;
+            float: left;
+            width: 100%;
+            .mu-gallery-top{
+                display: inline;
+                float: left;
+                margin-top: 50px;
+                padding: 20px 0;
+                width: 100%;
+                ul{
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+                    li{
+                        color: #fff;
+                        cursor: pointer;
+                        display: inline-block;
+                        font-size: 14px;
+                        font-weight: bold;
+                        letter-spacing: 0.5px;
+                        margin: 0 5px;
+                        padding: 6px 15px;
+                        text-transform: uppercase;
+                        @include transition(all 0.5s);
+                        &:hover,
+                        &:focus{
+                            background-color: #fff;
+                        }
+                    }
+                    .active{
+                        background-color: #fff;
+                    }
+                }
+            }
+            .mu-gallery-body{
+                display: inline;
+                float: left;
+                width: 100%;
+                margin-top: 50px;
+
+                ul{
+                    li{
+                        .mu-single-gallery{
+                            display: inline;
+                            float: left;
+                            margin-bottom: 30px;
+                            width: 100%;
+                            .mu-single-gallery-item{
+                                display: inline;
+                                float: left;
+                                width: 100%;
+                                position: relative;
+                                &:hover{
+                                    .mu-single-gallery-img{
+                                        img{
+                                            transform: scale(1.3);
+                                        }
+                                    }
+                                    .mu-single-gallery-info{
+                                        background-color: rgba(0,0,0,0.8);
+                                        opacity: 1;
+                                        transform: scale(1);
+                                        .mu-single-gallery-info-inner{
+                                            transform: scale(1);
+                                        }
+                                    }
+                                }
+
+                                .mu-single-gallery-img{
+                                    display: inline;
+                                    float: left;
+                                    height: 220px;
+
+                                    overflow: hidden;
+                                    width: 100%;
+
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        transform: scale(1);
+                                        @include transition(all 0.8s);
+                                    }
+                                }
+                                .mu-single-gallery-info{
+                                    background-color: rgba(0, 0, 0, 0.2);
+                                    bottom: 0;
+                                    height: 100%;
+                                    left: 0;
+                                    opacity: 0;
+                                    padding-top: 70px;
+                                    position: absolute;
+                                    right: 0;
+                                    text-align: left;
+                                    top: 0;
+                                    transform: scale(1);
+                                    width: 100%;
+                                    @include transition(all 0.8s);
+                                    .mu-single-gallery-info-inner{
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        padding: 20px;
+                                        transform: scale(0);
+                                        @include transition(all 0.5s);
+                                        h4{
+                                            color: #fff;
+                                            font-size: 20px;
+                                            line-height: 1.3;
+                                            margin-bottom: 0;
+                                            text-transform: uppercase;
+                                        }
+                                        p{
+                                            color: #fff;
+                                            font-size: 14px;
+                                            margin-bottom: 20px;
+                                        }
+                                        a{
+                                            color: #fff;
+                                            display: inline-block;
+                                            height: 35px;
+                                            line-height: 35px;
+                                            margin-right: 10px;
+                                            text-align: center;
+                                            width: 40px;
+                                            @include transition(all 0.5s);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #mixit-container {
+            .mix{
+                display: none;
+            }
+        }
+    }
+}

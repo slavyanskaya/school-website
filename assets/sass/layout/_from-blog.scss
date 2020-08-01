@@ -1,0 +1,89 @@
+/*==================
+ FROM BLOG SECTION
+====================*/
+#mu-from-blog{
+    display: inline;
+    float: left;
+    padding: 100px 0;
+    width: 100%;
+    .mu-from-blog-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-from-blog-content{
+            display: inline;
+            float: left;
+            margin-top: 50px;
+            width: 100%;
+        }
+    }
+}
+.mu-blog-single-item{
+    display: inline;
+    float: left;
+    width: 100%;
+    .mu-blog-single-img{
+        display: inline;
+        float: left;
+        width: 100%;
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+        .mu-blog-caption{
+            display: inline;
+            float: left;
+            width: 100%;
+            h3{
+                a{
+                    @include transition(all 0.5s);
+
+                }
+            }
+        }
+    }
+    .mu-blog-meta{
+        display: inline;
+        float: left;
+        margin-bottom: 15px;
+        width: 100%;
+        margin-top: 5px;
+        a{
+            display: inline-block;
+            float: left;
+            letter-spacing: 0.5px;
+            margin-right: 10px;
+            @include transition(all 0.5s);
+
+        }
+        span{
+            display: inline-block;
+            float: left;
+            i{
+                margin-right: 7px;
+            }
+        }
+    }
+    .mu-blog-description{
+        display: inline;
+        float: left;
+        width: 100%;
+        p{
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            line-height: 1.7;
+        }
+        a{
+            border-color: #555;
+            color: #555;
+            font-size: 14px;
+            margin-top: 15px;
+            &:hover,
+            &:focus{
+                color: #fff;
+            }
+        }
+    }
+}

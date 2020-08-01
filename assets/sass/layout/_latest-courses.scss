@@ -1,0 +1,125 @@
+/*==================
+ LATEST COURSES SECTION
+====================*/
+#mu-latest-courses{
+    background-color: #333;
+    display: inline;
+    float: left;
+    padding: 100px 0;
+    width: 100%;
+    .slick-slider {
+        position: static;
+    }
+    .mu-latest-courses-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-title{
+            h2{
+                color: #fff;
+            }
+            p{
+                color: #fff;
+            }
+        }
+        .mu-latest-courses-content{
+            display: inline;
+            float: left;
+            margin-top: 50px;
+            width: 100%;
+            .slick-slide{
+                outline: none;
+            }
+            .slick-dots{
+                li{
+                    background-color: #fff;
+                    border-radius: 4px;
+                    height: 8px;
+                    width: 20px;
+                    button{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.mu-latest-course-single{
+    background-color: #fff;
+    display: inline;
+    float: left;
+    width: 100%;
+    .mu-latest-course-img{
+        display: inline;
+        float: left;
+        width: 100%;
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+        .mu-latest-course-imgcaption{
+            background-color: #f8f8f8;
+            display: inline;
+            float: left;
+            padding: 10px 15px;
+            width: 100%;
+            a{
+                display: inline-block;
+                float: left;
+                @include transition(all 0.5s);
+                &:hover,
+                &:focus{
+                }
+
+            }
+            span{
+                float: right;
+                i{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .mu-latest-course-single-content{
+        display: inline;
+        float: left;
+        width: 100%;
+        padding: 15px;
+        h4{
+            color: #333;
+            line-height: 1.4;
+            a{
+                color: #333;
+                @include transition(all 0.5s);
+            }
+        }
+        p{
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            line-height: 1.7;
+        }
+        .mu-latest-course-single-contbottom{
+            border-top: 1px solid #ccc;
+            display: inline;
+            float: left;
+            margin-top: 15px;
+            padding-top: 15px;
+            width: 100%;
+            .mu-course-details{
+                display: inline-block;
+                float: left;
+                @include transition(all 0.5s);
+                &:hover,
+                &:focus{
+                    color: #333;
+                }
+            }
+            .mu-course-price{
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+}

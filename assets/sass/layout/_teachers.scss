@@ -1,0 +1,99 @@
+/*==================
+ TEACHER SECTION
+====================*/
+#mu-our-teacher{
+    //display: inline;
+    //float: left;
+    padding: 100px 0;
+    //width: 100%;
+
+    //background-attachment: fixed;
+    //background-image: url("../img/testimonial-bg.jpg");
+    //background-position: center center;
+    //background-size: cover;
+
+    .mu-our-teacher-area{
+        //display: inline;
+        //float: left;
+        width: 100%;
+        .mu-our-teacher-content{
+            //display: inline;
+            //float: left;
+            margin-top: 50px;
+            width: 100%;
+            .mu-our-teacher-single{
+                //display: inline;
+                //float: left;
+                width: 100%;
+                &:hover{
+                    .mu-our-teacher-img{
+                        .mu-our-teacher-social{
+                            opacity: 1;
+                            a{
+                                @include transform(translateY(0%));
+                            }
+                        }
+                    }
+                }
+                .mu-our-teacher-img {
+                    background-color: #ccc;
+                    //display: inline;
+                    position: relative;
+                    //float: left;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                    .mu-our-teacher-social{
+                        bottom: 0;
+                        left: 0;
+                        opacity: 0;
+                        overflow: hidden;
+                        padding-top: 43.5%;
+                        position: absolute;
+                        right: 0;
+                        text-align: center;
+                        top: 0;
+                        @include transition(all 0.5s);
+                        a{
+                            border: 2px solid #fff;
+                            color: #fff;
+                            display: inline-block;
+                            font-size: 18px;
+                            height: 40px;
+                            line-height: 40px;
+                            margin: 0 5px;
+                            width: 40px;
+                            @include transform(translateY(-1000%));
+                            @include transition(all 0.5s);
+                            &:hover,
+                            &:focus{
+                                background-color: #FFF;
+                            }
+                        }
+                    }
+                }
+                .mu-ourteacher-single-content{
+                    //display: inline;
+                    //float: left;
+                    width: 100%;
+                    h4{
+                        margin-bottom: 0;
+                        margin-top: 20px;
+                        text-transform: uppercase;
+                    }
+                    span{
+                        color: #000;
+                        display: block;
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                        margin-top: 5px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
