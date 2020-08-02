@@ -42,7 +42,7 @@ export default {
 					amp: true
 				}
 			},
-			{ hid: 'keywords', name: 'keywords', content: "Русская Школа В Армении, СШ Славянская, СШ 'Славянская', Старшая Школа Славянская, Армения Русская Школа, Славянская Школа В Армении, " }
+			{ hid: 'keywords', name: 'keywords', content: "Русская Школа В Армении, Русская Школа В Ереване, СШ Славянская, СШ 'Славянская', Сресняя Школа Славянская, Армения Русская Школа, Армения Русская Школа, Славянская Школа В Армении, Slavyanskaya, Slavyanskaya Shkola, Russkaya Shkola V Armenii" }
 		],
 		link: [
 			{rel: 'icon', type: 'image/x-icon', href: '/favicons/favicon.ico'},
@@ -124,6 +124,7 @@ export default {
 		'@nuxtjs/axios',
 		// Doc: https://github.com/nuxt/content
 		'@nuxt/content',
+		// '@nuxtjs/sitemap',
 
 		// for sass
 		// [

@@ -10,7 +10,7 @@
 							<div class="mu-testimonial-item">
 								<div class="mu-testimonial-quote">
 									<blockquote>
-										<p>Мы признательны нашей родной школе за высокий профессионализм, чуткость и постоянное мотивирование к развитию! <a class="text-primary read-more" data-name="ambarcumyan" href="#">Подробнее</a></p>
+										<p>Мы признательны нашей родной школе за высокий профессионализм, чуткость и постоянное мотивирование к развитию!</p>
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
@@ -18,7 +18,7 @@
 								</div>
 								<div class="mu-testimonial-info">
 									<h4>Армен Амбарцумян</h4>
-									<span>Happy Student</span>
+									<span><a class="text-primary read-more" data-name="ambarcumyan" href="#">Подробнее</a></span>
 								</div>
 							</div>
 							<!-- end testimonial single item -->
@@ -27,15 +27,15 @@
 							<div class="mu-testimonial-item">
 								<div class="mu-testimonial-quote">
 									<blockquote>
-										<p>Мы благодарны педагогическому составу школы за самоотверженный труд и успешное обучение школьников. <a class="text-primary read-more" data-name="gukasov" href="#">Подробнее</a></p>
+										<p>Мы благодарны педагогическому составу школы за самоотверженный труд и успешное обучение школьников.</p>
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
 									<img src="/images/layouts/testimonials/gukasov-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
-									<h4>Гукасов</h4>
-									<span>Happy Parent</span>
+									<h4>Гукасов И.Г.</h4>
+									<span><a class="text-primary read-more" data-name="gukasov" href="#">Подробнее</a></span>
 								</div>
 							</div>
 							<!-- end testimonial single item -->
@@ -44,15 +44,15 @@
 							<div class="mu-testimonial-item">
 								<div class="mu-testimonial-quote">
 									<blockquote>
-										<p>В нашей школе человек развивается не только интеллектуально, но и нравственно! <a class="text-primary read-more" data-name="jaklin" href="#">Подробнее</a></p>
+										<p>В нашей школе человек развивается не только интеллектуально, но и нравственно!</p>
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
 									<img src="/images/layouts/testimonials/jaklin-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
-									<h4>Жаклин</h4>
-									<span>Happy Student</span>
+									<h4>Жаклин Сархошян</h4>
+									<span><a class="text-primary read-more" data-name="jaklin" href="#">Подробнее</a></span>
 								</div>
 							</div>
 							<!-- end testimonial single item -->
@@ -61,15 +61,15 @@
 							<div class="mu-testimonial-item">
 								<div class="mu-testimonial-quote">
 									<blockquote>
-										<p>Такой душевной атмосферы, как в нашей школе, нет нигде в мире! <a class="text-primary read-more" data-name="janeta" href="#">Подробнее</a></p>
+										<p>Такой душевной атмосферы, как в нашей школе, нет нигде в мире!</p>
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
 									<img src="/images/layouts/testimonials/janeta-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
-									<h4>Жанета</h4>
-									<span>Happy Student</span>
+									<h4>Акопян Жанетта</h4>
+									<span><a class="text-primary read-more" data-name="janeta" href="#">Подробнее</a></span>
 								</div>
 							</div>
 							<!-- end testimonial single item -->
@@ -78,15 +78,15 @@
 							<div class="mu-testimonial-item">
 								<div class="mu-testimonial-quote">
 									<blockquote>
-										<p>Я благодарен судьбе за то, что мои дети попали именно в «Славянскую»! <a class="text-primary read-more" data-name="iloyan" href="#">Подробнее</a></p>
+										<p>Я благодарен судьбе за то, что мои дети попали именно в «Славянскую»!</p>
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
 									<img src="/images/layouts/testimonials/iloyan-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
-									<h4>Илоян</h4>
-									<span>Happy Student</span>
+									<h4>Илоян Георгий Суренович</h4>
+									<span><a class="text-primary read-more" data-name="iloyan" href="#">Подробнее</a></span>
 								</div>
 							</div>
 							<!-- end testimonial single item -->
