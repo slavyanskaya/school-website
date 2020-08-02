@@ -171,7 +171,8 @@ export default {
 	},
 
 	export: {
-		// fallback: true,
+		fallback: "404.html",
+
 		// routes: function () {
 		// 	let posts = axios.get('https://api.com/posts', {params: {size: 10}}).then((res) => {
 		// 		return res.data.posts.map((post) => {
