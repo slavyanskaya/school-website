@@ -104,7 +104,7 @@
 					</div>
 
 					<div class="col-lg-3 offset-lg-1 order-1 order-lg-2">
-						<img src="/images/founders/director.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
+						<img src="/images/layouts/founders/director.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
 					</div>
 				</div>
 

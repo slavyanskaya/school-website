@@ -35,15 +35,22 @@ export default {
 		meta: [
 			{charset: 'utf-8'},
 			{name: 'viewport', content: 'width=device-width, initial-scale=1'},
-			{hid: 'description', name: 'description', content: process.env.npm_package_description || ''}
+			{hid: 'description', name: 'description', content: process.env.npm_package_description || ''},
+			{
+				htmlAttrs: {
+					lang: 'ru',
+					amp: true
+				}
+			},
+			{ hid: 'keywords', name: 'keywords', content: "Русская Школа В Армении, СШ Славянская, СШ 'Славянская', Старшая Школа Славянская, Армения Русская Школа, Славянская Школа В Армении, " }
 		],
 		link: [
-			{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+			{rel: 'icon', type: 'image/x-icon', href: '/favicons/favicon.ico'},
 
-			{rel: 'apple-touch-icon', sizes: "180x180", type: 'image/x-icon', href: 'favicons/apple-touch-icon.png'},
-			{rel: 'icon', sizes: "32x32", type: 'image/x-icon', href: 'favicons/favicon-32x32.png'},
-			{rel: 'icon', sizes: "16x16", type: 'image/x-icon', href: 'favicons/favicon-16x16.png'},
-			{rel: 'manifest', href: 'favicons/site.webmanifest'},
+			{rel: 'apple-touch-icon', sizes: "180x180", type: 'image/x-icon', href: '/favicons/apple-touch-icon.png'},
+			{rel: 'icon', sizes: "32x32", type: 'image/x-icon', href: '/favicons/favicon-32x32.png'},
+			{rel: 'icon', sizes: "16x16", type: 'image/x-icon', href: '/favicons/favicon-16x16.png'},
+			{rel: 'manifest', href: '/favicons/site.webmanifest'},
 
 			{rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'},
 			// {rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.1/css/all.css'},
@@ -101,7 +108,14 @@ export default {
 	/*
 	** Nuxt.js dev-modules
 	*/
-	buildModules: [],
+	buildModules: [
+		'@nuxtjs/google-analytics',
+	],
+
+	googleAnalytics: {
+		id: 'UA-174236294-1', // Used as fallback if no runtime config is provided
+	},
+
 	/*
 	** Nuxt.js modules
 	*/
@@ -184,5 +198,6 @@ export default {
 
 	build: {
 		// fallback: true
+
 	}
 }

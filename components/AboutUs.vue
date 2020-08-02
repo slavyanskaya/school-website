@@ -43,7 +43,7 @@
 						<div class="row mt-5">
 							<div class="col-lg-6 col-md-6">
 								<div class="mu-about-us-left">
-									<img src="/images/about-us/gousars.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
+									<img src="/images/layouts/about-us/gousars.jpg" class="img-fluid mb-4 mb-lg-0" alt="gousari">
 								</div>
 							</div>
 

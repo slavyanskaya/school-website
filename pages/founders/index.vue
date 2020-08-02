@@ -38,7 +38,7 @@
 					</div>
 
 					<div class="col-lg-6 order-1 order-lg-2">
-						<img src="/images/founders/12.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
+						<img src="/images/layouts/founders/12.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
 					</div>
 				</div>
 				<!-- Text-Photo 1 END -->
@@ -46,7 +46,7 @@
 				<!-- Text-Photo 2 -->
 				<div class="row align-items-center my-5">
 					<div class="col-lg-6">
-						<img src="/images/founders/1.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
+						<img src="/images/layouts/founders/1.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
 					</div>
 
 					<div class="col-lg-6">
@@ -70,7 +70,7 @@
 					</div>
 
 					<div class="col-lg-6 order-1 order-lg-2">
-						<img src="/images/founders/5.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
+						<img src="/images/layouts/founders/5.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
 					</div>
 				</div>
 				<!-- Text-Photo 3 END -->
@@ -80,55 +80,55 @@
 				<!-- Image Gallery -->
 				<div class="row my-5">
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/3.jpg" class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/3.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
+						<a href="images/layouts/founders/3.jpg" class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/3.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
 						</a>
 					</div>
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/4.jpg"  class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/4.jpg" class="zoom img-fluid" style="object-position: 5% 5%" alt="">
-						</a>
-					</div>
-
-					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/5.jpg" class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/5.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
+						<a href="images/layouts/founders/4.jpg"  class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/4.jpg" class="zoom img-fluid" style="object-position: 5% 5%" alt="">
 						</a>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/6.jpg" class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/6.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
+						<a href="images/layouts/founders/5.jpg" class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/5.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
 						</a>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/7.jpg" class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/7.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
+						<a href="images/layouts/founders/6.jpg" class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/6.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
 						</a>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/11.jpg" class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/11.jpg" class="zoom img-fluid" style="object-position: 5% 5%" alt="">
+						<a href="images/layouts/founders/7.jpg" class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/7.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
 						</a>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/8.jpg" class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/8.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
+						<a href="images/layouts/founders/11.jpg" class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/11.jpg" class="zoom img-fluid" style="object-position: 5% 5%" alt="">
 						</a>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/9.jpg" class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/9.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
+						<a href="images/layouts/founders/8.jpg" class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/8.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
 						</a>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a href="images/founders/10.jpg" class="mancybox" rel="ligthbox">
-							<img  src="/images/founders/10.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
+						<a href="images/layouts/founders/9.jpg" class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/9.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
+						</a>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
+						<a href="images/layouts/founders/10.jpg" class="mancybox" rel="ligthbox">
+							<img  src="/images/layouts/founders/10.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">
 						</a>
 					</div>
 				</div>

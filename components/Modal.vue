@@ -80,7 +80,7 @@
 					let testimonialName = $(event.target).data('name');
 					let testimonial = testimonials[testimonialName];
 					modalText.text(testimonial.text);
-					modalImage.attr('src', `images/testimonials/${testimonial.image}.jpg`);
+					modalImage.attr('src', `images/layouts/testimonials/${testimonial.image}.jpg`);
 					$("#myModal").modal('show');
 				});
 			});

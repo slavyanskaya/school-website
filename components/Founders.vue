@@ -18,7 +18,7 @@
 				</div>
 
 				<div class="col-lg-6 order-1 order-lg-2">
-					<img src="/images/founders/12.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
+					<img src="/images/layouts/founders/12.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
 				</div>
 			</div>
 			<!-- Text-Photo 1 END -->
@@ -26,7 +26,7 @@
 			<!-- Text-Photo 2 -->
 			<div class="row align-items-center my-5">
 				<div class="col-lg-6">
-					<img src="/images/founders/1.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
+					<img src="/images/layouts/founders/1.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
 				</div>
 
 				<div class="col-lg-6">
@@ -50,7 +50,7 @@
 				</div>
 
 				<div class="col-lg-6 order-1 order-lg-2">
-					<img src="/images/founders/5.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
+					<img src="/images/layouts/founders/5.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
 				</div>
 			</div>
 			<!-- Text-Photo 3 END -->

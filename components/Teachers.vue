@@ -1,11 +1,10 @@
 <template>
 	<section id="mu-our-teacher">
 		<div class="container">
-			&nbsp;
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" v-show="loaded">
 					<div class="mu-our-teacher-area slider" id="teacher">
-						<div class="mu-title">
+						<div  class="mu-title" >
 							<h2>Our Teachers</h2>
 							<p>Для наших педагогов СШ "Славянская" - это образ жизни!</p>
 						</div>
@@ -13,31 +12,31 @@
 						<div class="mu-our-teacher-content">
 							<div class="slider-nav">
 								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/teachers/mkrtchyan-marina-garasovna.jpg" alt="teacher img">
+									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/mkrtchyan-marina-garasovna.jpg" alt="teacher img">
 								</div>
 
 								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/teachers/anaida-rafikovna-melikyan.jpg" alt="teacher img">
+									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/anaida-rafikovna-melikyan.jpg" alt="teacher img">
 								</div>
 
 								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/teachers/vasilevna-natalya-ivanovna.jpg" alt="teacher img">
+									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/vasilevna-natalya-ivanovna.jpg" alt="teacher img">
 								</div>
 
 								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/teachers/nonna-genrihovna-gaziyan.jpg" alt="teacher img">
+									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/nonna-genrihovna-gaziyan.jpg" alt="teacher img">
 								</div>
 
 								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/teachers/vardanyan-natalya-sergeevna.jpg" alt="teacher img">
+									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/vardanyan-natalya-sergeevna.jpg" alt="teacher img">
 								</div>
 
 								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/teachers/hayrapetyan-lilit-valeryevna.jpg" alt="teacher img">
+									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/hayrapetyan-lilit-valeryevna.jpg" alt="teacher img">
 								</div>
 
 								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/teachers/tatyana-stepanovna-belousova.jpg" alt="teacher img">
+									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/tatyana-stepanovna-belousova.jpg" alt="teacher img">
 								</div>
 							</div>
 
@@ -113,7 +112,13 @@
 	// require ('static/js/slick.js');
 
     export default {
+		data() {
+			return {
+				loaded: false
+			}
+		},
         mounted() {
+			// alert(3)
 			$(function () {
 				console.log('Slick settings enabled');
 
@@ -184,11 +189,17 @@
 					// ]
 				});
 			});
+
+			setTimeout( () => this.loaded = true,1000);
 		}
 	}
 </script>
 
 <style>
+	[v-cloak] {
+		display: none;
+	}
+
 	#teacher {
 		/*padding: 20px 0;*/
 	}
@@ -264,4 +275,6 @@
 	#teacher .slider-nav .slick-track {
 		height: 250px;
 	}
+
+
 </style>

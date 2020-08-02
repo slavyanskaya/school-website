@@ -35,7 +35,7 @@
 											<div class="col-md-12">
 												<article class="mu-blog-single-item">
 													<figure class="mu-blog-single-img">
-														<a href="#"><img alt="img" :src="article.img"></a>
+														<a href="#"><img :src="`/images/articles/${article.slug}/article-header-image.jpg`" :alt="article.description"></a>
 														<br>
 														<figcaption class="mu-blog-caption">
 															<h3><strong href="#">{{ article.description }}</strong></h3>
@@ -344,12 +344,24 @@
         // name: "article",
 		head() {
         	return {
-        		title: this.article.description
+        		title: this.article.description,
+				meta: [
+					{
+						hid: 'description',
+						name: 'description',
+						content: this.article.description
+					},
+
+					{
+						hid: 'article',
+						name: 'article',
+						content: this.article.bodyText
+					}
+				]
 			};
 		},
 		async asyncData ({ $content, params }) {
 			const article = await $content('articles', params.slug).fetch();
-
 			return { article }
 		},
 

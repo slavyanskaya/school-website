@@ -43,7 +43,7 @@
 							<div class="col-lg-4 col-md-4 col-xs-12">
 								<div class="mu-latest-course-single">
 									<figure class="mu-latest-course-img">
-										<a href="#"><img src="/images/courses/2.jpg" alt="img"></a>
+										<a href="#"><img src="/images/layouts/courses/2.jpg" alt="img"></a>
 										<figcaption class="mu-latest-course-imgcaption">
 											<a href="#">Engineering </a>
 											<span><i class="fa fa-clock-o"></i>75Days</span>
@@ -64,7 +64,7 @@
 							<div class="col-lg-4 col-md-4 col-xs-12">
 								<div class="mu-latest-course-single">
 									<figure class="mu-latest-course-img">
-										<a href="#"><img src="/images/courses/3.jpg" alt="img"></a>
+										<a href="#"><img src="/images/layouts/courses/3.jpg" alt="img"></a>
 										<figcaption class="mu-latest-course-imgcaption">
 											<a href="#">Academic</a>
 											<span><i class="fa fa-clock-o"></i>45Days</span>
@@ -85,7 +85,7 @@
 							<div class="col-lg-4 col-md-4 col-xs-12">
 								<div class="mu-latest-course-single">
 									<figure class="mu-latest-course-img">
-										<a href="#"><img src="/images/courses/1.jpg" alt="img"></a>
+										<a href="#"><img src="/images/layouts/courses/1.jpg" alt="img"></a>
 										<figcaption class="mu-latest-course-imgcaption">
 											<a href="#">Drawing</a>
 											<span><i class="fa fa-clock-o"></i>90Days</span>
@@ -106,7 +106,7 @@
 							<div class="col-lg-4 col-md-4 col-xs-12">
 								<div class="mu-latest-course-single">
 									<figure class="mu-latest-course-img">
-										<a href="#"><img src="/images/courses/2.jpg" alt="img"></a>
+										<a href="#"><img src="/images/layouts/courses/2.jpg" alt="img"></a>
 										<figcaption class="mu-latest-course-imgcaption">
 											<a href="#">Engineering </a>
 											<span><i class="fa fa-clock-o"></i>75Days</span>
@@ -127,7 +127,7 @@
 							<div class="col-lg-4 col-md-4 col-xs-12">
 								<div class="mu-latest-course-single">
 									<figure class="mu-latest-course-img">
-										<a href="#"><img src="/images/courses/3.jpg" alt="img"></a>
+										<a href="#"><img src="/images/layouts/courses/3.jpg" alt="img"></a>
 										<figcaption class="mu-latest-course-imgcaption">
 											<a href="#">Academic</a>
 											<span><i class="fa fa-clock-o"></i>45Days</span>

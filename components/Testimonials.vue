@@ -14,7 +14,7 @@
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
-									<img src="/images/testimonials/ambarcumyan-armen-profile.jpg" alt="img">
+									<img src="/images/layouts/testimonials/ambarcumyan-armen-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
 									<h4>Армен Амбарцумян</h4>
@@ -31,7 +31,7 @@
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
-									<img src="/images/testimonials/gukasov-profile.jpg" alt="img">
+									<img src="/images/layouts/testimonials/gukasov-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
 									<h4>Гукасов</h4>
@@ -48,7 +48,7 @@
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
-									<img src="/images/testimonials/jaklin-profile.jpg" alt="img">
+									<img src="/images/layouts/testimonials/jaklin-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
 									<h4>Жаклин</h4>
@@ -65,7 +65,7 @@
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
-									<img src="/images/testimonials/janeta-profile.jpg" alt="img">
+									<img src="/images/layouts/testimonials/janeta-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
 									<h4>Жанета</h4>
@@ -82,7 +82,7 @@
 									</blockquote>
 								</div>
 								<div class="mu-testimonial-img">
-									<img src="/images/testimonials/iloyan-profile.jpg" alt="img">
+									<img src="/images/layouts/testimonials/iloyan-profile.jpg" alt="img">
 								</div>
 								<div class="mu-testimonial-info">
 									<h4>Илоян</h4>

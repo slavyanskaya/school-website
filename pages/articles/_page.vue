@@ -42,7 +42,7 @@
 															</h3>
 														</figcaption>
 
-														<a href="#"><img :src="article.img" alt="img"></a>
+														<a href="#"><img :src="`/images/articles/${article.slug}/article-header-image.jpg`" :alt="article.description"></a>
 <!--														<a href="#"><img :src="`images/news/${article.img}`" alt="img"></a>-->
 													</figure>
 													<div class="mu-blog-meta">
@@ -65,27 +65,27 @@
 									<!-- end course content container -->
 
 									<!-- start course pagination -->
-									<div class="mu-pagination">
-										<nav>
-											<ul class="pagination">
-												<li>
-													<a href="#" aria-label="Previous">
-														<span class="fa fa-angle-left"></span> Prev
-													</a>
-												</li>
-												<li class="active"><a href="#">1</a></li>
-												<li><a href="#">2</a></li>
-												<li><a href="#">3</a></li>
-												<li><a href="#">4</a></li>
-												<li><a href="#">5</a></li>
-												<li>
-													<a href="#" aria-label="Next">
-														Next <span class="fa fa-angle-right"></span>
-													</a>
-												</li>
-											</ul>
-										</nav>
-									</div>
+<!--									<div class="mu-pagination">-->
+<!--										<nav>-->
+<!--											<ul class="pagination">-->
+<!--												<li>-->
+<!--													<a href="#" aria-label="Previous">-->
+<!--														<span class="fa fa-angle-left"></span> Prev-->
+<!--													</a>-->
+<!--												</li>-->
+<!--												<li class="active"><a href="#">1</a></li>-->
+<!--												<li><a href="#">2</a></li>-->
+<!--												<li><a href="#">3</a></li>-->
+<!--												<li><a href="#">4</a></li>-->
+<!--												<li><a href="#">5</a></li>-->
+<!--												<li>-->
+<!--													<a href="#" aria-label="Next">-->
+<!--														Next <span class="fa fa-angle-right"></span>-->
+<!--													</a>-->
+<!--												</li>-->
+<!--											</ul>-->
+<!--										</nav>-->
+<!--									</div>-->
 									<!-- end course pagination -->
 
 									<!-- Pagination -->

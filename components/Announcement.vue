@@ -5,7 +5,7 @@
 				<div class="col-md-12">
 					<div class="title">
 						<h2>ВСЕМ ВСЕМ ВСЕМ!!!</h2>
-						<img class="announcement__logo" src="/images/announcement/announcement.png" alt="">
+						<img class="announcement__logo" src="/images/layouts/announcement/announcement.png" alt="">
 					</div>
 				</div>
 
