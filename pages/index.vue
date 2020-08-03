@@ -4,12 +4,14 @@
 		<AboutUs/>
 		<Announcement/>
 		<Founders/>
+<!--		<LatestNews/>-->
 <!--		<LatestCourses/>-->
-		<hr>
+<!--		<LatestCourses/>-->
+<!--		<hr>-->
+
 		<Teachers/>
 		<Testimonials/>
 		<Modal/>
-
 	</fragment>
 </template>
 
@@ -18,10 +20,10 @@
 	import MainSlider from '@/components/MainSlider';
 	import Founders from '@/components/Founders';
 	import Teachers from '@/components/Teachers';
-	import LatestCourses from '@/components/LatestCourses';
 	import Testimonials from '@/components/Testimonials';
 	import Modal from '@/components/Modal';
 	import Announcement from "../components/Announcement";
+	// import LatestNews from "../components/LatestNews";
 
 	export default {
 		name: 'home',
@@ -48,12 +50,12 @@
 		components: {
 			Announcement,
 			Teachers,
-			LatestCourses,
 			Founders,
 			MainSlider,
 			AboutUs,
 			Modal,
-			Testimonials
+			Testimonials,
+			// LatestNews
 		}
 	}
 </script>

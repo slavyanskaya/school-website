@@ -38,3 +38,22 @@ body{
         padding: 0 120px;
     }
 }
+
+.mu-title--white{
+	//display: inline;
+	//float: left;
+	margin-bottom: 80px;
+	text-align: center;
+	width: 100%;
+	h2{
+		color: #fff;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	p{
+		color: #555;
+		letter-spacing: 0.3px;
+		line-height: 1.7;
+		padding: 0 120px;
+	}
+}

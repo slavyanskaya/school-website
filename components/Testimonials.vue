@@ -5,6 +5,14 @@
 			<div class="row">
 				<div class="col-12 col-md-10 offset-md-1">
 					<div class="mu-testimonial-area">
+						<div class="preloader">
+							<div class="rect1"></div>
+							<div class="rect2"></div>
+							<div class="rect3"></div>
+							<div class="rect4"></div>
+							<div class="rect5"></div>
+						</div>
+
 						<div id="mu-testimonial-slider" class="mu-testimonial-content">
 							<!-- start testimonial single item -->
 							<div class="mu-testimonial-item">
@@ -105,20 +113,24 @@
 		mounted() {
 			(function () {
 				$(document).ready(function () {
-					$('#mu-testimonial-slider').slick({
-						slidesToShow: 1,
-						dots: true,
-						infinite: true,
-						arrows: true,
-						autoplay: true,
-						speed: 500,
-						cssEase: 'linear',
-						fade: false,
-						accessibility: true,
+					$('#mu-testimonial-slider')
+						.on('init', function(slick) {
+							$('.preloader').css({display: 'none'});
+						})
+						.slick({
+							slidesToShow: 1,
+							dots: true,
+							infinite: true,
+							arrows: true,
+							autoplay: true,
+							speed: 500,
+							cssEase: 'linear',
+							fade: false,
+							accessibility: true,
 
-						prevArrow: '<span class="prev_arrow"><i class="fas fa-angle-left"></i></span>',
-						nextArrow: '<span class="next_arrow"><i class="fas fa-angle-right"></i></span>'
-					});
+							prevArrow: '<span class="prev_arrow"><i class="fas fa-angle-left"></i></span>',
+							nextArrow: '<span class="next_arrow"><i class="fas fa-angle-right"></i></span>'
+						});
 				});
 
 			})(jQuery);
@@ -127,6 +139,19 @@
 </script>
 
 <style>
+
+	#mu-testimonial-slider {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 1s ease;
+		-webkit-transition: opacity 1s ease;
+	}
+
+	#mu-testimonial-slider.slick-initialized {
+		visibility: visible;
+		opacity: 1;
+	}
+
 	/*.slick-prev, .slick-next {*/
 	/*}*/
 

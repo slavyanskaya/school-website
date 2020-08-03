@@ -29,7 +29,7 @@
 					<ul class="navbar-nav navbar_nav ml-auto">
 						<li class="nav-item nav__item text-center px-1"
 							:class="{'nav__item--active': $nuxt.$route.path == '/'}">
-							<nuxt-link to="/" exact class="nav-link nav__link ">Home</nuxt-link>
+							<nuxt-link to="/" exact class="nav-link nav__link ">Главная</nuxt-link>
 						</li>
 
 <!--						<li class="nav-item nav__item text-center px-1"-->

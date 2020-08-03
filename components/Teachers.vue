@@ -1,17 +1,20 @@
 <template>
-	<section id="mu-our-teacher">
+	<section id="mu-our-teacher" >
 		<div class="container">
+
+			<hr class="w100">
+
 			<div class="row">
-				<div class="col-md-12" v-show="loaded">
+				<div class="col-md-12" >
 					<div class="mu-our-teacher-area slider" id="teacher">
 						<div  class="mu-title" >
-							<h2>Our Teachers</h2>
+							<h2>Наши Учителя</h2>
 							<p>Для наших педагогов СШ "Славянская" - это образ жизни!</p>
 						</div>
 
 						<div class="mu-our-teacher-content">
-							<div class="slider-nav">
-								<div class="slider__item">
+							<div id="slider-nav" class="slider-nav">
+								<div id="slider__item" class="slider__item">
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/mkrtchyan-marina-garasovna.jpg" alt="teacher img">
 								</div>
 
@@ -40,7 +43,7 @@
 								</div>
 							</div>
 
-							<div ref="sluyder" class="slider-for">
+							<div id="slider-for">
 								<div class="slider__item">
 									<h2>Мкртчян Марина Гарасовна</h2>
 									<span class="slide__position">Преподаватель начальных классов</span>
@@ -120,11 +123,17 @@
         mounted() {
 			// alert(3)
 			$(function () {
-				console.log('Slick settings enabled');
+
+				// $('.slider').on('init', function(slick) {
+				// 	console.log('fired!');
+				// 	$('.slider').fadeIn(3000);
+				// });
+				//
+				// console.log('Slick settings enabled');
 
 				// console.log(this.$refs['sluyder']);
         	// 	$(this.$refs['sluyder']).slick({
-				$('#teacher .slider-for').slick({
+				$('#teacher #slider-for').slick({
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					arrows: false,
@@ -141,7 +150,7 @@
 					arrows: false,
 					focusOnSelect: true,
 					variableWidth: true,
-					asNavFor: '.slider-for',
+					asNavFor: '#slider-for',
 					autoplay: true,
 					autoplaySpeed: 2000,
 					accessibility: true,
@@ -188,17 +197,41 @@
 					//     // instead of a settings object
 					// ]
 				});
-			});
 
-			setTimeout( () => this.loaded = true,1000);
+
+
+				// setTimeout( () => {
+				// 	this.loaded = true;
+				// 	$('#mu-our-teacher').removeClass('invisible');
+				// },1000);
+			});
 		}
 	}
 </script>
 
 <style>
+	.invisible {
+		display: none;
+	}
+
 	[v-cloak] {
 		display: none;
 	}
+
+	#slider-nav,
+	#slider-for {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 1s ease;
+		-webkit-transition: opacity 1s ease;
+	}
+
+	#slider-nav.slick-initialized,
+	#slider-for.slick-initialized {
+		visibility: visible;
+		opacity: 1;
+	}
+
 
 	#teacher {
 		/*padding: 20px 0;*/
@@ -230,14 +263,14 @@
 	}
 
 	#teacher .slider-nav .slider__item{
-		margin: 0 14px;
+		margin: 0 10px;
 	}
 
-	#teacher .slider-for {
+	#teacher #slider-for {
 		margin-top: 10px;
 	}
 
-	#teacher .slider-for .slider__item{
+	#teacher #slider-for .slider__item{
 		transition: transform 1400ms;
 
 		text-align: center;
@@ -269,7 +302,7 @@
 
 	#teacher .slider-nav .slick-list {
 		padding: 15px 60px !important;
-		margin-left: 30px !important;
+		/*margin-left: 15px !important;*/
 	}
 
 	#teacher .slider-nav .slick-track {
