@@ -1,1 +1,0 @@
-window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1596573566",layout:"default",error:null,serverRendered:true,routePath:"\u002Farticle\u002Fs-sh-slavyanskaya-prodoljaet-nabor-uchashixsya-v-1-12-klassi-na-2020-2021-uchebniy-god",config:{}};
