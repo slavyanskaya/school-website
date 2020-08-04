@@ -73,7 +73,7 @@ export default {
 	/*
 	** Global CSS
 	*/
-	// css: ["@/assets/styles/main.css"],
+	css: ["~/assets/sass/app.scss"],
 
 	pageTransition: {
 		name: "fade",
@@ -124,7 +124,7 @@ export default {
 		'@nuxtjs/axios',
 		// Doc: https://github.com/nuxt/content
 		'@nuxt/content',
-		// '@nuxtjs/sitemap',
+		'@nuxtjs/sitemap',
 
 		// for sass
 		// [
@@ -136,6 +136,107 @@ export default {
 		// ]
 
 	],
+
+	paginationInfo: {
+		perPage: 2,
+	},
+
+	sitemap: {
+		// path: '/cryptoticker.cc.xml',
+		hostname: 'https://slavyanskaya.am',
+		cacheTime: 1000 * 60 * 15,
+		gzip: true,
+		// generate: false,
+		exclude: [
+			'/account/**',
+			'/account',
+			'/admin/**',
+			'/admin',
+		],
+
+		routes: async () => {
+			// articles routes
+			const { $content } = require('@nuxt/content');
+			let articles = await $content('articles').only(['slug', 'createdAt', 'updatedAt']).fetch();
+			let articleRoutes = articles.map( (article) => {
+				return {
+					url: `/article/${article.slug}`,
+					changefreq: 'weekly',
+					priority: 0.8,
+					lastmod: article.updatedAt
+				};
+			});
+
+			// articles pages routes
+			const perPage = 2;
+			let skip;
+			let most_recent_update_of_current_pages_articles;
+			let current_pages_articles;
+			let articlePagesRoutes = [];
+			const pagesAmount = Math.ceil(articles.length / perPage);
+
+			for (let currentPage = 1; currentPage <= pagesAmount; currentPage++) {
+				skip = currentPage * perPage - perPage; // 1 * 2 -2 (0), 2 * 2 - 2 (2), 3 * 2 - 2 (4)
+
+				current_pages_articles = await $content('articles')
+					.only(['slug', 'createdAt', 'updatedAt'])
+					.sortBy('createdAt', 'desc')
+					.skip(skip)
+					.limit(perPage)
+					.fetch();
+
+
+
+				// Get most recent updated article in page
+				most_recent_update_of_current_pages_articles =
+					current_pages_articles
+						.map( (a) => a.updatedAt)
+						.sort( (a1, a2) => a1 > a2 ? 1 : -1)[0];
+
+				articlePagesRoutes.push({
+					url: `/articles/${currentPage}`,
+					changefreq: 'weekly',
+					priority: 0.8,
+					lastmod: most_recent_update_of_current_pages_articles
+				});
+			}
+
+			return [
+				{
+					url: '/',
+					changefreq: 'weekly',
+					priority: 1
+				},
+				{
+					url: '/contacts',
+					changefreq: 'daily',
+					priority: 1,
+					// lastmod: amountOfPages
+				},
+				...articlePagesRoutes,
+				...articleRoutes
+			];
+		}
+		// routes: [
+			// '/',
+			// '/compare',
+			// '/exchanges/bibox',
+			// '/exchanges/binance',
+			// '/exchanges/bitfinex',
+			// '/exchanges/bittrex',
+			// '/exchanges/coss',
+			// '/exchanges/kraken',
+			// '/exchanges/kucoin',
+			// '/exchanges/poloniex',
+			// '/exchanges/theocean',
+			// '/exchanges/upbit'
+		// ].map(route => ({
+		// 	url: route,
+		// 	changefreq: 'monthly',
+		// 	priority: 1,
+		// 	lastmodISO: new Date().toISOString().split('T')[0]
+		// }))
+	},
 
 	// for sass
 	// styleResources: {
@@ -184,18 +285,18 @@ export default {
 		// 	})
 		// },
 
-		async routes () {
-			// const { $content } = require('@nuxt/content');
-			// const files = await $content('articles').only(['slug']).fetch();
-			// console.log(files);
-			// return files.map(file => '/article/' + file.slug);
-			return [
-				'/articles/1',
-				'/articles/2',
-				'/articles/3',
-				'/articles/4',
-			];
-		}
+		// async routes () {
+		// 	// const { $content } = require('@nuxt/content');
+		// 	// const files = await $content('articles').only(['slug']).fetch();
+		// 	// console.log(files);
+		// 	// return files.map(file => '/article/' + file.slug);
+		// 	return [
+		// 		'/articles/1',
+		// 		'/articles/2',
+		// 		'/articles/3',
+		// 		'/articles/4',
+		// 	];
+		// }
 	},
 
 	build: {

@@ -4,8 +4,7 @@
 		<AboutUs/>
 		<Announcement/>
 		<Founders/>
-<!--		<LatestNews/>-->
-<!--		<LatestCourses/>-->
+		<LatestNews :latestArticles="latestArticles" />
 <!--		<LatestCourses/>-->
 <!--		<hr>-->
 
@@ -23,7 +22,7 @@
 	import Testimonials from '@/components/Testimonials';
 	import Modal from '@/components/Modal';
 	import Announcement from "../components/Announcement";
-	// import LatestNews from "../components/LatestNews";
+	import LatestNews from "../components/LatestNews";
 
 	export default {
 		name: 'home',
@@ -43,6 +42,16 @@
 			}
 		},
 
+		async asyncData({$content, params, route}) {
+			let latestArticles = await $content('articles')
+				.without(['body'])
+				.sortBy('createdAt', 'desc')
+				.limit(3)
+				.fetch();
+
+			return {latestArticles};
+		},
+
 		mounted() {
 
 		},
@@ -55,7 +64,7 @@
 			AboutUs,
 			Modal,
 			Testimonials,
-			// LatestNews
+			LatestNews
 		}
 	}
 </script>

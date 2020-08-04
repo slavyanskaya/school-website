@@ -21,47 +21,46 @@
 <!--				</div>-->
 
 				<div id="latest-courses-slider " class="row">
-					<div class="col-lg-4  col-12 mb-5">
-						<div class="card h-100">
-<!--							<img class="card-img-top" src="design.jpg" alt="Design">-->
+					<div class="col-lg-4 col-12 mb-5" v-for="(article, index) in latestArticles" :key="index">
+						<div class="card h-130">
+							<img class="card-img-top" :src="`/images/articles/${article.slug}/article-header-image.jpg`" :alt="article.title">
 							<div class="card-body">
-								<h4 class="card-title">Design</h4>
-								<p class="card-text">Deliver the best user experience
-									with our carefully designed responsive websites and applications!</p>
+								<h6 class="card-title">{{ formatDate(article.createdAt) }}</h6>
+								<h5 class="card-text">{{ article.title }}</h5>
 							</div>
 							<div class="card-footer py-4">
-								<a href="#" class="btn btn-secondary">See portfolio &raquo;</a>
+								<nuxt-link :to="{name: 'article-slug', params: {slug: article.slug}}" class="btn btn-primary">Подробнее</nuxt-link>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-lg-4 col-12 mb-5">
-						<div class="card h-100">
-<!--							<img class="card-img-top" src="development.jpg" alt="Development">-->
-							<div class="card-body">
-								<h4 class="card-title">Development</h4>
-								<p class="card-text">You need software that works on every device.
-									Leverage the latest technologies and the most powerful tools!</p>
-							</div>
-							<div class="card-footer py-4">
-								<a href="#" class="btn btn-secondary">See projects &raquo;</a>
-							</div>
-						</div>
-					</div>
+<!--					<div class="col-lg-4 col-12 mb-5">-->
+<!--						<div class="card h-100">-->
+<!--&lt;!&ndash;							<img class="card-img-top" src="development.jpg" alt="Development">&ndash;&gt;-->
+<!--							<div class="card-body">-->
+<!--								<h4 class="card-title">Development</h4>-->
+<!--								<p class="card-text">You need software that works on every device.-->
+<!--									Leverage the latest technologies and the most powerful tools!</p>-->
+<!--							</div>-->
+<!--							<div class="card-footer py-4">-->
+<!--								<a href="#" class="btn btn-secondary">See projects &raquo;</a>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
 
-					<div class="col-lg-4  col-12 mb-5">
-						<div class="card h-100">
-<!--							<img class="card-img-top" src="analytics.jpg" alt="Analytics">-->
-							<div class="card-body">
-								<h4 class="card-title">Analytics</h4>
-								<p class="card-text">Consult our experts to set up proper goals and
-									find the best stack for your next application!</p>
-							</div>
-							<div class="card-footer py-4">
-								<a href="#" class="btn btn-secondary">See testimonials &raquo;</a>
-							</div>
-						</div>
-					</div>
+<!--					<div class="col-lg-4  col-12 mb-5">-->
+<!--						<div class="card h-100">-->
+<!--&lt;!&ndash;							<img class="card-img-top" src="analytics.jpg" alt="Analytics">&ndash;&gt;-->
+<!--							<div class="card-body">-->
+<!--								<h4 class="card-title">Analytics</h4>-->
+<!--								<p class="card-text">Consult our experts to set up proper goals and-->
+<!--									find the best stack for your next application!</p>-->
+<!--							</div>-->
+<!--							<div class="card-footer py-4">-->
+<!--								<a href="#" class="btn btn-secondary">See testimonials &raquo;</a>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
 				</div>
 
 			</div>
@@ -71,6 +70,20 @@
 
 <script>
 	export default {
+		props: {
+			latestArticles: {
+				type: Array,
+				required: false
+			}
+		},
+
+		methods: {
+			formatDate(date) {
+				const options = {year: 'numeric', month: 'long', day: 'numeric'};
+				return new Date(date).toLocaleDateString('ru', options)
+			},
+		}
+
 		// mounted() {
 		// 	(function () {
 		// 		// $(document).ready(function () {
@@ -143,10 +156,33 @@
 
 <style scoped>
 	/* Card */
-	.btn-secondary {
-		background-color: transparent;
-		border-color: #c60063;
-		color: #c60063;
+	.btn-primary {
+		/*background-color: blue;*/
+		/*border-color: blue;*/
+		color: white;
+	}
+
+
+
+	.card {
+		/*padding: 10px;*/
+		text-align: center;
+		/*position: relative;*/
+	}
+
+	.card-footer {
+
+	}
+
+	.card-img-top {
+		margin: auto;
+		margin-top: -25px;
+		width: 94%;
+		border-radius: 5%;
+
+		-webkit-box-shadow: 0px 13px 23px -2px rgba(130,130,130,1);
+		-moz-box-shadow: 0px 13px 23px -2px rgba(130,130,130,1);
+		box-shadow: 0px 13px 23px -2px rgba(130,130,130,1);
 	}
 
 	/* Preloader */

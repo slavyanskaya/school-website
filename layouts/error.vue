@@ -1,6 +1,6 @@
 <template>
-	<div class="nuxt-error">
-		gfdgfdg
+	<div style="min-height: 100vh" class="nuxt-error">
+
 <!--		<component :is="errorPage" :error="error"/>-->
 	</div>
 </template>
@@ -11,7 +11,7 @@
 
 	export default {
 		// name: 'nuxt-error',
-		// layout: 'default', // optional
+		layout: 'default', // optional
 		// props: {
 		// 	error: {
 		// 		type: Object,

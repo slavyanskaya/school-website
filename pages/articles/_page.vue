@@ -257,7 +257,7 @@
 		async asyncData({ $content, params, route }) {
 			const perPage = 3;
 			let page = parseInt(params.page);
-			console.log(route);
+			// console.log(route);
 			let skip = page * perPage - perPage;
 
 			let articles = await $content('articles')
