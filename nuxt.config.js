@@ -137,10 +137,6 @@ export default {
 
 	],
 
-	paginationInfo: {
-		perPage: 2,
-	},
-
 	sitemap: {
 		// path: '/cryptoticker.cc.xml',
 		hostname: 'https://slavyanskaya.am',
@@ -269,10 +265,44 @@ export default {
 			// return files.map(file => '/article/' + file.path);
 			// return ['/article/fourth'];
 		// }
+
+		fallback: "404.html",
+
+		routes: async () => {
+			// articles routes
+			const { $content } = require('@nuxt/content');
+			let articles = await $content('articles').only(['slug', 'createdAt', 'updatedAt']).fetch();
+			let articleRoutes = articles.map( (article) => `/article/${article.slug}`);
+
+			// articles pages routes
+			const perPage = 2;
+			let skip;
+			let current_pages_articles;
+			let articlePagesRoutes = [];
+			const pagesAmount = Math.ceil(articles.length / perPage);
+
+			for (let currentPage = 1; currentPage <= pagesAmount; currentPage++) {
+				skip = currentPage * perPage - perPage; // 1 * 2 -2 (0), 2 * 2 - 2 (2), 3 * 2 - 2 (4)
+
+				current_pages_articles = await $content('articles')
+					.only(['slug', 'createdAt', 'updatedAt'])
+					.sortBy('createdAt', 'desc')
+					.skip(skip)
+					.limit(perPage)
+					.fetch();
+
+				articlePagesRoutes.push(`/articles/${currentPage}`);
+			}
+
+			return [
+				...articlePagesRoutes,
+				...articleRoutes
+			];
+		}
 	},
 
 	export: {
-		fallback: "404.html",
+		// fallback: "404.html",
 
 		// routes: function () {
 		// 	let posts = axios.get('https://api.com/posts', {params: {size: 10}}).then((res) => {
