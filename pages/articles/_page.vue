@@ -20,7 +20,7 @@
 		<!-- End breadcrumb -->
 
 		<!-- Start Course Archive Content -->
-		<section id="mu-course-content">
+		<section id="mu-course-content" style="min-height: 100vh">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
