@@ -255,7 +255,7 @@
 		// },
 
 		async asyncData({ $content, params, route }) {
-			const perPage = 3;
+			const perPage = 2;
 			let page = parseInt(params.page);
 			// console.log(route);
 			let skip = page * perPage - perPage;
@@ -264,7 +264,7 @@
 				.without(['body'])
 				.sortBy('createdAt', 'desc')
 				.skip(skip)
-				.limit(3)
+				.limit(perPage)
 				.fetch();
 
 			// console.log(articles);
