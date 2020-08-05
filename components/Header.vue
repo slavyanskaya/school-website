@@ -20,16 +20,11 @@
 								<div class="mu-header-top-right">
 									<nav>
 										<ul class="mu-top-social-nav">
-											<li><a target="_blank" href="https://www.facebook.com/%D0%A1%D0%A8-%D0%A1%D0%9B%D0%90%D0%92%D0%AF%D0%9D%D0%A1%D0%9A%D0%90%D0%AF-1527694427465387/"><span class="fab fa-facebook-f"></span></a>
-											</li>
-											<li><a href="#"><span class="fab fa-twitter"></span></a>
-											</li>
-											<li><a href="#"><span class="fab fa-google-plus-g"></span></a>
-											</li>
-											<li><a href="#"><span class="fab fa-linkedin-in"></span></a>
-											</li>
-											<li><a href="#"><span class="fab fa-youtube"></span></a>
-											</li>
+											<li><a target="_blank" href="https://www.facebook.com/%D0%A1%D0%A8-%D0%A1%D0%9B%D0%90%D0%92%D0%AF%D0%9D%D0%A1%D0%9A%D0%90%D0%AF-1527694427465387/"><span class="fab fa-facebook-f"></span></a></li>
+											<li><a href="#"><span class="fab fa-twitter"></span></a></li>
+<!--											<li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>-->
+<!--											<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>-->
+											<li><a href="#"><span class="fab fa-youtube"></span></a></li>
 										</ul>
 									</nav>
 								</div>

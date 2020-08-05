@@ -225,6 +225,10 @@
 </script>
 
 <style scoped>
+	p {
+		text-align: center;
+	}
+
 	#demo {
 		height:100%;
 		position:relative;

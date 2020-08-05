@@ -29,7 +29,7 @@
 					<ul class="navbar-nav navbar_nav ml-auto">
 						<li class="nav-item nav__item text-center px-1"
 							:class="{'nav__item--active': $nuxt.$route.path === '/'}">
-							<nuxt-link to="/" exact class="nav-link nav__link ">Главная</nuxt-link>
+							<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" to="/" exact class="nav-link nav__link ">Главная</nuxt-link>
 						</li>
 
 <!--						<li class="nav-item nav__item text-center px-1"-->
@@ -39,22 +39,22 @@
 
 						<li class="nav-item nav__item text-center px-1"
 							:class="{'nav__item--active': $nuxt.$route.path === '/about'}">
-							<nuxt-link :to="{name: 'about'}" exact class="nav-link nav__link ">О школе</nuxt-link>
+							<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" :to="{name: 'about'}" exact class="nav-link nav__link ">О школе</nuxt-link>
 						</li>
 
 						<li class="nav-item nav__item text-center px-1"
 							:class="{'nav__item--active': $nuxt.$route.path === '/founders'}">
-							<nuxt-link to="/founders" exact class="nav-link nav__link ">Учредитель</nuxt-link>
+							<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" to="/founders" exact class="nav-link nav__link ">Учредитель</nuxt-link>
 						</li>
 
 						<li class="nav-item nav__item text-center px-1"
 							:class="{'nav__item--active': ($nuxt.$route.name === 'articles-page') || ($nuxt.$route.name === 'article-slug')}">
-							<nuxt-link :to="{name: 'articles-page', params: {page: 1} }" exact class="nav-link nav__link" :class="{'nav__link--active': ($nuxt.$route.name === 'articles-page') || ($nuxt.$route.name === 'article-slug')}">Новости</nuxt-link>
+							<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" :to="{name: 'articles-page', params: {page: 1} }" exact class="nav-link nav__link" :class="{'nav__link--active': ($nuxt.$route.name === 'articles-page') || ($nuxt.$route.name === 'article-slug')}">Новости</nuxt-link>
 						</li>
 
 						<li class="nav-item nav__item text-center px-1"
 							:class="{'nav__item--active': $nuxt.$route.path === '/contact'}">
-							<nuxt-link  to="/contact" exact class="nav-link nav__link ">Контакты</nuxt-link>
+							<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show"  to="/contact" exact class="nav-link nav__link ">Контакты</nuxt-link>
 						</li>
 
 						<!--            <li class="nav-item nav__item dropdown">-->

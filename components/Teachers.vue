@@ -2,8 +2,6 @@
 	<section id="mu-our-teacher" >
 		<div class="container">
 
-			<hr class="w100">
-
 			<div class="row">
 				<div class="col-md-12" >
 					<div class="mu-our-teacher-area slider" id="teacher">
@@ -14,10 +12,6 @@
 
 						<div class="mu-our-teacher-content">
 							<div id="slider-nav" class="slider-nav">
-								<div id="slider__item" class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/mkrtchyan-marina-garasovna.jpg" alt="teacher img">
-								</div>
-
 								<div class="slider__item">
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/anaida-rafikovna-melikyan.jpg" alt="teacher img">
 								</div>
@@ -38,19 +32,16 @@
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/hayrapetyan-lilit-valeryevna.jpg" alt="teacher img">
 								</div>
 
+								<div id="slider__item" class="slider__item">
+									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/mkrtchyan-marina-garasovna.jpg" alt="teacher img">
+								</div>
+
 								<div class="slider__item">
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/tatyana-stepanovna-belousova.jpg" alt="teacher img">
 								</div>
 							</div>
 
 							<div id="slider-for">
-								<div class="slider__item">
-									<h2>Мкртчян Марина Гарасовна</h2>
-									<span class="slide__position">Преподаватель начальных классов</span>
-									<p class="slide__start-time">Работает в школе с 2016 года</p>
-									<i class="slide__quote">СШ "Славянская" - это источник радости, энергии и молодости!</i>
-								</div>
-
 								<div class="slider__item">
 									<h2>Меликян Анаида Рафиковна </h2>
 									<span class="slide__position">Преподаватель математики</span>
@@ -92,6 +83,13 @@
 									<p>Автор более 50-ти научно - исследовательских публикаций</p>
 									<p>Награждена сертификатами за участие в международных научных конференциях в РФ, Японии, Великобритании, Италии, Испании, США и других странах ближнего зарубежья</p>
 									<i class="slide__quote">СШ "Славянская" - удивительное место, где каждый учитель - это добрый волшебник, творящий чудеса на наших глазах!</i>
+								</div>
+
+								<div class="slider__item">
+									<h2>Мкртчян Марина Гарасовна</h2>
+									<span class="slide__position">Преподаватель начальных классов</span>
+									<p class="slide__start-time">Работает в школе с 2016 года</p>
+									<i class="slide__quote">СШ "Славянская" - это источник радости, энергии и молодости!</i>
 								</div>
 
 								<div class="slider__item">
@@ -152,7 +150,7 @@
 					variableWidth: true,
 					asNavFor: '#slider-for',
 					autoplay: true,
-					autoplaySpeed: 2000,
+					autoplaySpeed: 3500,
 					accessibility: true,
 					infinite: true,
 					centerPadding: '0',

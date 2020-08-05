@@ -121,7 +121,7 @@
 							slidesToShow: 1,
 							dots: true,
 							infinite: true,
-							arrows: true,
+							arrows: false,
 							autoplay: true,
 							speed: 500,
 							cssEase: 'linear',
@@ -179,8 +179,8 @@
 
 	#mu-testimonial-slider .prev_arrow {
 		position: absolute;
-		bottom: 20%;
-		left: 15%;
+		bottom: 40%;
+		left: 35%;
 
 		color: white;
 		width: 50px;
@@ -195,8 +195,8 @@
 
 	#mu-testimonial-slider .next_arrow {
 		position: absolute;
-		bottom: 20%;
-		right: 15%;
+		bottom: 40%;
+		right: 35%;
 
 		color: white;
 		width: 50px;

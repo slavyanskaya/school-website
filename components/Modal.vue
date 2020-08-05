@@ -109,10 +109,14 @@
 		padding: 0;
 	}
 	.modal-content {
-		border-radius: 0px;
+		border-radius: 0;
 		border: none;
 	}
 	.modal-inner { text-align: center; padding: 65px 80px;}
-	.modal-inner .form-control, .modal-inner .btn { border-radius: 0px; }
+	.modal-inner .form-control, .modal-inner .btn { border-radius: 0; }
 	.modal-inner .form-control { background: #f1f1f1; }
+
+	@media screen and (max-width: 640px) {
+		.modal-inner { padding: 40px 20px;}
+	}
 </style>
