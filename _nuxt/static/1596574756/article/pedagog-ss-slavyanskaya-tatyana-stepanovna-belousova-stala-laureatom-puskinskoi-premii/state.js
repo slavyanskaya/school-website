@@ -1,1 +1,0 @@
-window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1596574756",layout:"default",error:null,serverRendered:true,routePath:"\u002Farticle\u002Fpedagog-ss-slavyanskaya-tatyana-stepanovna-belousova-stala-laureatom-puskinskoi-premii",config:{}};
