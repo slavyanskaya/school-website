@@ -20,12 +20,12 @@
 <!--					<div class="rect5"></div>-->
 <!--				</div>-->
 
-				<div id="latest-courses-slider " class="row">
+				<div id="latest-courses-slider " class="row d-flex justify-content-center">
 					<div class="col-lg-4 col-12 mb-5" v-for="(article, index) in latestArticles" :key="index">
 						<div class="card h-130">
 							<img class="card-img-top" :src="`/images/articles/${article.slug}/article-header-image.jpg`" :alt="article.title">
 							<div class="card-body">
-								<h6 class="card-title">{{ formatDate(article.createdAt) }}</h6>
+								<h6 class="card-title">{{ formatDate(article.manualCreatedAt * 1000) }}</h6>
 								<h5 class="card-text">{{ article.title }}</h5>
 							</div>
 							<div class="card-footer py-4">

@@ -35,6 +35,7 @@ export default {
 		meta: [
 			{charset: 'utf-8'},
 			{name: 'viewport', content: 'width=device-width, initial-scale=1'},
+			{name: 'google-site-verification', content: 'i_iGtKzqlpNjcH-8o7VrZPZ_gL9mKWbOrrTW5ERQiMU'},
 			{hid: 'description', name: 'description', content: process.env.npm_package_description || ''},
 			{
 				htmlAttrs: {
@@ -120,21 +121,9 @@ export default {
 	** Nuxt.js modules
 	*/
 	modules: [
-		// Doc: https://axios.nuxtjs.org/usage
 		'@nuxtjs/axios',
-		// Doc: https://github.com/nuxt/content
 		'@nuxt/content',
 		'@nuxtjs/sitemap',
-
-		// for sass
-		// [
-		//   'nuxt-sass-resources-loader',
-		//   [
-		//     'assets/scss/file/_path.scss',
-		//     'assets/scss/file/_path-two.scss'
-		//   ]
-		// ]
-
 	],
 
 	sitemap: {
@@ -153,7 +142,7 @@ export default {
 		routes: async () => {
 			// articles routes
 			const { $content } = require('@nuxt/content');
-			let articles = await $content('articles').only(['slug', 'createdAt', 'updatedAt']).fetch();
+			let articles = await $content('articles').only(['slug', 'manualCreatedAt', 'updatedAt']).fetch();
 			let articleRoutes = articles.map( (article) => {
 				return {
 					url: `/article/${article.slug}`,
@@ -163,8 +152,8 @@ export default {
 				};
 			});
 
-			// articles pages routes
-			const perPage = 2;
+			// articles pages routes. Not sure if we need sitemaps of these
+			const perPage = 10;
 			let skip;
 			let most_recent_update_of_current_pages_articles;
 			let current_pages_articles;
@@ -175,13 +164,11 @@ export default {
 				skip = currentPage * perPage - perPage; // 1 * 2 -2 (0), 2 * 2 - 2 (2), 3 * 2 - 2 (4)
 
 				current_pages_articles = await $content('articles')
-					.only(['slug', 'createdAt', 'updatedAt'])
-					.sortBy('createdAt', 'desc')
+					.only(['slug', 'manualCreatedAt', 'updatedAt'])
+					.sortBy('manualCreatedAt', 'desc')
 					.skip(skip)
 					.limit(perPage)
 					.fetch();
-
-
 
 				// Get most recent updated article in page
 				most_recent_update_of_current_pages_articles =
@@ -207,31 +194,11 @@ export default {
 					url: '/contacts',
 					changefreq: 'daily',
 					priority: 1,
-					// lastmod: amountOfPages
 				},
-				...articlePagesRoutes,
+				...articlePagesRoutes, // Not sure if we need sitemaps of these
 				...articleRoutes
 			];
 		}
-		// routes: [
-			// '/',
-			// '/compare',
-			// '/exchanges/bibox',
-			// '/exchanges/binance',
-			// '/exchanges/bitfinex',
-			// '/exchanges/bittrex',
-			// '/exchanges/coss',
-			// '/exchanges/kraken',
-			// '/exchanges/kucoin',
-			// '/exchanges/poloniex',
-			// '/exchanges/theocean',
-			// '/exchanges/upbit'
-		// ].map(route => ({
-		// 	url: route,
-		// 	changefreq: 'monthly',
-		// 	priority: 1,
-		// 	lastmodISO: new Date().toISOString().split('T')[0]
-		// }))
 	},
 
 	// for sass
@@ -257,21 +224,15 @@ export default {
 	*/
 
 	generate: {
-		// fallback: true
-		// async routes () {
-			// const { $content } = require('@nuxt/content');
-			// const files = await $content('articles').only(['slug']).fetch();
-			// return files.map(file => '/article/fourth');
-			// return files.map(file => '/article/' + file.path);
-			// return ['/article/fourth'];
-		// }
-
 		fallback: "404.html",
 
 		routes: async () => {
+			// Standard routes like /, /about, /contacts, /gallery etc are crawled with nuxt crawler if we have nuxt-links to them,
+			// Here we add dynamic routes
+
 			// articles routes
 			const { $content } = require('@nuxt/content');
-			let articles = await $content('articles').only(['slug', 'createdAt', 'updatedAt']).fetch();
+			let articles = await $content('articles').only(['slug', 'manualCreatedAt', 'updatedAt']).fetch();
 			let articleRoutes = articles.map( (article) => `/article/${article.slug}`);
 
 			// articles pages routes
@@ -285,8 +246,8 @@ export default {
 				skip = currentPage * perPage - perPage; // 1 * 2 -2 (0), 2 * 2 - 2 (2), 3 * 2 - 2 (4)
 
 				current_pages_articles = await $content('articles')
-					.only(['slug', 'createdAt', 'updatedAt'])
-					.sortBy('createdAt', 'desc')
+					.only(['slug', 'manualCreatedAt', 'updatedAt'])
+					.sortBy('manualCreatedAt', 'desc')
 					.skip(skip)
 					.limit(perPage)
 					.fetch();
@@ -302,6 +263,42 @@ export default {
 	},
 
 	export: {
+		fallback: "404.html",
+
+		routes: async () => {
+			// Standard routes like /, /about, /contacts, /gallery etc are crawled with nuxt crawler if we have nuxt-links to them,
+			// Here we add dynamic routes
+
+			// articles routes
+			const { $content } = require('@nuxt/content');
+			let articles = await $content('articles').only(['slug', 'manualCreatedAt', 'updatedAt']).fetch();
+			let articleRoutes = articles.map( (article) => `/article/${article.slug}`);
+
+			// articles pages routes
+			const perPage = 2;
+			let skip;
+			let current_pages_articles;
+			let articlePagesRoutes = [];
+			const pagesAmount = Math.ceil(articles.length / perPage);
+
+			for (let currentPage = 1; currentPage <= pagesAmount; currentPage++) {
+				skip = currentPage * perPage - perPage; // 1 * 2 -2 (0), 2 * 2 - 2 (2), 3 * 2 - 2 (4)
+
+				current_pages_articles = await $content('articles')
+					.only(['slug', 'manualCreatedAt', 'updatedAt'])
+					.sortBy('manualCreatedAt', 'desc')
+					.skip(skip)
+					.limit(perPage)
+					.fetch();
+
+				articlePagesRoutes.push(`/articles/${currentPage}`);
+			}
+
+			return [
+				...articlePagesRoutes,
+				...articleRoutes
+			];
+		}
 		// fallback: "404.html",
 
 		// routes: function () {

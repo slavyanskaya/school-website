@@ -45,7 +45,7 @@
 		async asyncData({$content, params, route}) {
 			let latestArticles = await $content('articles')
 				.without(['body'])
-				.sortBy('createdAt', 'desc')
+				.sortBy('manualCreatedAt', 'desc')
 				.limit(3)
 				.fetch();
 

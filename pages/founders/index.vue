@@ -231,12 +231,12 @@
 		overflow:hidden;
 	}
 
-
 	.green{
 		background-color:#6fb936;
 	}
 	.thumb{
 		margin-bottom: 30px;
+		min-height: 200px;
 	}
 
 	.page-top{

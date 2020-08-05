@@ -43,19 +43,28 @@
 														</figcaption>
 
 														<a href="#"><img :src="`/images/articles/${article.slug}/article-header-image.jpg`" :alt="article.description"></a>
+
 <!--														<a href="#"><img :src="`images/news/${article.img}`" alt="img"></a>-->
 													</figure>
 													<div class="mu-blog-meta">
 														Автор: <i>{{ article.author.name }}</i>
 														<br>
-														{{ formatDate(article.createdAt) }}
-<!--														<span><i class="fa fa-comments-o"></i>87</span>-->
+														{{ formatDate(article.manualCreatedAt * 1000) }}
+														<!--														<span><i class="fa fa-comments-o"></i>87</span>-->
 													</div>
+
 													<div class="mu-blog-description">
 <!--														<p>{!! limitString(strip_tags($news->content), 100) !!}</p>-->
 														<nuxt-link class="mu-read-more-btn" :to="{name: 'article-slug', params: {slug: article.slug} }">Подробнее</nuxt-link>
+
+														<hr class="w-100">
+
 													</div>
+
+
 												</article>
+
+
 											</div>
 <!--											@empty-->
 <!--											<p>No News</p>-->
@@ -255,14 +264,14 @@
 		// },
 
 		async asyncData({ $content, params, route }) {
-			const perPage = 2;
+			const perPage = 10;
 			let page = parseInt(params.page);
 			// console.log(route);
 			let skip = page * perPage - perPage;
 
 			let articles = await $content('articles')
 				.without(['body'])
-				.sortBy('createdAt', 'desc')
+				.sortBy('manualCreatedAt', 'desc')
 				.skip(skip)
 				.limit(perPage)
 				.fetch();
@@ -274,7 +283,7 @@
 			(
 			(
 				await $content('articles')
-					.only(['createdAt'])
+					.only(['manualCreatedAt'])
 					.fetch()
 				).length / perPage
 			);

@@ -18,7 +18,7 @@
 						<!-- TODO on md size make text float the image -->
 
 						<div class="row mt-5">
-							<div class="col-lg-6 col-md-6">
+							<div class="col-lg-6 col-md-12">
 								<div class="mu-about-us-left">
 
 									<p>Добро пожаловать на страницу СШ "Славянская"!</p>
@@ -30,7 +30,7 @@
 										В школе действует современный компьютерный класс. </p>
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6">
+							<div class="col-lg-6 col-md-12">
 								<div class="mu-about-us-right text-center">
 									<iframe style="min-height: 410px; width: 100%;border:none;overflow:hidden;"  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1527694427465387%2Fvideos%2F1562524440649052%2F&show_text=false&appId=2299208336823266" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
 <!--									<a id="mu-abtus-video" href="https://www.youtube.com/embed/HN3pm9qYAUs" target="mutube-video">-->
@@ -41,13 +41,13 @@
 						</div>
 <!--						TODO Make facebook player with popup, not iframe and fix height/width issues-->
 						<div class="row mt-5">
-							<div class="col-lg-6 col-md-6 order-2 order-lg-1">
+							<div class="col-lg-6 col-md-12 order-2 order-lg-1">
 								<div class="mu-about-us-left">
 									<img src="/images/layouts/about-us/gousars.jpg" class="img-fluid mb-4 mb-lg-0" alt="gousari">
 								</div>
 							</div>
 
-							<div class="col-lg-6 col-md-6 order-1 order-lg-2">
+							<div class="col-lg-6 col-md-12 order-1 order-lg-2">
 								<div class="mu-about-us">
 									<p>Проводится большая внеклассная и внешкольная работа. Деятельность школьного театра старшеклассников «Светоч», театра кукол «Гармоша» (дважды лауреат Всеармянского фестиваля кукольных коллективов) и детского хора «Сударушка» неоднократно отмечалась грамотами и дипломами Министерства образования и науки РА, Министерства культуры РА, Посольства РФ в РА, Представительства росзарубежцентра в РА.
 										За более чем 20-летнюю историю своего существования школа выпустила целую плеяду талантливых воспитанников. Наши выпускники продолжают учёбу в вузах или уже работают в Ереване и Москве, в Санкт-Петербурге и Мадриде, в Сочи и Ростове-на- Дону.
@@ -71,5 +71,11 @@
 </script>
 
 <style scoped>
-
+	/*div>p:first-child::first-letter {*/
+	/*	font: bold italic 3em / .5 serif;*/
+	/*	font-style: italic;*/
+	/*	color: #607d8b;*/
+	/*	float: left;*/
+	/*	margin: 0.2em 0.25em .01em 0;*/
+	/*}*/
 </style>

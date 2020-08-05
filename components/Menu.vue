@@ -5,7 +5,7 @@
 			<div class="container">
 				<a href="#" class="navbar-brand navbar_brand">
 					<!-- Logo Image -->
-					<img src="logo.png" width="45" alt=""
+					<img src="/logo.png" width="45" alt=""
 						 class="d-inline-block align-middle mr-2">
 					<!-- Logo Text -->
 					<span class="text-uppercase font-weight-bold">Славянская</span>
@@ -28,7 +28,7 @@
 				<div id="navbarSupportedContent" class="collapse navbar-collapse">
 					<ul class="navbar-nav navbar_nav ml-auto">
 						<li class="nav-item nav__item text-center px-1"
-							:class="{'nav__item--active': $nuxt.$route.path == '/'}">
+							:class="{'nav__item--active': $nuxt.$route.path === '/'}">
 							<nuxt-link to="/" exact class="nav-link nav__link ">Главная</nuxt-link>
 						</li>
 
@@ -38,22 +38,22 @@
 <!--						</li>-->
 
 						<li class="nav-item nav__item text-center px-1"
-							:class="{'nav__item--active': $nuxt.$route.path == '/about'}">
+							:class="{'nav__item--active': $nuxt.$route.path === '/about'}">
 							<nuxt-link :to="{name: 'about'}" exact class="nav-link nav__link ">О школе</nuxt-link>
 						</li>
 
 						<li class="nav-item nav__item text-center px-1"
-							:class="{'nav__item--active': $nuxt.$route.path == '/founders'}">
+							:class="{'nav__item--active': $nuxt.$route.path === '/founders'}">
 							<nuxt-link to="/founders" exact class="nav-link nav__link ">Учредитель</nuxt-link>
 						</li>
 
 						<li class="nav-item nav__item text-center px-1"
-							:class="{'nav__item--active': $nuxt.$route.path == '/articles.index'}">
-							<nuxt-link :to="{name: 'articles-page', params: {page: 1} }" exact class="nav-link nav__link">Новости</nuxt-link>
+							:class="{'nav__item--active': ($nuxt.$route.name === 'articles-page') || ($nuxt.$route.name === 'article-slug')}">
+							<nuxt-link :to="{name: 'articles-page', params: {page: 1} }" exact class="nav-link nav__link" :class="{'nav__link--active': ($nuxt.$route.name === 'articles-page') || ($nuxt.$route.name === 'article-slug')}">Новости</nuxt-link>
 						</li>
 
 						<li class="nav-item nav__item text-center px-1"
-							:class="{'nav__item--active': $nuxt.$route.path == '/contact'}">
+							:class="{'nav__item--active': $nuxt.$route.path === '/contact'}">
 							<nuxt-link  to="/contact" exact class="nav-link nav__link ">Контакты</nuxt-link>
 						</li>
 

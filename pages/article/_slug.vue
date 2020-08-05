@@ -41,22 +41,21 @@
 															<h3><strong href="#">{{ article.description }}</strong></h3>
 														</figcaption>
 													</figure>
-
 													<br>
-
-													<div class="mu-blog-meta">
-														Автор: <i>{{ article.author.name }}</i>
-														<br>
-														{{ formatDate(article.createdAt) }}
-<!--														<a href="#">{{ article.diffForHumansAccessor }}</a>-->
-<!--														<span><i class="fa fa-comments-o"></i>87</span>-->
-													</div>
 
 													<div class="mu-blog-description">
 														<nuxt-content :document="article" />
-<!--														{!! $news->content !!}-->
+														<hr class="w-100 my-2">
 													</div>
+
 													<!-- End blog social share -->
+													<div class="mu-blog-meta">
+														Автор: <i>{{ article.author.name }}</i>
+														<br>
+														{{ formatDate(article.manualCreatedAt * 1000) }}
+														<!--														<a href="#">{{ article.diffForHumansAccessor }}</a>-->
+														<!--														<span><i class="fa fa-comments-o"></i>87</span>-->
+													</div>
 												</article>
 											</div>
 										</div>
@@ -376,5 +375,12 @@
 </script>
 
 <style scoped>
-
+	/*For some reason only works if not scoped, and that destroys the whole site text*/
+	/*.mu-blog-description>p:first-child::first-letter {*/
+	/*	font: bold italic 3em / .5 serif;*/
+	/*	font-style: italic;*/
+	/*	color: #607d8b;*/
+	/*	float: left;*/
+	/*	margin: 0.2em 0.25em .01em 0;*/
+	/*}*/
 </style>
