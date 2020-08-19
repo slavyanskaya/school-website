@@ -20,9 +20,9 @@
 <!--					<div class="rect5"></div>-->
 <!--				</div>-->
 
-				<div id="latest-courses-slider " class="row d-flex justify-content-center">
+				<div id="latest-courses-slider " class="row justify-content-center">
 					<div class="col-lg-4 col-12 mb-5" v-for="(article, index) in latestArticles" :key="index">
-						<div class="card h-130">
+						<div class="card h-100">
 							<img class="card-img-top" :src="`/images/articles/${article.slug}/article-header-image.jpg`" :alt="article.title">
 							<div class="card-body">
 								<h6 class="card-title">{{ formatDate(article.manualCreatedAt * 1000) }}</h6>
@@ -179,6 +179,7 @@
 		margin-top: -25px;
 		width: 94%;
 		border-radius: 5%;
+		height: 200px;
 
 		-webkit-box-shadow: 0px 13px 23px -2px rgba(130,130,130,1);
 		-moz-box-shadow: 0px 13px 23px -2px rgba(130,130,130,1);
