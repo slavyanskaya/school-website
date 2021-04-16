@@ -76,7 +76,7 @@ lang: ru-RU # Set the site language
 title: "Славянская школа" # Site name or title, also used in jekyll-seo-tag
 logo: "/images/common/school-logo.jpg" # Site logo, also used in jekyll-seo-tag
 description: "Официальный веб-сайт средней школы \"Славянская\" в Ереване. Славянская школа - единственная русская школа в Республике Армения." # Site description and default description, also used in jekyll-seo-tag
-url: "https://slavyanskay.am" # Site url, also used in jekyll-seo-tag
+url: "https://slavyanskay.school" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/slavyanskaya/school-website"
 email: "me@daviddarnes.com"
@@ -92,7 +92,7 @@ navigation_header:
   Контакты: /search/
 
 navigation_footer:
-  Сайт создан учениками школы.: https://slavyanskaya.am
+  Сайт создан учениками школы.: https://slavyanskaya.school
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/DavidDarnes
