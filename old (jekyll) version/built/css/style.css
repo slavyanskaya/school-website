@@ -1,0 +1,378 @@
+body,html
+{
+    height: 100%;
+    width: 100%;
+    font-family: "SeguaIO" , "Arial" , "Helvetica" , sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+    position: relative;
+}
+.wrapper
+{
+    position: relative;
+    max-width: 100%;
+    min-width: 980px;
+    font-family: "SegoeUI";
+    box-sizing: border-box;
+    padding-bottom: 200px;
+    min-height: 100%;
+    background-color: #fff;
+    color: #000;
+}
+ #index .wrapper
+{
+    background-image: url(../image/index_bg.jpg);
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: top center ;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 142px;
+    z-index:2;
+    
+}
+.in
+{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 960px;
+    
+}
+
+nav ul > li
+{
+    border: 4px solid #fff;
+    /*display: inline-block;*/
+    float: left;
+    /*margin-right:-8px;*/
+ 
+    border-left: none;    
+    border-top: none;
+    list-style-type: none;
+}
+nav li:first-child
+{
+    border: 4px solid #fff;
+    border-top: none;    
+}
+nav 
+{   
+    /*text-align: right;*/
+    float: right;
+}
+nav a
+{
+    padding: 20px;
+    display: block;
+    padding-top: 90px;
+    font-size: 27px;
+    letter-spacing: 0.5px;
+}
+a
+{
+    text-decoration: none;
+    color: #fff;
+    /*font-size: 27px;*/
+
+}
+footer
+{
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    height: 117px;    
+    background-color: #fff;
+    bottom: 0;
+    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.20);
+    left: 0;
+    max-height: 117px;
+}
+footer p 
+{
+    
+    padding-bottom: 48px;
+    padding-top: 48px;
+    font-size: 25px;
+    
+}
+p
+{
+    /*padding-top: 40px;*/
+    padding-bottom: 30px;
+}
+
+ #index main
+{
+    padding-top: 320px;
+}
+ h1
+{
+    font-size: 60px;  
+    line-height: 0.9;
+    color: #000;
+    max-width: 727px;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    margin: 70px 0 30px 180px;
+}
+h1::before
+{
+    position: absolute;
+    content: "";
+    height: 278px;
+    width: 253px;
+    background-color:#e9b926;
+    top: -70px; 
+    left: -151px;
+    z-index: -1;
+}
+#index h1
+{
+    color: #fff;
+    width: 727px;
+    margin-left: 220px;
+    
+}
+#index h1:before
+{
+    position: absolute;
+    content: "";
+    height: 378px;
+    width: 253px;
+    background-color:#e9b926;
+    top: -70px; 
+    left: -170px;
+    z-index: -10;
+}
+
+h1+p {
+    margin-bottom: 50px;
+}
+
+.tel
+{
+    
+     padding-bottom: 48px;
+     float: right;
+     top: 0px;   
+}
+p > a
+{
+    color: black;
+    /*font-size: 25px; */   
+}
+footer p
+{
+    float: left;
+}
+nav li:nth-child(1):hover, li:nth-child(1) .active
+{
+    background-color: #ff0000;
+    
+}
+nav li:nth-child(2):hover, li:nth-child(2) .active
+{
+    background-color: #e9b926;
+    
+}
+nav li:nth-child(3):hover, li:nth-child(3) .active
+{
+    background-color: #0c0c8b;
+    
+}
+nav li:nth-child(4):hover, li:nth-child(4) .active
+{
+    background-color: #09a814;
+    
+}
+nav li:nth-child(5):hover, li:nth-child(5) .active
+{
+    background-color: #00b6cb;
+    
+}
+.logo
+{
+    float: left;
+    zheight: 140px;
+    width: 180px;
+    margin-top: 25px;
+    /*background: #fff;*/
+}
+
+
+
+#header
+
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 142px;
+    z-index:2;    
+}
+
+.background
+{
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: top center ;
+    background-color: #14126e;
+    height: 483px;
+    width: 100%;
+}
+#school .background
+{
+    background-image: url(../image/about_bg.jpg);
+}
+
+
+main
+{
+    padding-top: 50px;
+}
+
+.content_header
+{
+    padding-left: 315px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    min-height: 150px;
+}
+h3
+{
+    padding-bottom: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 120%;
+}
+span
+{
+    color: #cfa420;
+}
+.left
+{
+    float: left;
+    width:  50%; 
+    margin-right: 40px;
+    margin-bottom: 50px;
+   
+}
+.right
+{
+    float: right;
+    width: 50%;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+
+/*postpleniye*/
+#postup .background
+{
+   
+    background-image: url(../image/admission_bg.jpg);
+}
+
+
+strong
+{
+font-weight: bold;
+}
+
+/*about teachers*/
+
+#teachs .background
+{
+   
+    background-image: url(../image/teachers_bg.jpg);
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+/*about news*/
+
+
+#news .background
+{
+   
+    background-image: url(../image/news_bg.jpg);
+}
+
+
+/*Контакты*/
+
+#cont .background
+{
+   
+    background-image: url(../image/contacts_bg.jpg);
+}
+
+.map
+{
+ float: right;
+ border: 0;
+ width: 600px;
+ height: 450px;
+}
+section:after
+{
+    content: '';    
+    clear: both;
+    display: block;
+}
+ 
+/*news second */
+
+#news .background
+{
+   
+    background-image: url(../image/news_bg.jpg);
+}
+
+.links a
+{
+    font-weight: bold;
+}
+.links a:hover
+{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1050px)
+{
+    nav a 
+    {
+       font-size: 22px; 
+    }
+}
+.size
+{
+    font-size: 36px;
+}
+#news h2
+{
+    font-size: 36px;
+    line-height: 136%;
+}
+.content_header > p
+{
+    padding-top: 15px;
+}
+
+main ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}

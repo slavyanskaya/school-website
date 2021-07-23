@@ -1,0 +1,27 @@
+/*==================
+ ERROR PAGE
+====================*/
+#mu-error{
+    display: inline;
+    float: left;
+    padding: 100px 0;
+    width: 100%;
+    .mu-error-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        text-align: center;
+        p{
+            font-size: 22px;
+
+        }
+        span{
+
+        }
+        h2{
+            font-size: 200px;
+            line-height: 1.7;
+        }
+
+    }
+}

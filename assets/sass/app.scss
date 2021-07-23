@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  // 'abstracts/functions',
+  // 'abstracts/colours',
+   'abstracts/fonts',
+  'abstracts/mixins';
+
+// 2. Vendors
+// @import
+  // 'vendors/normalize';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/responsive',
+  'base/typography';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/nav',
+  'layout/footer',
+  'layout/top-slider',
+  'layout/about-us',
+  'layout/founders',
+  'layout/about-us-counter',
+  'layout/features',
+  //'layout/services',
+  'layout/latest-courses',
+  'layout/teachers',
+  'layout/testimonials',
+  'layout/announcement',
+  'layout/from-blog';
+
+// 5. Components
+@import
+  'components/buttons',
+  'components/preloader',
+  'components/scroll-to-top',
+  'components/search';
+
+// 6. Page-specific styles
+@import
+  'pages/home',
+  'pages/error',
+  'pages/gallery',
+  'pages/contact',
+  'pages/blog-index',
+  'pages/blog-sinle';
+
+// 7. Themes
+@import
+  //'themes/default';
+  'themes/theme-color';
+

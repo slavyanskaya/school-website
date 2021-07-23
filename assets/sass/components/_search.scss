@@ -1,0 +1,52 @@
+/*==================
+ SEARCH
+====================*/
+#mu-search{
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%) scale(0);
+    @include transition(all 0.5s ease-in-out 0s);
+    width: 100%;
+    z-index: 99999;
+    .mu-search-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        padding: 20% 0;
+        text-align: center;
+        .mu-search-close{
+            border: none;
+            color: #fff;
+            display: inline-block;
+            font-size: 25px;
+            outline: none;
+            height: 50px;
+            line-height: 50px;
+            position: absolute;
+            right: 100px;
+            text-align: center;
+            top: 50px;
+            width: 50px;
+        }
+        .mu-search-form{
+            input[type="search"]{
+                background: transparent none repeat scroll 0 0;
+                border: medium none;
+                color: #fff;
+                font-size: 45px;
+                font-family: $heading-font;
+                height: 100px;
+                outline: medium none;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
+#mu-search.mu-search-open{
+    transform: translateY(0) scale(1);
+}

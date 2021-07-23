@@ -1,0 +1,50 @@
+
+// HEADER
+
+
+#mu-header{
+	background-color: #f8f8f8;
+	width: 100%;
+	.mu-header-area{
+		padding: 10px 0;
+		width: 100%;
+		.mu-header-top-left{
+
+            white-space: nowrap;
+			width: 100%;
+			.mu-top-email{
+				font-size: 14px;
+				i{
+					margin-right: 5px;
+				}
+			}
+			.mu-top-phone{
+				border-left: 1px solid #ddd;
+
+				font-size: 14px;
+
+				margin-left: 15px;
+				padding-left: 15px;
+				i{
+					margin-right: 5px;
+				}
+			}
+		}
+		.mu-header-top-right{
+			text-align: right;
+			width: 100%;
+			.mu-top-social-nav			{
+				display: inline-block;
+				li{
+					display: inline-block;
+					a{
+						display: inline-block;
+						font-size: 14px;
+						padding: 0 8px;
+						@include transition(all 0.5s);
+					}
+				}
+			}
+		}
+	}
+}

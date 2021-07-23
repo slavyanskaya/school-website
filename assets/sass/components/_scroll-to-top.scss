@@ -1,0 +1,34 @@
+/*==================
+ SCROLL TO TOP
+====================*/
+.scrollToTop {
+    border-radius: 4px;
+    bottom: 60px;
+    color: #fff;
+    display: none;
+    font-size: 30px;
+    line-height: 50px;
+    height: 50px;
+    font-family: $heading-font;
+    padding: 5px 0;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+    z-index: 999;
+    @include transition(all 0.5s ease 0s);
+    i{
+        display: block;
+    }
+    span{
+        display: block;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+.scrollToTop:hover,
+.scrollToTop:focus{
+    color: #fff;
+}

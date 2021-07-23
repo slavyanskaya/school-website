@@ -1,0 +1,252 @@
+/*==================
+ COURSES PAGE
+====================*/
+#mu-page-breadcrumb{
+    background-color: #333;
+    display: inline;
+    float: left;
+    padding: 30px 0;
+    width: 100%;
+    .mu-page-breadcrumb-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        h2{
+            text-align: center;
+            color: #fff;
+        }
+        .breadcrumb{
+            background-color: transparent;
+            justify-content: center;
+            border-radius: 0;
+            margin-bottom: 0;
+            margin-top: 10px;
+            text-align: center;
+            li{
+                color: #fff;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+#mu-course-content{
+    background-color: #f8f8f8;
+    //display: inline;
+    //float: left;
+    padding: 100px 0;
+    width: 100%;
+    .mu-course-content-area{
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-course-container{
+            display: inline;
+            float: left;
+            width: 100%;
+            .mu-latest-course-single{
+                border: 1px solid #ccc;
+                margin-bottom: 30px;
+            }
+        }
+        .mu-sidebar{
+            display: inline;
+            float: left;
+            width: 100%;
+            .mu-single-sidebar{
+                background-color: #FFF;
+                display: inline;
+                float: left;
+                margin-bottom: 25px;
+                padding: 0 10px 10px;
+                width: 100%;
+                h3{
+
+                }
+                .mu-sidebar-catg{
+                    padding-left: 15px;
+                    li{
+                        a{
+                            color: #333;
+                            display: inline-block;
+                            font-size: 15px;
+                            font-weight: normal;
+                            padding: 5px 0 5px 15px;
+                            position: relative;
+                            text-transform: capitalize;
+                            @include transition(all 0.5s ease 0s);
+                            &:hover,
+                            &:focus{
+                                margin-left: 5px;
+                            }
+                            &:before{
+                                content: "\f101";
+                                font-family: FontAwesome;
+                                left: 0;
+                                position: absolute;
+                                top: 5px;
+                            }
+                        }
+                    }
+                }
+                .mu-sidebar-popular-courses{
+                    display: inline;
+                    float: left;
+                    margin-top: 10px;
+                    width: 100%;
+                    .media{
+                        .media-left{
+                            .media-object{
+                                width: 70px;
+                                height: 60px;
+                            }
+                        }
+                        .media-body{
+                            .media-heading {
+                                font-size: 16px;
+                                a{
+                                    @include transition(all 0.5s);
+                                }
+                            }
+                            .popular-course-price{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .mu-sidebar-archives{
+                    li{
+                        a, button{
+                            &:before{
+                                content: '\f0da';
+                            }
+                            span{
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+                .tag-cloud{
+                    display: inline;
+                    float: left;
+                    margin-top: 5px;
+                    width: 100%;
+                    a{
+                        border-bottom: 1px solid #ccc;
+                        display: inline-block;
+                        font-size: 15px;
+                        letter-spacing: 0.3px;
+                        margin: 0 5px 10px;
+                        padding: 5px;
+                        @include transition(all 0.5s);
+                    }
+                }
+            }
+        }
+        .mu-course-details{
+            background-color: #FFF;
+            .mu-latest-course-single{
+                border: none;
+                .mu-latest-course-imgcaption{
+                    background-color: #FFF;
+                }
+                .mu-latest-course-single-content{
+                    h2{
+                        line-height: 1.7;
+                        margin-bottom: 20px;
+                    }
+                    h4{
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 10px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                    ul{
+                        margin-bottom: 30px;
+                        li{
+                            // line-height: 1.7;
+                            margin-bottom: 10px;
+                            span:first-child{
+                                display: inline-block;
+                                min-width: 150px;
+                                float: left;
+                            }
+                        }
+                    }
+                    .table{
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+.mu-pagination{
+    display: inline;
+    float: left;
+    width: 100%;
+    .pagination{
+        li{
+            &:first-child a{
+                border-radius: 0;
+                span{
+                    margin-right: 5px;
+                }
+            }
+            &:last-child a{
+                border-radius: 0;
+                span{
+                    margin-left: 5px;
+                }
+            }
+            a{
+                color: #333;
+                margin: 0 5px;
+                @include transition(all 0.5s);
+                &:hover,
+                &:focus{
+                    color: #fff;
+                }
+            }
+        }
+        .active{
+            a{
+                color: #fff;
+            }
+        }
+    }
+}
+.mu-related-item{
+    display: inline;
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+    .mu-related-item-area{
+        margin-top: 30px;
+        .mu-latest-course-single{
+            border: 1px solid #ccc;
+        }
+        .mu-blog-single-item{
+            background-color: #FFF;
+            .mu-blog-caption{
+                padding: 0 15px;
+            }
+            .mu-blog-meta{
+                padding: 0 15px;
+            }
+            .mu-blog-description{
+                padding: 0 15px 20px;
+            }
+
+        }
+        #mu-related-item-slide{
+            .slick-prev,
+            .slick-next{
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}
