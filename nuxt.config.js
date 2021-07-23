@@ -128,7 +128,7 @@ export default {
 
 	sitemap: {
 		// path: '/cryptoticker.cc.xml',
-		hostname: 'https://slavyanskaya.am',
+		hostname: 'https://slavyanskaya.school',
 		cacheTime: 1000 * 60 * 15,
 		gzip: true,
 		// generate: false,
