@@ -1,5 +1,5 @@
 <template>
-	<fragment>
+	<div>
 		<!-- Page breadcrumb -->
 		<section id="mu-page-breadcrumb">
 			<div class="container">
@@ -244,7 +244,7 @@
 			</div>
 		</section>
 		<!-- End Course Archive Content -->
-	</fragment>
+	</div>
 </template>
 
 <script>

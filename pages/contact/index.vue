@@ -1,5 +1,5 @@
 <template>
-	<fragment>
+	<div>
 		<!-- Page breadcrumb -->
 		<section id="mu-page-breadcrumb">
 			<div class="container">
@@ -70,7 +70,7 @@
 			</div>
 		</section>
 		<!-- End contact  -->
-	</fragment>
+	</div>
 </template>
 
 <script>
@@ -79,7 +79,9 @@
 			return {
 				title: 'Контакты',
 			}
-		}
+		},
+
+		// transition: 'page'
     }
 </script>
 

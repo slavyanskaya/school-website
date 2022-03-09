@@ -1,0 +1,19 @@
+//.page-scale-enter-active, .page-scale-leave-active {
+//	transition: all 0.5s;
+//}
+//
+//.page-scale-enter, .page-scale-leave-active {
+//	opacity: 0;
+//	transform: scale(0);
+//}
+
+.page-enter-active, .page-leave-active {
+	//display: none;
+	transition: opacity 0.25s;
+}
+
+.page-enter, .page-leave-active {
+	opacity: 0;
+	//transform: scale(0);
+	//display: none;
+}
