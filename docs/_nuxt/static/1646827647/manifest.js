@@ -1,1 +1,0 @@
-__NUXT_JSONP__("manifest.js", {routes:["\u002F","\u002Farticles\u002F1","\u002Farticle\u002Fpodarok-pervoklassnikam-ot-oo-rossiya-respubliki-armenia","\u002Fcontact","\u002Fabout","\u002Farticle\u002Fpedagog-ss-slavyanskaya-tatyana-stepanovna-belousova-stala-laureatom-puskinskoi-premii","\u002Ffounders"]})

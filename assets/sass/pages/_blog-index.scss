@@ -184,40 +184,41 @@
     }
 }
 .mu-pagination{
-    display: inline;
-    float: left;
-    width: 100%;
-    .pagination{
-        li{
-            &:first-child a{
-                border-radius: 0;
-                span{
-                    margin-right: 5px;
-                }
-            }
-            &:last-child a{
-                border-radius: 0;
-                span{
-                    margin-left: 5px;
-                }
-            }
-            a{
-                color: #333;
-                margin: 0 5px;
-                @include transition(all 0.5s);
-                &:hover,
-                &:focus{
-                    color: #fff;
-                }
-            }
-        }
-        .active{
-            a{
-                color: #fff;
-            }
-        }
-    }
+    //display: inline;
+    //float: left;
+    //width: 100%;
+    //.pagination{
+    //    li{
+    //        &:first-child a{
+    //            border-radius: 0;
+    //            span{
+    //                margin-right: 5px;
+    //            }
+    //        }
+    //        &:last-child a{
+    //            border-radius: 0;
+    //            span{
+    //                margin-left: 5px;
+    //            }
+    //        }
+    //        a{
+    //            color: #333;
+    //            margin: 0 5px;
+    //            @include transition(all 0.5s);
+    //            &:hover,
+    //            &:focus{
+    //                color: #fff;
+    //            }
+    //        }
+    //    }
+    //    .active{
+    //        a{
+    //            color: #fff;
+    //        }
+    //    }
+    //}
 }
+
 .mu-related-item{
     display: inline;
     float: left;

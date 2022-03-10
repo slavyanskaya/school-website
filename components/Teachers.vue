@@ -12,9 +12,9 @@
 
 						<div class="mu-our-teacher-content">
 							<div id="slider-nav" class="slider-nav">
-								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/anaida-rafikovna-melikyan.jpg" alt="teacher img">
-								</div>
+<!--								<div class="slider__item">-->
+<!--									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/anaida-rafikovna-melikyan.jpg" alt="teacher img">-->
+<!--								</div>-->
 
 								<div class="slider__item">
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/vasilevna-natalya-ivanovna.jpg" alt="teacher img">
@@ -24,9 +24,9 @@
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/nonna-genrihovna-gaziyan.jpg" alt="teacher img">
 								</div>
 
-								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/vardanyan-natalya-sergeevna.jpg" alt="teacher img">
-								</div>
+<!--								<div class="slider__item">-->
+<!--									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/vardanyan-natalya-sergeevna.jpg" alt="teacher img">-->
+<!--								</div>-->
 
 								<div class="slider__item">
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/hayrapetyan-lilit-valeryevna.jpg" alt="teacher img">
@@ -42,12 +42,12 @@
 							</div>
 
 							<div id="slider-for">
-								<div class="slider__item">
-									<h2>Меликян Анаида Рафиковна </h2>
-									<span class="slide__position">Преподаватель математики</span>
-									<p class="slide__start-time">Работает в школе с 2009 года</p>
-									<i class="slide__quote">СШ "Славянская" - это частица моей жизни!</i>
-								</div>
+<!--								<div class="slider__item">-->
+<!--									<h2>Меликян Анаида Рафиковна </h2>-->
+<!--									<span class="slide__position">Преподаватель математики</span>-->
+<!--									<p class="slide__start-time">Работает в школе с 2009 года</p>-->
+<!--									<i class="slide__quote">СШ "Славянская" - это частица моей жизни!</i>-->
+<!--								</div>-->
 
 								<div class="slider__item">
 									<h2>Васильева Альбина Ивановна</h2>
@@ -65,14 +65,14 @@
 									<i class="slide__quote">СШ "Славянская" - мой второй дом. Здесь всегда тепло и уютно!</i>
 								</div>
 
-								<div class="slider__item">
-									<h2>Варданян Наталья Сергеевна</h2>
-									<span class="slide__position">Преподаватель русского языка и литературы</span>
-									<p class="slide__start-time">Работает в школе с 2017 года</p>
-									<p>Председатель филиала "Абовян" ОО "Россия" РА</p>
-									<p>Награждена медалью Мовсеса Хоренаци за выдающиеся творческие достижения в области образования</p>
-									<i class="slide__quote">СШ "Славянская" для меня - источник творческого вдохновения!</i>
-								</div>
+<!--								<div class="slider__item">-->
+<!--									<h2>Варданян Наталья Сергеевна</h2>-->
+<!--									<span class="slide__position">Преподаватель русского языка и литературы</span>-->
+<!--									<p class="slide__start-time">Работает в школе с 2017 года</p>-->
+<!--									<p>Председатель филиала "Абовян" ОО "Россия" РА</p>-->
+<!--									<p>Награждена медалью Мовсеса Хоренаци за выдающиеся творческие достижения в области образования</p>-->
+<!--									<i class="slide__quote">СШ "Славянская" для меня - источник творческого вдохновения!</i>-->
+<!--								</div>-->
 
 								<div class="slider__item">
 									<h2>Айрапетян Лилит Валерьевна</h2>
@@ -141,7 +141,7 @@
 				});
 
 				$('#teacher .slider-nav').slick({
-					slidesToShow: 5,
+					slidesToShow: 3,
 					slidesToScroll: 1,
 					dots: false,
 					centerMode: true,

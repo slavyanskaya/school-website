@@ -13,8 +13,6 @@ export default {
 		host: '0.0.0.0', // default: localhost
 	},
 
-
-
 	/*
 	** Nuxt rendering mode
 	** See https://nuxtjs.org/api/configuration-mode
@@ -36,14 +34,15 @@ export default {
 			{charset: 'utf-8'},
 			{name: 'viewport', content: 'width=device-width, initial-scale=1'},
 			{name: 'google-site-verification', content: 'i_iGtKzqlpNjcH-8o7VrZPZ_gL9mKWbOrrTW5ERQiMU'},
-			{hid: 'description', name: 'description', content: process.env.npm_package_description || ''},
+			// {hid: 'description', name: 'description', content: process.env.npm_package_description || ''},
+			{hid: 'description', name: 'description', content: process.env.npm_package_description || "Русская Школа В Армении, Русская Школа В Ереване, СШ Славянская, СШ 'Славянская', Средняя Школа Славянская, Армения Русская Школа, Армения Русская Школа, Славянская Школа В Армении, Slavyanskaya, Slavyanskaya Shkola, Russkaya Shkola V Armenii"},
 			{
 				htmlAttrs: {
 					lang: 'ru',
 					amp: true
 				}
 			},
-			{ hid: 'keywords', name: 'keywords', content: "Русская Школа В Армении, Русская Школа В Ереване, СШ Славянская, СШ 'Славянская', Сресняя Школа Славянская, Армения Русская Школа, Армения Русская Школа, Славянская Школа В Армении, Slavyanskaya, Slavyanskaya Shkola, Russkaya Shkola V Armenii" }
+			{ hid: 'keywords', name: 'keywords', content: "Русская Школа В Армении, Русская Школа В Ереване, СШ Славянская, СШ 'Славянская', Средняя Школа Славянская, Армения Русская Школа, Армения Русская Школа, Славянская Школа В Армении, Slavyanskaya, Slavyanskaya Shkola, Russkaya Shkola V Armenii" }
 		],
 		link: [
 			{rel: 'icon', type: 'image/x-icon', href: '/favicons/favicon.ico'},
@@ -65,7 +64,7 @@ export default {
 			{src: 'https://code.jquery.com/jquery-3.4.1.min.js', type: 'text/javascript', body: true},
 			{src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', type: 'text/javascript', body: true},
 			{src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', type: 'text/javascript', body: true},
-
+			{src: 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2', type: 'text/javascript', body: true, async: true, defer: true},
 			{src: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js', type: 'text/javascript', body: true},
 			{src: '/js/slick.js', type: 'text/javascript', body: true},
 		]
@@ -76,9 +75,20 @@ export default {
 	*/
 	css: ["~/assets/sass/app.scss"],
 
-	pageTransition: {
-		name: "fade",
-		mode: "out-in"
+	/* Layout Transitions */
+	// layoutTransition: {
+	// 	name: "page",
+	// 	mode: "out-in"
+	// },
+	//
+	// pageTransition: {
+	// 	name: "page",
+	// 	mode: "out-in"
+	// },
+
+	transition: {
+		name: 'page',
+		mode: 'out-in'
 	},
 
 	loadingIndicator: {
@@ -91,7 +101,7 @@ export default {
 	** https://nuxtjs.org/guide/plugins
 	*/
 	plugins: [
-		'./plugins/vue-fragment'
+		// './plugins/vue-frag'
 	],
 	/*
 	** Auto import components
@@ -101,7 +111,6 @@ export default {
 	router: {
 		// linkActiveClass: "nav__item--active",
 		linkExactActiveClass: "nav__link--active",
-
 		// base: '/nuxt-content-test/'
 	},
 

@@ -1,5 +1,5 @@
 <template>
-	<fragment>
+	<div>
 		<MainSlider/>
 		<AboutUs/>
 		<Announcement/>
@@ -11,7 +11,7 @@
 		<Teachers/>
 		<Testimonials/>
 		<Modal/>
-	</fragment>
+	</div>
 </template>
 
 <script>
