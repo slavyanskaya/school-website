@@ -64,7 +64,7 @@ export default {
 			{src: 'https://code.jquery.com/jquery-3.4.1.min.js', type: 'text/javascript', body: true},
 			{src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', type: 'text/javascript', body: true},
 			{src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', type: 'text/javascript', body: true},
-
+			{src: 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2', type: 'text/javascript', body: true, async: true, defer: true},
 			{src: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js', type: 'text/javascript', body: true},
 			{src: '/js/slick.js', type: 'text/javascript', body: true},
 		]

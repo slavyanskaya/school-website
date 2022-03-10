@@ -10,7 +10,7 @@
 
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><nuxt-link to="/">Главная</nuxt-link></li>
-								<li class=" breadcrumb-item active">Новости</li>
+								<li class="breadcrumb-item active">Новости</li>
 							</ol>
 						</div>
 					</div>
@@ -70,61 +70,42 @@
 <!--											<p>No News</p>-->
 <!--											@endforelse-->
 										</div>
-
-										<div class="row">
-											<PaginationNuxtContent ref="paginator" :meta="meta" :range="5"/>
-										</div>
 									</div>
 									<!-- end course content container -->
 
 									<!-- start course pagination -->
-<!--									<div class="mu-pagination">-->
-<!--										<nav>-->
-<!--											<ul class="pagination">-->
-<!--												<li>-->
-<!--													<a href="#" aria-label="Previous">-->
-<!--														<span class="fa fa-angle-left"></span> Prev-->
-<!--													</a>-->
-<!--												</li>-->
-<!--												<li class="active"><a href="#">1</a></li>-->
-<!--												<li><a href="#">2</a></li>-->
-<!--												<li><a href="#">3</a></li>-->
-<!--												<li><a href="#">4</a></li>-->
-<!--												<li><a href="#">5</a></li>-->
-<!--												<li>-->
-<!--													<a @click.prevent="changePageBefore" href="#" aria-label="Next">-->
-<!--														Next <span class="fa fa-angle-right"></span>-->
-<!--													</a>-->
-<!--												</li>-->
-<!--											</ul>-->
-<!--										</nav>-->
-<!--									</div>-->
+									<div class="mu-pagination">
+										<nav>
+											<ul class="pagination">
+												<li>
+													<a href="#" aria-label="Previous">
+														<span class="fa fa-angle-left"></span> Prev
+													</a>
+												</li>
+												<li class="active"><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li><a href="#">5</a></li>
+												<li>
+													<a @click.prevent="changePageBefore" href="#" aria-label="Next">
+														Next <span class="fa fa-angle-right"></span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
 									<!-- end course pagination -->
-<!--									<PaginationNuxtContent ref="paginator" :meta="meta" :range="5"/>-->
+
 									<!-- Pagination -->
 <!--									{{ $all_news->appends(Request::Input())->links() }}-->
 
 									<!-- Pagination END -->
 
-
-
-
-
-
-
-
-<!--									<div class="pagination">-->
-<!--										<a @click.prevent="changePageBefore" href="#"  class="pagination-previous button is-black">Previous &#x3c;</a>-->
-<!--										<a @click.prevent="changePageAfter"  href="#" class="pagination-next button is-black">Next &#x3e;</a>-->
-<!--									</div>-->
-
-
-
-
-
-
-
-
+									<div class="pagination">
+										<a @click.prevent="changePageBefore" href="#"  class="pagination-previous button is-black">Previous &#x3c;</a>
+										<a @click.prevent="changePageAfter"  href="#" class="pagination-next button is-black">Next &#x3e;</a>
+									</div>
 
 								</div>
 
@@ -267,8 +248,6 @@
 </template>
 
 <script>
-	import PaginationNuxtContent from "~/components/Pagination-nuxt-content";
-
     export default {
         name: "index",
 
@@ -277,32 +256,18 @@
         		title: 'Новости, страница ' + this.$route.params.page
 			};
 		},
+		// data() {
+		// 	return {
+		// 		perPage: 3,
+		// 		articles: []
+		// 	}
+		// },
 
-		async asyncData({ $content, params, route, router }) {
+		async asyncData({ $content, params, route }) {
 			const perPage = 2;
-
-			let pagesCount = Math.ceil
-			(
-				(
-					await $content('articles')
-						.only(['manualCreatedAt'])
-						.fetch()
-				).length / perPage
-			);
-
-			let current_page = parseInt(params.page);
-			if (current_page > pagesCount) {
-				current_page = pagesCount;
-				// route.push({ params: {page: current} })
-			}
-			if (current_page < 1) {
-				current_page = 1;
-				// route.push({ params: {page: current} })
-			}
-			// params.page = current_page;
-
-			console.log('current', current_page);
-			let skip = (current_page * perPage) - perPage;
+			let page = parseInt(params.page);
+			// console.log(route);
+			let skip = page * perPage - perPage;
 
 			let articles = await $content('articles')
 				.without(['body'])
@@ -314,19 +279,17 @@
 			// console.log(articles);
 			// Use skip then limit. if you se limit then skip, it has a bug
 
+			let pagesCount = Math.ceil
+			(
+			(
+				await $content('articles')
+					.only(['manualCreatedAt'])
+					.fetch()
+				).length / perPage
+			);
 
-
-			let meta = {current_page, last_page: pagesCount}
-			return {articles, current_page, pagesCount, skip, meta};
+			return {articles, page, pagesCount, skip};
 		},
-
-		// created() {
-		// 	if (parseInt(this.$route.params.page) !== this.current_page) {
-		// 		console.log('changed');
-		// 		this.$router.push({params: {page: this.current_page}})
-		// 	}
-		// 	// this.$router.push({params: {page: this.current_page}})
-		// },
 
 		methods: {
 			formatDate(date) {
@@ -335,8 +298,8 @@
 			},
 
 			changePageBefore() {
-				// alert(this.pagesCount);
-				// alert(parseInt(this.$route.params.current_page) - 1)
+				alert(this.pagesCount);
+				// alert(parseInt(this.$route.params.page) - 1)
 				this.$router.push({
 					name: 'articles-page',
 					params: {
@@ -354,10 +317,6 @@
 					}
 				})
 			}
-		},
-
-		components: {
-			PaginationNuxtContent
 		}
     }
 </script>
