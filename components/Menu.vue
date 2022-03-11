@@ -3,13 +3,21 @@
 	<section>
 		<nav class="navbar navbar-default navbar_default bg-default navbar-expand-md shadow-sm" role="navigation">
 			<div class="container">
-				<a href="#" class="navbar-brand navbar_brand">
+				<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" to="/" exact class="navbar-brand navbar_brand">
 					<!-- Logo Image -->
 					<img src="/logo.png" width="45" alt=""
 						 class="d-inline-block align-middle mr-2">
 					<!-- Logo Text -->
 					<span class="text-uppercase font-weight-bold">Славянская</span>
-				</a>
+				</nuxt-link>
+
+<!--				<a href="#" class="navbar-brand navbar_brand">-->
+<!--					&lt;!&ndash; Logo Image &ndash;&gt;-->
+<!--					<img src="/logo.png" width="45" alt=""-->
+<!--						 class="d-inline-block align-middle mr-2">-->
+<!--					&lt;!&ndash; Logo Text &ndash;&gt;-->
+<!--					<span class="text-uppercase font-weight-bold">Славянская</span>-->
+<!--				</a>-->
 
 				<button
 					type="button"

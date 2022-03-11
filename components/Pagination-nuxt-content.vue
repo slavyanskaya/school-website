@@ -8,10 +8,10 @@
 							:class="[
 								'pagination__link',
 								'pagination__link--prev',
-								{'disabled': meta.current_page == pageNumbers[0] || pageNumbers.length == 0}
+								{'disabled': meta.current_page == allPageNumbers[0] || allPageNumbers.length == 0}
 							]"
-							:to="{params: {page: pageNumbers[0]}}">
-							<!--                    :to="{query: {...$route.query, page: pageNumbers[0]}}">-->
+							:to="{params: {page: allPageNumbers[0]}}">
+							<!--                    :to="{query: {...$route.query, page: allPageNumbers[0]}}">-->
 <!--							First-->
 							<!--							<i class="fas fa-long-arrow-alt-left"></i>-->
 							<i class="fas fa-angle-double-left"></i>
@@ -24,7 +24,7 @@
 						<nuxt-link
 							:class="[
 								'pagination__link',
-								{'disabled': meta.current_page <= pageNumbers[0] || pageNumbers.length == 0}
+								{'disabled': meta.current_page <= allPageNumbers[0] || allPageNumbers.length == 0}
 							]"
 							:to="{params: {page: meta.current_page - 1}}">
 							<!--            :to="{query: {...$route.query, page: meta.current_page - 1}}">-->
@@ -35,7 +35,7 @@
 
 					<!-- Pages in Range -->
 					<li
-						v-for="(item, index) in filteredItems" :key="index"
+						v-for="(item, index) in pageNumbersInRange" :key="index"
 						class="pagination__item">
 						<nuxt-link
 							:class="['pagination__link', {'pagination__link--active': item == meta.current_page}]"
@@ -50,7 +50,7 @@
 						<nuxt-link
 							:class="[
 								'pagination__link',
-								{'disabled': meta.current_page >= pageNumbers[pageNumbers.length - 1] || pageNumbers.length == 0}
+								{'disabled': meta.current_page >= allPageNumbers[allPageNumbers.length - 1] || allPageNumbers.length == 0}
 							]"
 							:to="{params: {page: meta.current_page + 1}}">
 							<!--            :to="{query: {...$route.query, page: meta.current_page + 1}}">-->
@@ -65,7 +65,7 @@
 							:class="[
 								'pagination__link',
 								'pagination__link--next',
-								{'disabled': meta.current_page >= pageNumbers[pageNumbers.length - 1] || pageNumbers.length == 0}
+								{'disabled': meta.current_page >= allPageNumbers[allPageNumbers.length - 1] || allPageNumbers.length == 0}
 							]"
 							:to="{params: {page: meta.last_page}}">
 							<!--                    :to="{query: {...$route.query, page: meta.last_page}}">-->
@@ -86,13 +86,13 @@
 
 
 <!--    <nav class="pagination m-pagination">-->
-<!--&lt;!&ndash;        PageNumbers: {{ pageNumbers }}&ndash;&gt;-->
+<!--&lt;!&ndash;        PageNumbers: {{ allPageNumbers }}&ndash;&gt;-->
 <!--&lt;!&ndash;        <br>&ndash;&gt;-->
-<!--&lt;!&ndash;        FilteredItems: {{ filteredItems }}&ndash;&gt;-->
+<!--&lt;!&ndash;        FilteredItems: {{ pageNumbersInRange }}&ndash;&gt;-->
 <!--&lt;!&ndash;        <br>&ndash;&gt;-->
 <!--&lt;!&ndash;        meta: {{ meta }}&ndash;&gt;-->
 <!--&lt;!&ndash;        <br>&ndash;&gt;-->
-<!--&lt;!&ndash;        PageNumbers: {{ pageNumbers }}&ndash;&gt;-->
+<!--&lt;!&ndash;        PageNumbers: {{ allPageNumbers }}&ndash;&gt;-->
 <!--&lt;!&ndash;        <br>&ndash;&gt;-->
 <!--&lt;!&ndash;        Start is {{ start }}&ndash;&gt;-->
 <!--&lt;!&ndash;        <br>&ndash;&gt;-->
@@ -110,8 +110,8 @@
         // props: ['meta', 'range', 'surroundPages'],
         data() {
             return {
-                pageNumbers: [],
-                filteredItems: [],
+                allPageNumbers: [],
+                pageNumbersInRange: [],
                 surroundPages: (this.range -1) / 2,
                 start: 0,
                 end: 0
@@ -129,6 +129,8 @@
 			}
 
             this.setFilteredItems();
+			// console.log('filtered items', this.pageNumbersInRange);
+			// console.log('allPageNumbers', this.allPageNumbers);
         },
 
 		created() {
@@ -159,10 +161,10 @@
 				// this.$router.replace({ params: {page: current} })
 
 
-                this.pageNumbers = [];
+                this.allPageNumbers = [];
 
                 for (let i = 0; i < this.meta.last_page; i++){
-                    this.pageNumbers.push(i + 1);
+                    this.allPageNumbers.push(i + 1);
                 }
 
                 if (current < this.range - this.surroundPages) {
@@ -176,13 +178,13 @@
                         then we get these pages 1 2 3 4 5 6 7 8 9
                     */
                 } else if (
-                    current <= this.pageNumbers.length &&
-                    current > this.pageNumbers.length - this.range + this.surroundPages
+                    current <= this.allPageNumbers.length &&
+                    current > this.allPageNumbers.length - this.range + this.surroundPages
                 ) {
-                    start = this.pageNumbers.length - this.range + 1;
-                    end = this.pageNumbers.length;
+                    start = this.allPageNumbers.length - this.range + 1;
+                    end = this.allPageNumbers.length;
                     /*
-                        We have meta.current_page: 12, pageNumbers.length 100, range: 9, surroundPages: 4
+                        We have meta.current_page: 12, allPageNumbers.length 100, range: 9, surroundPages: 4
                         if ( (12 <= 100) && (12 > (100 - 9 + 4)) )
                         We get
                         start: 100 - 9 + 1,
@@ -192,7 +194,7 @@
                     start = current - this.surroundPages;
                     end = parseInt(current) + parseInt(this.surroundPages);
                     /*
-                        We have meta.current_page: 12, pageNumbers.length 100, range: 9, surroundPages: 4
+                        We have meta.current_page: 12, allPageNumbers.length 100, range: 9, surroundPages: 4
                         if ( (12 <= 100) && (12 > (100 - 9 + 4)) )
                         We get
                         start: 100 - 9 + 1,
@@ -204,18 +206,18 @@
                     start = 1
                 }
 
-                if (end > this.pageNumbers.length){
-                    end = this.pageNumbers.length;
+                if (end > this.allPageNumbers.length){
+                    end = this.allPageNumbers.length;
                 }
 
-                this.filteredItems = [];
+                this.pageNumbersInRange = [];
 
                 for(let j = start; j <= end; j++) {
-                    this.filteredItems.push(j);
+                    this.pageNumbersInRange.push(j);
                 }
 
-				// alert(this.pageNumbers[this.pageNumbers.length - 1])
-				// alert(this.pageNumbers)
+				// alert(this.allPageNumbers[this.allPageNumbers.length - 1])
+				// alert(this.allPageNumbers)
             },
         },
     }

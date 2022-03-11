@@ -56,6 +56,17 @@
 
 		},
 
+		beforeRouteLeave(to, from, next) {
+			// console.log("before route called");
+			// We need to pause sliders so we dont get error on other pages that dont have those elements
+			$('#teacher .slider-nav').slick('slickPause');
+			$('#slider-for').slick('slickPause');
+
+			next(vm => {
+				console.log("prev rout is: "+vm.prevRoute);
+			})
+		},
+
 		components: {
 			Announcement,
 			Teachers,

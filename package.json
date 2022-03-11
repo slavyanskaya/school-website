@@ -5,6 +5,10 @@
 	"scripts": {
 		"dev": "nuxt",
 		"build": "nuxt build",
+		"migrate": "npm run delete-docs & nuxt generate & npm run create-folder-and-copy-docs & npm run copy-files",
+		"copy-files": "Robocopy \"to copy\" docs",
+		"create-folder-and-copy-docs": "mkdir docs & Robocopy dist docs /E",
+		"delete-docs": "rmdir /s /q docs",
 		"start": "nuxt start",
 		"export": "nuxt export",
 		"serve": "nuxt serve",

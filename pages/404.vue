@@ -1,7 +1,7 @@
 <template>
 	<div class="nuxt-error">
-		gfdgfdg
-		<!--		<component :is="errorPage" :error="error"/>-->
+<!--		gfdgfdg-->
+<!--		<component :is="errorPage" :error="error"/>-->
 	</div>
 </template>
 

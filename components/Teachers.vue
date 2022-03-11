@@ -291,7 +291,6 @@
 		transition: all 1400ms;
 	}
 
-
 	#teacher .slider-nav .slick-slide {
 		/*background-color: green;*/
 		display: flex !important;

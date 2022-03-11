@@ -6,8 +6,6 @@
 
 
 export default {
-
-
 	server: {
 		port: 3000, // default: 3000
 		host: '0.0.0.0', // default: localhost
@@ -91,8 +89,12 @@ export default {
 		mode: 'out-in'
 	},
 
+
+   	// Set ssr to false to see the loading indicator - https://nuxtjs.org/docs/2.x/features/rendering-modes
+	ssr: false,
+
 	loadingIndicator: {
-		name: 'circle',
+		name: 'rectangle-bounce',
 		color: '#3B8070',
 		background: 'white'
 	},
