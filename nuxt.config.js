@@ -57,6 +57,7 @@ export default {
 			{rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css', media: "screen" },
 
 			{rel: 'stylesheet', href: '/css/slick.css'},
+			// {rel: 'stylesheet', href: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'},
 		],
 		script: [
 			{src: 'https://code.jquery.com/jquery-3.4.1.min.js', type: 'text/javascript', body: true},
@@ -64,7 +65,10 @@ export default {
 			{src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', type: 'text/javascript', body: true},
 			{src: 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2', type: 'text/javascript', body: true, async: true, defer: true},
 			{src: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js', type: 'text/javascript', body: true},
+
+			// {src: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', type: 'text/javascript', body: true},
 			{src: '/js/slick.js', type: 'text/javascript', body: true},
+			// {src: '/js/jquery.mixitup.js', type: 'text/javascript', body: true}, // Something like filterizr. Is for filtering gallery with fancybox. Replace with something modern or vueable maybe
 		]
 	},
 
@@ -96,7 +100,8 @@ export default {
 	loadingIndicator: {
 		name: 'rectangle-bounce',
 		color: '#3B8070',
-		background: 'white'
+
+		background: 'white',
 	},
 
 	/* Plugins to load before mounting the App
@@ -286,7 +291,7 @@ export default {
 			let articleRoutes = articles.map( (article) => `/article/${article.slug}`);
 
 			// articles pages routes
-			const perPage = 2;
+			const perPage = 7;
 			let skip;
 			let current_pages_articles;
 			let articlePagesRoutes = [];

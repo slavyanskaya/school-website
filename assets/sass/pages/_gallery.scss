@@ -6,6 +6,7 @@
     float: left;
     padding: 100px 0;
     width: 100%;
+	//background:#eee;
     .mu-gallery-area{
         display: inline;
         float: left;
@@ -25,6 +26,7 @@
                     text-align: center;
                     width: 100%;
                     li{
+
                         color: #fff;
                         cursor: pointer;
                         display: inline-block;
@@ -33,6 +35,7 @@
                         letter-spacing: 0.5px;
                         margin: 0 5px;
                         padding: 6px 15px;
+
                         text-transform: uppercase;
                         @include transition(all 0.5s);
                         &:hover,
@@ -54,11 +57,13 @@
                 ul{
                     li{
                         .mu-single-gallery{
+							background: white;
                             display: inline;
                             float: left;
                             margin-bottom: 30px;
                             width: 100%;
                             .mu-single-gallery-item{
+								background: white;
                                 display: inline;
                                 float: left;
                                 width: 100%;
@@ -70,7 +75,7 @@
                                         }
                                     }
                                     .mu-single-gallery-info{
-                                        background-color: rgba(0,0,0,0.8);
+                                        background-color: rgba(0,0,0,0.2);
                                         opacity: 1;
                                         transform: scale(1);
                                         .mu-single-gallery-info-inner{
@@ -146,10 +151,24 @@
                 }
             }
         }
-        #mixit-container {
-            .mix{
-                display: none;
-            }
-        }
     }
+}
+
+.fancybox-next {
+	right: -20px;
+	top: 35%;
+}
+
+.fancybox-prev {
+	left: -20px;
+	top: 35%;
+}
+
+.fancybox-nav {
+	//z-index: 0;
+	width: 30%;
+	height: 30%;
+	transform: translate(50% 50%);
+	//display: none;
+	//background-color: red;
 }

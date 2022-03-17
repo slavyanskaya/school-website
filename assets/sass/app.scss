@@ -16,8 +16,8 @@
 // 3. Base stuff
 @import
   'base/base',
-  'base/responsive',
   'base/typography';
+  //'base/main-bootstrap';
 
 // 4. Layout-related sections
 @import
@@ -55,5 +55,6 @@
 // 7. Themes
 @import
   //'themes/default';
+  'base/responsive',
   'themes/theme-color';
 

@@ -125,12 +125,16 @@
 
 
 @media(max-width:767px ){
-
+	//body {
+	//	display: none;
+	//}
 	.navbar-header{
 		padding: 10px 0;
 	}
-	#mu-menu .navbar-header .navbar-brand {
+	.navbar-brand {
 	  padding-top: 10px;
+		//display: none;
+		margin-left: 1rem;
 	}
 	#mu-search-icon{
 		display: none;
@@ -148,7 +152,7 @@
 	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 	  background-color: $theme-color;
 	}
-	#mu-menu .navbar-default .navbar-nav li > a {
+	.navbar-nav li > a {
 	  padding: 15px 20px;
 	}
 	#mu-slider .mu-slider-single .mu-slider-content h2 {
@@ -224,6 +228,9 @@
 }
 
 @media(max-width:640px){
+	.navbar-brand {
+		margin-left: 1rem;
+	}
 	.mu-header-top-left {
 		flex-direction: column;
 	}
@@ -262,8 +269,16 @@
 
 }
 
+@media(max-width:580px ){
+	.navbar-brand {
+		margin-left: 0;
+	}
+}
 
 @media(max-width:480px ){
+	.navbar-brand {
+		margin-left: 0;
+	}
 	#mu-header .mu-header-area .mu-header-top-left .mu-top-email {
 	  font-size: 12px;
 	  margin-top: 3px;

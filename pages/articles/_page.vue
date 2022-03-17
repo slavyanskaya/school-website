@@ -279,7 +279,7 @@
 		},
 
 		async asyncData({ $content, params, route, router }) {
-			const perPage = 2;
+			const perPage = 7;
 
 			let pagesCount = Math.ceil
 			(

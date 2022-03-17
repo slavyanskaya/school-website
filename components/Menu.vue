@@ -56,6 +56,11 @@
 						</li>
 
 						<li class="nav-item nav__item text-center px-1"
+							:class="{'nav__item--active': $nuxt.$route.path === '/gallery'}">
+							<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" to="/gallery" exact class="nav-link nav__link ">Галерея</nuxt-link>
+						</li>
+
+						<li class="nav-item nav__item text-center px-1"
 							:class="{'nav__item--active': ($nuxt.$route.name === 'articles-page') || ($nuxt.$route.name === 'article-slug')}">
 							<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" :to="{name: 'articles-page', params: {page: 1} }" exact class="nav-link nav__link" :class="{'nav__link--active': ($nuxt.$route.name === 'articles-page') || ($nuxt.$route.name === 'article-slug')}">Новости</nuxt-link>
 						</li>
