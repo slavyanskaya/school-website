@@ -15,20 +15,19 @@
     background: pink
     border: 1px solid red
     text-align: center
-    padding: 1rem 0 
+    padding: 1rem 0
 
 $grid-columns-amount: 12
-$grid-max-width: 1200px 
+$grid-max-width: 1200px
 $grid-breakpoint-small: "only screen and (min-width: 0px)"
 $grid-breakpoint-medium: "only screen and (min-width: 768px)"
 $grid-breakpoint-large: "only screen and (min-width: 1080px)"
 $grid-breakpoint-xl: "only screen and (min-width: 1300px)"
 
-
 @for $i from 1 through $grid-columns-amount
     .col-#{$i}
         flex: 0 0 100% / $grid-columns-amount * $i
-    
+
     .col-offset-#{$i}
         margin-left: 100% / $grid-columns-amount * $i
 
@@ -47,7 +46,7 @@ $grid-breakpoint-xl: "only screen and (min-width: 1300px)"
     @for $i from 1 through $grid-columns-amount
         .col-md-#{$i}
             flex: 0 0 100% / $grid-columns-amount * $i
-    
+
 @media #{$grid-breakpoint-large}
     .container
         width: 95%

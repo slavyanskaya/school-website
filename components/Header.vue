@@ -24,7 +24,7 @@
 											<li><a href="#"><span class="fab fa-twitter"></span></a></li>
 <!--											<li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>-->
 <!--											<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>-->
-											<li><a href="#"><span class="fab fa-youtube"></span></a></li>
+											<li><a target="_blank" href="https://www.youtube.com/channel/UC4JL5vBYYTZYwtR2SMuypKQ"><span class="fab fa-youtube"></span></a></li>
 										</ul>
 									</nav>
 								</div>

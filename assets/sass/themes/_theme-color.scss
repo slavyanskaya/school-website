@@ -241,17 +241,11 @@
 }
 #mu-course-content{
 	background-color: #f8f8f8;
-	display: inline;
-	float: left;
 	padding: 100px 0;
 	width: 100%;
 	.mu-course-content-area{
-		display: inline;
-		float: left;
 		width: 100%;
 		.mu-course-container{
-			display: inline;
-			float: left;
 			width: 100%;
 			.mu-latest-course-single{
 				border: 1px solid #ccc;
@@ -318,8 +312,6 @@
 	}
 }
 .mu-related-item{
-	display: inline;
-	float: left;
 	margin-top: 30px;
 	width: 100%;
 	h3{
@@ -373,8 +365,6 @@
 	}
 }
 .mu-comments-area{
-	display: inline;
-	float: left;
 	width: 100%;
 	margin-top: 20px;
 	h3{
@@ -407,27 +397,32 @@
 		}
 	}
 }
-#mu-gallery{
-	.mu-gallery-area{
-		.mu-gallery-content{
-			width: 100%;
-			.mu-gallery-top{
-				ul{
-					li{
-						background-color: $theme-color;
-						border: 1px solid $theme-color;
-						&:hover,
-						&:focus{
-							color: $theme-color;
-							border-color: $theme-color;
-						}
-					}
-					.active{
-						color: $theme-color;
-						border-color: $theme-color;
-					}
-				}
-			}
+.filterBlock {
+	&__filter {
+		background-color: $theme-color;
+		border: 1px solid $theme-color;
+
+		&:hover,
+		&:focus {
+			color: $theme-color;
+			border-color: $theme-color;
+		}
+
+		&--active {
+			background: #fff;
+			color: $theme-color;
+			border-color: $theme-color;
+		}
+	}
+}
+
+.galleryBlock {
+	&__inner {
+		a {
+			//background-color: $theme-color;
+		}
+	}
+}
 			.mu-gallery-body{
 
 				ul{
@@ -447,9 +442,7 @@
 					}
 				}
 			}
-		}
-	}
-}
+
 #mu-contact{
 	.mu-contact-area{
 		.mu-contact-content{

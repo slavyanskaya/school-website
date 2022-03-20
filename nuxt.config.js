@@ -43,22 +43,21 @@ export default {
 			{ hid: 'keywords', name: 'keywords', content: "Русская Школа В Армении, Русская Школа В Ереване, СШ Славянская, СШ 'Славянская', Средняя Школа Славянская, Армения Русская Школа, Армения Русская Школа, Славянская Школа В Армении, Slavyanskaya, Slavyanskaya Shkola, Russkaya Shkola V Armenii" }
 		],
 		link: [
-			{rel: 'icon', type: 'image/x-icon', href: '/favicons/favicon.ico'},
-
+			// Favicons
+			{rel: 'icon', type: 'image/x-icon', href: '/favicons/favicon.ico'}, // Main i think
 			{rel: 'apple-touch-icon', sizes: "180x180", type: 'image/x-icon', href: '/favicons/apple-touch-icon.png'},
 			{rel: 'icon', sizes: "32x32", type: 'image/x-icon', href: '/favicons/favicon-32x32.png'},
 			{rel: 'icon', sizes: "16x16", type: 'image/x-icon', href: '/favicons/favicon-16x16.png'},
 			{rel: 'manifest', href: '/favicons/site.webmanifest'},
 
+			// Libraries
 			{rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'},
-			// {rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.1/css/all.css'},
 			{rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'},
-
 			{rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css', media: "screen" },
-
 			{rel: 'stylesheet', href: '/css/slick.css'},
 			// {rel: 'stylesheet', href: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'},
 		],
+
 		script: [
 			{src: 'https://code.jquery.com/jquery-3.4.1.min.js', type: 'text/javascript', body: true},
 			{src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', type: 'text/javascript', body: true},
@@ -68,7 +67,7 @@ export default {
 
 			// {src: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', type: 'text/javascript', body: true},
 			{src: '/js/slick.js', type: 'text/javascript', body: true},
-			// {src: '/js/jquery.mixitup.js', type: 'text/javascript', body: true}, // Something like filterizr. Is for filtering gallery with fancybox. Replace with something modern or vueable maybe
+			{src: '/js/jquery.mixitup.js', type: 'text/javascript', body: true}, // Something like filterizr. Is for filtering gallery with fancybox. Replace with something modern or vueable maybe
 		]
 	},
 
@@ -252,7 +251,7 @@ export default {
 			let articleRoutes = articles.map( (article) => `/article/${article.slug}`);
 
 			// articles pages routes
-			const perPage = 2;
+			const perPage = 10;
 			let skip;
 			let current_pages_articles;
 			let articlePagesRoutes = [];
@@ -291,7 +290,7 @@ export default {
 			let articleRoutes = articles.map( (article) => `/article/${article.slug}`);
 
 			// articles pages routes
-			const perPage = 7;
+			const perPage = 10;
 			let skip;
 			let current_pages_articles;
 			let articlePagesRoutes = [];

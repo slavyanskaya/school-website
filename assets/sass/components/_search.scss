@@ -13,8 +13,6 @@
     width: 100%;
     z-index: 99999;
     .mu-search-area{
-        display: inline;
-        float: left;
         width: 100%;
         padding: 20% 0;
         text-align: center;
@@ -47,6 +45,7 @@
         }
     }
 }
+
 #mu-search.mu-search-open{
     transform: translateY(0) scale(1);
 }

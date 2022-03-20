@@ -3,13 +3,9 @@
 ====================*/
 #mu-page-breadcrumb{
     background-color: #333;
-    display: inline;
-    float: left;
     padding: 30px 0;
     width: 100%;
     .mu-page-breadcrumb-area{
-        display: inline;
-        float: left;
         width: 100%;
         h2{
             text-align: center;
@@ -33,17 +29,11 @@
 }
 #mu-course-content{
     background-color: #f8f8f8;
-    //display: inline;
-    //float: left;
     padding: 100px 0;
     width: 100%;
     .mu-course-content-area{
-        display: inline;
-        float: left;
         width: 100%;
         .mu-course-container{
-            display: inline;
-            float: left;
             width: 100%;
             .mu-latest-course-single{
                 border: 1px solid #ccc;
@@ -51,13 +41,9 @@
             }
         }
         .mu-sidebar{
-            display: inline;
-            float: left;
             width: 100%;
             .mu-single-sidebar{
                 background-color: #FFF;
-                display: inline;
-                float: left;
                 margin-bottom: 25px;
                 padding: 0 10px 10px;
                 width: 100%;
@@ -91,8 +77,6 @@
                     }
                 }
                 .mu-sidebar-popular-courses{
-                    display: inline;
-                    float: left;
                     margin-top: 10px;
                     width: 100%;
                     .media{
@@ -128,8 +112,6 @@
                     }
                 }
                 .tag-cloud{
-                    display: inline;
-                    float: left;
                     margin-top: 5px;
                     width: 100%;
                     a{
@@ -169,9 +151,7 @@
                             // line-height: 1.7;
                             margin-bottom: 10px;
                             span:first-child{
-                                display: inline-block;
-                                min-width: 150px;
-                                float: left;
+                                //display: inline-block;
                             }
                         }
                     }
@@ -184,8 +164,6 @@
     }
 }
 .mu-pagination{
-    //display: inline;
-    //float: left;
     //width: 100%;
     //.pagination{
     //    li{
@@ -220,8 +198,6 @@
 }
 
 .mu-related-item{
-    display: inline;
-    float: left;
     margin-top: 30px;
     width: 100%;
     .mu-related-item-area{

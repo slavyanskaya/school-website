@@ -8,8 +8,6 @@
     background-image: url("~static/images/layouts/testimonials/testimonial-bg.jpg");
     background-position: center center;
     background-size: cover;
-    //display: inline;
-    //float: left;
     padding: 100px 0;
     position: relative;
     //width: 100%;
@@ -26,28 +24,20 @@
     }
     .mu-testimonial-area{
         //margin: 0 auto;
-        //display: inline;
-        //float: left;
         padding: 0 30px;
         position: relative;
         //width: 90%;
         z-index: 99;
         .mu-testimonial-content{
             //margin: 0 auto;
-            //display: inline;
-            //float: left;
             //width: 100%;
             .mu-testimonial-item{
                 //margin: 0 auto;
-                //display: inline;
-                //float: left;
                 //width: 100%;
                 outline: none;
                 .mu-testimonial-quote{
                     background-color: #333;
                     border-radius: 4px;
-                    //display: inline;
-                    //float: left;
                     padding: 60px 30px;
                     //width: 95%;
                     blockquote{
@@ -77,8 +67,6 @@
                     }
                 }
                 .mu-testimonial-img{
-                    //display: inline;
-                    //float: left;
                     //width: 100%;
                     text-align: center;
                     img{
@@ -92,8 +80,6 @@
                     }
                 }
                 .mu-testimonial-info{
-                    //display: inline;
-                    //float: left;
                     //width: 100%;
                     text-align: center;
                     h4{

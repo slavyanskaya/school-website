@@ -1,22 +1,14 @@
 
 // FOOTER
 #mu-footer{
-	display: inline;
-	float: left;
 	width: 100%;
 	.mu-footer-top{
 		background-color: #333;
-		display: inline;
-		float: left;
 		padding: 50px 0;
 		width: 100%;
 		.mu-footer-top-area{
-			display: inline;
-			float: left;
 			width: 100%;
 			.mu-footer-widget{
-				display: inline;
-				float: left;
 				width: 100%;
 				h4{
 					color: #fff;
@@ -52,8 +44,6 @@
 					color: #f9f9f9;
 				}
 				.mu-subscribe-form{
-					display: inline;
-					float: left;
 					margin-top: 10px;
 					width: 100%;
 					input[type="email"]{
@@ -91,13 +81,9 @@
 	}
 	.mu-footer-bottom{
 		background-color: #222;
-		display: inline;
-		float: left;
 		padding: 25px 0;
 		width: 100%;
 		.mu-footer-bottom-area{
-			display: inline;
-			float: left;
 			text-align: center;
 			width: 100%;
 			p{
