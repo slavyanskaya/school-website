@@ -47,42 +47,24 @@
 					</div>
 				</div>
 
-				<!--  -->
-<!--				<ul class="row filter-container galleryBlock">-->
-<!--					<li-->
-<!--						v-for="(gallery_item, index) in allImages[0]" :key="gallery_item+index"-->
-<!--						:data-category="gallery_item.category"-->
-<!--						data-sort="value"-->
-<!--						class="col-12 col-md-4 galleryBlock__item filtr-item">-->
-<!--						<a :href="gallery_item.link"-->
-<!--						   :class="[{'fancybox.iframe': gallery_item.type === 'youtube'}, 'fancybox', 'galleryBlock__link']"-->
-<!--						   data-fancybox-group="gallery">-->
-<!--							<div class="galleryBlock__container">-->
-<!--								&lt;!&ndash;							<div  >&ndash;&gt;-->
-<!--								<div class="galleryBlock__inner">-->
-<!--									<img :src="gallery_item.thumb" class="galleryBlock__image" alt="">-->
-
-<!--									<div class="galleryBlock__info">-->
-<!--&lt;!&ndash;										<h4>{{ gallery_item.text }}</h4>&ndash;&gt;-->
-<!--										&lt;!&ndash;															<p>Math</p>&ndash;&gt;-->
-<!--										<a v-if="gallery_item.type === 'image'" href="#" class="aa-link"><span class="fa fa-eye fa-3x"></span></a>-->
-<!--										<a v-else-if="gallery_item.type === 'youtube'" href="#" class="aa-link"><span class="fab fa-youtube fa-3x"></span></a>-->
-<!--										<a v-else href="#" class="aa-link"><span class="fa fa-link fa-3x"></span></a>-->
-<!--									</div>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--							&lt;!&ndash;							</div>&ndash;&gt;-->
-<!--						</a>-->
-<!--					</li>-->
-<!--				</ul>-->
-
-
 				<ul id="filter-container mixit-container" class="row filter-container galleryBlock">
+<!--					<template v-for="(gallery, index) in galleries">-->
+<!--						<gallery-item-lazy-->
+<!--							v-for="(gallery_item, index) in gallery.imgArray" :key="gallery_item.title + gallery_item.text + index"-->
+<!--							:title="gallery_item.text"-->
+<!--							:category="gallery_item.category"-->
+<!--							:type="gallery_item.type"-->
+<!--							:finalLink="gallery_item.link"-->
+<!--							:thumbLink="gallery_item.thumb">-->
+<!--						</gallery-item-lazy>-->
+<!--					</template>-->
+
 					<li
 						v-for="(gallery_item, index) in allImages[0]" :key="gallery_item+index"
 						:data-category="gallery_item.category"
 						data-sort="value"
-						class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 galleryBlock__item mix filtr-item">
+						class="col-12 col-sm-12 col-md-6 col-lg-4 galleryBlock__item mix filtr-item">
+
 						<a :href="gallery_item.link"
 						   :class="[{'fancybox.iframe': gallery_item.type === 'youtube'}, 'fancybox', 'galleryBlock__link']"
 						   data-fancybox-group="gallery">
@@ -94,7 +76,7 @@
 									<div class="galleryBlock__info">
 										<!--										<h4>{{ gallery_item.text }}</h4>-->
 										<!--															<p>Math</p>-->
-										<a v-if="gallery_item.type === 'image'" href="#" class="aa-link"><span class="fa fa-eye fa-3x"></span></a>
+										<a v-if="gallery_item.type === 'image'" href="#" class="aa-link"><span class="fa fa-image fa-3x"></span></a>
 										<a v-else-if="gallery_item.type === 'youtube'" href="#" class="aa-link"><span class="fab fa-youtube fa-3x"></span></a>
 										<a v-else href="#" class="aa-link"><span class="fa fa-link fa-3x"></span></a>
 									</div>
@@ -111,11 +93,10 @@
 </template>
 
 <script>
-import Filterizr from 'filterizr';
-import GalleryItem from "~/components/GalleryItem";
+// import Filterizr from 'filterizr';
+import GalleryItemLazy from "~/components/GalleryItemLazy";
 import Pagination from "~/components/Pagination-nuxt-content";
-// import fs from "fs";
-// import path from "path";
+
 export default {
 	name: "gallery",
 	data() {
@@ -136,7 +117,7 @@ export default {
 			});
 		});
 
-		console.log(allImages);
+		// console.log(allImages);
 
 		return {galleries, allImages};
 	},
@@ -158,68 +139,34 @@ export default {
 			// ]
 		};
 	},
-	methods: {
-		// initiateFancyBox() {
-		// 	(function () {
-		// 		$(".fancybox").fancybox({
-		// 			keyboard: true,
-		// 			arrows: true,
-		// 			infobar: true,
-		// 			// smallBtn: "auto",
-		// 			toolbar: true,
-		// 			buttons: [
-		// 				"zoom",
-		// 				//"share",
-		// 				"slideShow",
-		// 				//"fullScreen",
-		// 				//"download",
-		// 				"thumbs",
-		// 				"close"
-		// 			],
-		// 			animationEffect: "zoom",
-		// 		});
-		//
-		// 		$(".zoom").hover(function(){
-		// 			$(this).addClass('transition');
-		// 		}, function(){
-		// 			$(this).removeClass('transition');
-		// 		});
-		// 	})();
-		// }
-	},
 
 	mounted() {
-			jQuery(function(){
-				jQuery('#mixit-container').mixItUp();
-			});
-		// (function () {
-		// 	$(document).ready(function () {
-		// 		// const filterizr = $('.filter-container').filterizr({
-		// 		const filterizr = new Filterizr('#filter-container', {
-		//
-		// 			// controlsSelector: '.fltr-controls',
-		// 			// gridItemsSelector: '.filtr-item',
-		// 			// layout: 'sameWidth',
-		// 			// layout: 'sameHeight',
-		// 			spinner: {
-		// 				enabled: true,
-		// 			},
-		// 			// gutterPixels: 10,
-		// 		});
-		//
-		// 		// const options = { /* check next step for available options */ };
-		// 		// const filterizr = new Filterizr('#filter-container', {
-		// 		// 	gutterPixels: 3,
-		// 		// 	// filter: 'Кошкин дом',
-		// 		// });
-		// 		//
-		// 		$('.filter[data-filter]').on('click', function () {
-		// 			$('.filter[data-filter]').removeClass('filterBlock__filter--active');
-		// 			$(this).addClass('filterBlock__filter--active');
-		// 		});
+		(function () {
+			$(document).ready(function () {
+				jQuery(function(){
+					jQuery('#mixit-container').mixItUp();
+				});
+
+		/*		const filterizr = $('.filter-container').filterizr({
+				const filterizr = new Filterizr('#filter-container', {
+
+					// controlsSelector: '.fltr-controls',
+					// gridItemsSelector: '.filtr-item',
+					// layout: 'sameWidth',
+					// layout: 'sameHeight',
+					spinner: {
+						enabled: true,
+					},
+					// gutterPixels: 10,
+				});
+
+				$('.filter[data-filter]').on('click', function () {
+					$('.filter[data-filter]').removeClass('filterBlock__filter--active');
+					$(this).addClass('filterBlock__filter--active');
+				});*/
 
 				$(".fancybox").fancybox({
-					// keyboard: true,
+					keyboard: true,
 					arrows: true,
 
 					// afterLoad: function(current) {
@@ -227,91 +174,40 @@ export default {
 					// 		current.arrows = false;
 					// 	}
 					// },
-					// infobar: true,
-					// smallBtn: "auto",
-					// toolbar: true,
-					// buttons: [
-					// 	"zoom",
-					// 	"share",
-					// 	"slideShow",
-					// 	"fullScreen",
-					// 	"download",
-					// 	"thumbs",
-					// 	"close"
-					// ],
+
+					infobar: true,
+					smallBtn: "auto",
+					toolbar: true,
+
+					// For disabling window shift on click and closing
+					helpers: {
+						overlay: {
+							locked: false
+						}
+					},
+
+					buttons: [
+						"zoom",
+						"share",
+						"slideShow",
+						"fullScreen",
+						"download",
+						"thumbs",
+						"close"
+					],
 					animationEffect: "zoom",
 				});
-
-				// $(".fancybox").fancybox();
-
-				$(".zoom").hover(function () {
-					$(this).addClass('transition');
-				}, function () {
-					$(this).removeClass('transition');
-				});
-			// });
-		// })(jQuery);
+			});
+		})(jQuery);
 	},
 
 	components: {
 		Pagination,
-		GalleryItem
+		GalleryItemLazy
 	}
 }
 </script>
 
 <style scoped lang="scss">
-p {
-	text-align: center;
-}
-
-@media(max-width: 767px) {
-	.cardon {
-		///*min-width: 300px;*/
-		max-height: 250px;
-		/*border: 0px;*/
-		/*padding: 15px;*/
-	}
-}
-
-img {
-	//height:250px;
-	/*width: 350px;*/
-	//overflow: hidden;
-	//border:5px solid #fff;
-	//border-radius: 5px;
-	//box-shadow: 0 3px 5px rgba(0,0,0,.3);
-	/*margin: 20px;*/
-}
-
-//img{
-//	height: 100%;
-//	width:100%;
-//	object-fit: cover;
-//}
-
-.img-responsive {
-	//height: 100%;
-	//width:100%;
-	//width: 200px; /* You can set the dimensions to whatever you want */
-	//height: 200px;
-	width: 100%;
-	height: 200px;
-	overflow: hidden;
-	//border: 5px solid #fff;
-	border-radius: 5px;
-	box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-	object-fit: cover;
-}
-
-.filter-container {
-	//padding: 0;
-	//margin-left: 60px;
-}
-
-img:hover img {
-	//transform: scale(1.4);
-}
-
 
 </style>

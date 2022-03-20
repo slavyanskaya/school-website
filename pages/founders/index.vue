@@ -201,6 +201,14 @@
 						infobar: true,
 						// smallBtn: "auto",
 						toolbar: true,
+
+						// For disabling window shift on click and closing
+						helpers: {
+							overlay: {
+								locked: false
+							}
+						},
+
 						buttons: [
 							"zoom",
 							//"share",

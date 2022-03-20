@@ -12,6 +12,13 @@ body{
 	overflow-x: hidden;
 }
 
+// For disabling window shift on bootstrap modal open
+body.modal-open {
+	width: 100% !important;
+	padding-right: 0 !important;
+	overflow-y: scroll !important;
+}
+
 .no-padding {
 	padding: 0;
 }

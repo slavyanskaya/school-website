@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{305:function(t,n,e){"use strict";e.r(n);var r={name:"404",asyncData:function(t){return(0,t.redirect)("/about")}},c=e(7),component=Object(c.a)(r,(function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"nuxt-error"})}),[],!1,null,null,null);n.default=component.exports}}]);
