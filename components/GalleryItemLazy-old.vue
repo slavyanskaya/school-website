@@ -9,7 +9,7 @@
 			<div class="galleryBlock__container">
 				<!--							<div  >-->
 				<div class="galleryBlock__inner">
-					<img v-lazyload :data-src="thumbLink" src="https://via.placeholder.com/330x200/" class="galleryBlock__image" alt="">
+					<img :src="imageThumb" class="galleryBlock__image" alt="">
 
 					<div class="galleryBlock__info">
 						<!--										<h4>{{ title }}</h4>-->
@@ -24,7 +24,7 @@
 <!--			<div class="mu-single-gallery">-->
 <!--				<div class="mu-single-gallery-item">-->
 <!--					<div class="mu-single-gallery-img">-->
-<!--						<a href="#"><img alt="img" :src="thumbLink"></a>-->
+<!--						<a href="#"><img alt="img" :src="imageThumb"></a>-->
 <!--&lt;!&ndash;						<a href="#"><img alt="img" :src="images/layouts/founders/2.jpg"></a>&ndash;&gt;-->
 <!--					</div>-->
 <!--					<div class="mu-single-gallery-info">-->
@@ -44,8 +44,6 @@
 </template>
 
 <script>
-import lazyload from "~/directives/lazyload";
-
 export default {
 	// props: ['title', 'type', 'link', 'thumb', 'category'],
 	props: {
@@ -83,8 +81,41 @@ export default {
 		},
 	},
 
-	directives: {
-		lazyload
+	data() {
+		return {
+			imagePlaceholder : this.placeholder,
+			imageThumb : this.placeholder,
+			loaded : false,
+			completed : false,
+			// styleObject: {
+			// 	filter: `blur(${this.blurAmount}px)`,
+			// 	transition: "all 1s"
+			// }
+		}
+	},
+
+	methods: {
+		setWindowLoaded() {
+			setTimeout(() => {
+				this.loaded = true;
+			},100)
+		},
+		lazyLoad() {
+			if (this.loaded && !this.completed) {
+				this.completed = true;
+				this.imageThumb = this.thumbLink;
+				// this.styleObject = {
+				// 	transition: "all 1s"
+				// };
+			}
+		},
+	},
+
+	mounted() {
+		window.addEventListener('load', this.setWindowLoaded);
+
+		window.addEventListener('scroll', this.lazyLoad);
+
 	},
 	name: "GalleryItem",
 }

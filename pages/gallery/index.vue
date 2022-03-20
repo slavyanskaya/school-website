@@ -48,43 +48,43 @@
 				</div>
 
 				<ul id="filter-container mixit-container" class="row filter-container galleryBlock">
-<!--					<template v-for="(gallery, index) in galleries">-->
-<!--						<gallery-item-lazy-->
-<!--							v-for="(gallery_item, index) in gallery.imgArray" :key="gallery_item.title + gallery_item.text + index"-->
-<!--							:title="gallery_item.text"-->
-<!--							:category="gallery_item.category"-->
-<!--							:type="gallery_item.type"-->
-<!--							:finalLink="gallery_item.link"-->
-<!--							:thumbLink="gallery_item.thumb">-->
-<!--						</gallery-item-lazy>-->
-<!--					</template>-->
+					<template v-for="(gallery, index) in galleries">
+						<gallery-item-lazy
+							v-for="(gallery_item, index) in gallery.imgArray" :key="gallery_item.title + gallery_item.text + index"
+							:title="gallery_item.text"
+							:category="gallery_item.category"
+							:type="gallery_item.type"
+							:finalLink="gallery_item.link"
+							:thumbLink="gallery_item.thumb">
+						</gallery-item-lazy>
+					</template>
 
-					<li
-						v-for="(gallery_item, index) in allImages[0]" :key="gallery_item+index"
-						:data-category="gallery_item.category"
-						data-sort="value"
-						class="col-12 col-sm-12 col-md-6 col-lg-4 galleryBlock__item mix filtr-item">
+<!--					<li-->
+<!--						v-for="(gallery_item, index) in allImages[0]" :key="gallery_item+index"-->
+<!--						:data-category="gallery_item.category"-->
+<!--						data-sort="value"-->
+<!--						class="col-12 col-sm-12 col-md-6 col-lg-4 galleryBlock__item mix filtr-item">-->
 
-						<a :href="gallery_item.link"
-						   :class="[{'fancybox.iframe': gallery_item.type === 'youtube'}, 'fancybox', 'galleryBlock__link']"
-						   data-fancybox-group="gallery">
-							<div class="galleryBlock__container">
-								<!--							<div  >-->
-								<div class="galleryBlock__inner">
-									<img :src="gallery_item.thumb" class="galleryBlock__image" alt="">
+<!--						<a :href="gallery_item.link"-->
+<!--						   :class="[{'fancybox.iframe': gallery_item.type === 'youtube'}, 'fancybox', 'galleryBlock__link']"-->
+<!--						   data-fancybox-group="gallery">-->
+<!--							<div class="galleryBlock__container">-->
+<!--								&lt;!&ndash;							<div  >&ndash;&gt;-->
+<!--								<div class="galleryBlock__inner">-->
+<!--									<img :src="gallery_item.thumb" class="galleryBlock__image" alt="">-->
 
-									<div class="galleryBlock__info">
-										<!--										<h4>{{ gallery_item.text }}</h4>-->
-										<!--															<p>Math</p>-->
-										<a v-if="gallery_item.type === 'image'" href="#" class="aa-link"><span class="fa fa-image fa-3x"></span></a>
-										<a v-else-if="gallery_item.type === 'youtube'" href="#" class="aa-link"><span class="fab fa-youtube fa-3x"></span></a>
-										<a v-else href="#" class="aa-link"><span class="fa fa-link fa-3x"></span></a>
-									</div>
-								</div>
-							</div>
-							<!--							</div>-->
-						</a>
-					</li>
+<!--									<div class="galleryBlock__info">-->
+<!--										&lt;!&ndash;										<h4>{{ gallery_item.text }}</h4>&ndash;&gt;-->
+<!--										&lt;!&ndash;															<p>Math</p>&ndash;&gt;-->
+<!--										<a v-if="gallery_item.type === 'image'" href="#" class="aa-link"><span class="fa fa-image fa-3x"></span></a>-->
+<!--										<a v-else-if="gallery_item.type === 'youtube'" href="#" class="aa-link"><span class="fab fa-youtube fa-3x"></span></a>-->
+<!--										<a v-else href="#" class="aa-link"><span class="fa fa-link fa-3x"></span></a>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							&lt;!&ndash;							</div>&ndash;&gt;-->
+<!--						</a>-->
+<!--					</li>-->
 				</ul>
 
 			</div>
