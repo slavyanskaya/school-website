@@ -21,7 +21,7 @@
 <!--				</div>-->
 
 				<div id="latest-courses-slider " class="row justify-content-center">
-					<div class="col-lg-4 col-12 mb-5" v-for="(article, index) in latestArticles" :key="index">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5" v-for="(article, index) in latestArticles" :key="index">
 						<div class="card h-100">
 							<img class="card-img-top" :src="`/images/articles/${article.slug}/article-header-image.jpg`" :alt="article.title">
 							<div class="card-body">

@@ -213,9 +213,9 @@
 }
 
 @media(max-width:640px){
-	.navbar-brand {
-		margin-left: 1rem;
-	}
+	//.navbar-brand {
+	//	margin-left: 1rem;
+	//}
 	.mu-header-top-left {
 		flex-direction: column;
 	}
@@ -239,7 +239,7 @@
 	  margin-top: 30px;
 	}
 	#mu-service .mu-service-area .mu-service-single {
-	  padding: 20px 5px;
+	  //padding: 20px 5px;
 	}
 	#mu-service .mu-service-area .mu-service-single h3 {
 	  font-size: 16px;
@@ -254,15 +254,15 @@
 }
 
 @media(max-width:580px ){
-	.navbar-brand {
-		margin-left: 0;
-	}
+	//.navbar-brand {
+	//	margin-left: 0;
+	//}
 }
 
 @media(max-width:480px ){
-	.navbar-brand {
-		margin-left: 0;
-	}
+	//.navbar-brand {
+	//	margin-left: 0;
+	//}
 	#mu-header .mu-header-area .mu-header-top-left .mu-top-email {
 	  font-size: 12px;
 	  margin-top: 3px;

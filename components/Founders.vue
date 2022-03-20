@@ -1,6 +1,6 @@
 <template>
 	<section id="founders">
-		<div class="container py-5">
+		<div class="container">
 			<!-- Text-Photo 1 (With title) -->
 			<div class="row align-items-center mb-5">
 				<!-- Title -->

@@ -32,7 +32,17 @@
 							</div>
 							<div class="col-lg-6 col-md-12">
 								<div class="mu-about-us-right text-center">
-									<iframe class="iframe" style="width: 100%; border:none; overflow:hidden;"  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1527694427465387%2Fvideos%2F1562524440649052%2F&show_text=false&appId=2299208336823266" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+									<iframe
+										class="iframe"
+										loading="lazy"
+										style="width: 100%; border:none; overflow:hidden;"
+										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1527694427465387%2Fvideos%2F1562524440649052%2F&show_text=false&appId=2299208336823266"
+										scrolling="no"
+										frameborder="0"
+										allowTransparency="true"
+										allow="encrypted-media"
+										allowFullScreen="true">
+									</iframe>
 <!--									<a id="mu-abtus-video" href="https://www.youtube.com/embed/HN3pm9qYAUs" target="mutube-video">-->
 <!--										<img src="/images/about-us/about-us.jpg" alt="img">-->
 <!--									</a>-->

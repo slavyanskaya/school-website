@@ -1,7 +1,7 @@
 <template>
 	<!-- Start menu -->
 	<section>
-		<nav class="navbar navbar-default navbar_default bg-default navbar-expand-md shadow-sm" role="navigation">
+		<nav class="navbar navbar-default navbar_default bg-default navbar-expand-md px-0 shadow-sm" role="navigation">
 			<div class="container">
 				<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" to="/" exact class="navbar-brand navbar_brand">
 					<!-- Logo Image -->
@@ -35,7 +35,7 @@
 
 				<div id="navbarSupportedContent" class="collapse navbar-collapse">
 					<ul class="navbar-nav navbar_nav ml-auto">
-						<li class="nav-item nav__item text-center px-1"
+						<li class="d-md-none d-lg-inline-block nav-item nav__item text-center px-1"
 							:class="{'nav__item--active': $nuxt.$route.path === '/'}">
 							<nuxt-link data-toggle="collapse" data-target=".navbar-collapse.show" to="/" exact class="nav-link nav__link ">Главная</nuxt-link>
 						</li>
