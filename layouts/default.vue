@@ -3,7 +3,9 @@
 		<ScrollToTop/>
 		<Header/>
 		<Menu/>
-		<Nuxt/>
+		<keep-alive>
+			<Nuxt/>
+		</keep-alive>
 		<Footer/>
 	</div>
 </template>

@@ -19,20 +19,20 @@
         .mu-blog-description{
             padding: 0 15px 30px;
 
-            ul{
-                padding-left: 20px;
-                li{
-                    line-height: 1.8;
-                    padding-left: 25px;
-                    position: relative;
-                    &:before{
-                        content: '\f14a';
-                        font-family: fontAwesome;
-                        position: absolute;
-                        left: 0;
-                    }
-                }
-            }
+            //ul{
+            //    padding-left: 20px;
+            //    li{
+            //        line-height: 1.8;
+            //        padding-left: 25px;
+            //        position: relative;
+            //        &:before{
+            //            content: '\f14a';
+            //            font-family: fontAwesome;
+            //            position: absolute;
+            //            left: 0;
+            //        }
+            //    }
+            //}
         }
         .mu-blog-tags{
             width: 100%;

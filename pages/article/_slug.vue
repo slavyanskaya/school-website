@@ -45,6 +45,19 @@
 
 													<div class="mu-blog-description">
 														<nuxt-content :document="article" />
+
+														<div class="container">
+															<ul class="row galleryBlock">
+																<gallery-item-lazy
+																	v-for="(gallery_item, index) in article.imgArray" :key="gallery_item.title + gallery_item.text + index"
+																	:title="gallery_item.text"
+																	:type="gallery_item.type"
+																	:finalLink="gallery_item.link"
+																	:thumbLink="gallery_item.thumb">
+																</gallery-item-lazy>
+															</ul>
+														</div>
+
 														<hr class="w-100 my-2">
 													</div>
 
@@ -53,7 +66,7 @@
 														Автор: <i>{{ article.author.name }}</i>
 														<br>
 														{{ formatDate(article.manualCreatedAt * 1000) }}
-														<!--														<a href="#">{{ article.diffForHumansAccessor }}</a>-->
+<!--														{{ article.diffForHumansAccessor }}-->
 														<!--														<span><i class="fa fa-comments-o"></i>87</span>-->
 													</div>
 												</article>
@@ -340,6 +353,8 @@
 </template>
 
 <script>
+	import GalleryItemLazy from "~/components/GalleryItemLazy";
+
     export default {
         // name: "article",
 		head() {
@@ -362,7 +377,41 @@
 		},
 		async asyncData ({ $content, params }) {
 			const article = await $content('articles', params.slug).fetch();
+			console.log(article.imgArray);
 			return { article }
+		},
+
+		mounted() {
+			$(document).ready(function () {
+				// setTimeout(() => {
+				// 	var mixer = mixitup('#mixit-container');
+					$(".fancybox").fancybox({
+						keyboard: true,
+						arrows: true,
+						infobar: true,
+						smallBtn: "auto",
+						toolbar: true,
+
+						// For disabling window shift on click and closing
+						helpers: {
+							overlay: {
+								locked: false
+							}
+						},
+
+						buttons: [
+							"zoom",
+							"share",
+							"slideShow",
+							"fullScreen",
+							"download",
+							"thumbs",
+							"close"
+						],
+						animationEffect: "zoom",
+					});
+				// },2000)
+			});
 		},
 
 		methods: {
@@ -370,6 +419,10 @@
 				const options = {year: 'numeric', month: 'long', day: 'numeric'};
 				return new Date(date).toLocaleDateString('ru', options)
 			},
+		},
+
+		components: {
+			GalleryItemLazy
 		}
     }
 </script>

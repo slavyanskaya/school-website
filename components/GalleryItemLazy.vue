@@ -1,15 +1,14 @@
 <template>
 	<!-- start single gallery image -->
-	<li
-		class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 galleryBlock__item mix filtr-item"
+	<div
+		:class="['galleryBlock__item', {'filtr-item': category}]"
 		:data-category="category"
-		data-sort="value"
 	>
 		<a :href="finalLink" :class="[{'fancybox.iframe': type === 'youtube'}, 'fancybox', 'galleryBlock__link']" data-fancybox-group="gallery">
 			<div class="galleryBlock__container">
 				<!--							<div  >-->
 				<div class="galleryBlock__inner">
-					<img v-lazyload :data-src="thumbLink" src="https://via.placeholder.com/330x200/" class="galleryBlock__image" alt="">
+					<img v-lazyload :data-src="thumbLink ? thumbLink : finalLink" src="https://via.placeholder.com/330x200/" class="galleryBlock__image" alt="">
 
 					<div class="galleryBlock__info">
 						<!--										<h4>{{ title }}</h4>-->
@@ -39,7 +38,7 @@
 <!--				</div>-->
 <!--			</div>-->
 		</a>
-	</li>
+	</div>
 	<!-- start single gallery image END -->
 </template>
 
@@ -54,7 +53,6 @@ export default {
 			default: 'loading.gif'
 		},
 		thumbLink: {
-			type: String,
 			required: true
 		},
 		type: {
@@ -70,8 +68,8 @@ export default {
 			required: true
 		},
 		category: {
-			type: String,
-			required: true
+			type: Boolean|String,
+			default: false
 		},
 		alt: {
 			type: String,

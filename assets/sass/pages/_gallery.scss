@@ -152,6 +152,22 @@
 	}
 }
 
+.filtr-item {
+	width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+	.filtr-item {
+		width: 33.3%;
+	}
+}
+
+@media screen and (min-width: 991px) {
+	.filtr-item {
+		width: 33.3%;
+	}
+}
+
 .fancybox-next {
 	right: -20px;
 	top: 35%;

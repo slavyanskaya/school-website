@@ -64,10 +64,11 @@ export default {
 			{src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', type: 'text/javascript', body: true},
 			{src: 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2', type: 'text/javascript', body: true, async: true, defer: true},
 			{src: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js', type: 'text/javascript', body: true},
+			// {src: 'https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js', type: 'text/javascript', body: true},
 
 			// {src: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', type: 'text/javascript', body: true},
 			{src: '/js/slick.js', type: 'text/javascript', body: true},
-			{src: '/js/jquery.mixitup.js', type: 'text/javascript', body: true}, // Something like filterizr. Is for filtering gallery with fancybox. Replace with something modern or vueable maybe
+			// {src: '/js/jquery.mixitup.js', type: 'text/javascript', body: true}, // Something like filterizr. Is for filtering gallery with fancybox. Replace with something modern or vueable maybe
 		]
 	},
 

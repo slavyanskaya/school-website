@@ -33,13 +33,15 @@
 
 							<div class="filterBlock__content">
 								<ul class="filterBlock__filters-list">
-<!--									<li class="filterBlock__filter filter m-2" data-filter="all">All</li>-->
-<!--									<li class="filterBlock__filter filter" data-filter="sadas">sadas</li>-->
+									<!-- These two after a while create a bug with animation queue -->
+<!--									<li class="filterBlock__filter filter my-2" data-filter="all">All</li>-->
+<!--									<li class="filterBlock__filter filter my-2" data-filter="none">None</li>-->
+
 									<li
 										v-for="(gallery, index) in galleries" :key="gallery + '-filter-'+index"
-										:class="['filterBlock__filter', 'filter', {'filterBlock__filter--active': gallery.category === 'Кошкин дом'}]"
+										:class="['filterBlock__filter', 'fltr-controls','my-2', {'filterBlock__filter--active': gallery.category == 'skupoy-ricar'} ]"
 										:data-filter="gallery.category">
-										{{ gallery.category }}
+										{{ gallery.title }}
 									</li>
 								</ul>
 							</div>
@@ -47,45 +49,27 @@
 					</div>
 				</div>
 
-				<ul id="filter-container mixit-container" class="row filter-container galleryBlock">
-					<template v-for="(gallery, index) in galleries">
+				<div id="filtr-container" class="galleryBlock" style="text-align: center; margin-left: auto; margin-right: auto">
 						<gallery-item-lazy
-							v-for="(gallery_item, index) in gallery.imgArray" :key="gallery_item.title + gallery_item.text + index"
+							v-for="(gallery_item, index) in allImages" :key="gallery_item.title + gallery_item.text + index"
 							:title="gallery_item.text"
 							:category="gallery_item.category"
 							:type="gallery_item.type"
 							:finalLink="gallery_item.link"
 							:thumbLink="gallery_item.thumb">
 						</gallery-item-lazy>
-					</template>
 
-<!--					<li-->
-<!--						v-for="(gallery_item, index) in allImages[0]" :key="gallery_item+index"-->
-<!--						:data-category="gallery_item.category"-->
-<!--						data-sort="value"-->
-<!--						class="col-12 col-sm-12 col-md-6 col-lg-4 galleryBlock__item mix filtr-item">-->
-
-<!--						<a :href="gallery_item.link"-->
-<!--						   :class="[{'fancybox.iframe': gallery_item.type === 'youtube'}, 'fancybox', 'galleryBlock__link']"-->
-<!--						   data-fancybox-group="gallery">-->
-<!--							<div class="galleryBlock__container">-->
-<!--								&lt;!&ndash;							<div  >&ndash;&gt;-->
-<!--								<div class="galleryBlock__inner">-->
-<!--									<img :src="gallery_item.thumb" class="galleryBlock__image" alt="">-->
-
-<!--									<div class="galleryBlock__info">-->
-<!--										&lt;!&ndash;										<h4>{{ gallery_item.text }}</h4>&ndash;&gt;-->
-<!--										&lt;!&ndash;															<p>Math</p>&ndash;&gt;-->
-<!--										<a v-if="gallery_item.type === 'image'" href="#" class="aa-link"><span class="fa fa-image fa-3x"></span></a>-->
-<!--										<a v-else-if="gallery_item.type === 'youtube'" href="#" class="aa-link"><span class="fab fa-youtube fa-3x"></span></a>-->
-<!--										<a v-else href="#" class="aa-link"><span class="fa fa-link fa-3x"></span></a>-->
-<!--									</div>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--							&lt;!&ndash;							</div>&ndash;&gt;-->
-<!--						</a>-->
-<!--					</li>-->
-				</ul>
+<!--					<template v-for="(gallery, index) in galleries">-->
+<!--						<gallery-item-lazy-->
+<!--							v-for="(gallery_item, index) in gallery.imgArray" :key="gallery_item.title + gallery_item.text + index"-->
+<!--							:title="gallery_item.text"-->
+<!--							:category="gallery_item.category"-->
+<!--							:type="gallery_item.type"-->
+<!--							:finalLink="gallery_item.link"-->
+<!--							:thumbLink="gallery_item.thumb">-->
+<!--						</gallery-item-lazy>-->
+<!--					</template>-->
+				</div>
 
 			</div>
 		</section>
@@ -93,9 +77,10 @@
 </template>
 
 <script>
-// import Filterizr from 'filterizr';
+import Filterizr from 'filterizr';
 import GalleryItemLazy from "~/components/GalleryItemLazy";
 import Pagination from "~/components/Pagination-nuxt-content";
+import mixitup from 'mixitup';
 
 export default {
 	name: "gallery",
@@ -110,14 +95,15 @@ export default {
 		let galleries = await $content('galleries')
 			.fetch();
 
-		let allImages = galleries.map(gallery => {
-			return gallery.imgArray.map(arr => {
+		let allImages = [];
+		galleries.map(gallery => {
+			gallery.imgArray.map(arr => {
 				// console.log('another array', arr);
-				return arr
+				allImages.push(arr);
 			});
 		});
 
-		// console.log(allImages);
+		console.log(allImages, galleries);
 
 		return {galleries, allImages};
 	},
@@ -143,27 +129,37 @@ export default {
 	mounted() {
 		(function () {
 			$(document).ready(function () {
-				jQuery(function(){
-					jQuery('#mixit-container').mixItUp();
+				$('.filter[data-filter]').on('click', function () {
+					console.log(666);
+					$('.filter[data-filter]').removeClass('mixitup-control-active filterBlock__filter--active');
+					$(this).addClass('mixitup-control-active filterBlock__filter--active');
 				});
 
-		/*		const filterizr = $('.filter-container').filterizr({
-				const filterizr = new Filterizr('#filter-container', {
+					// $('#mixit-container').mixItUp({
+					// 	selectors: {
+					// 		target: '.mix-target',
+					// 	}
+					// });
+
+
+				// const filterizr = $('.filter-container').filterizr({
+				const filterizr = new Filterizr('#filtr-container', {
 
 					// controlsSelector: '.fltr-controls',
 					// gridItemsSelector: '.filtr-item',
 					// layout: 'sameWidth',
 					// layout: 'sameHeight',
+					filter: 'skupoy-ricar',
 					spinner: {
 						enabled: true,
 					},
-					// gutterPixels: 10,
+					gutterPixels: 15,
 				});
 
-				$('.filter[data-filter]').on('click', function () {
-					$('.filter[data-filter]').removeClass('filterBlock__filter--active');
-					$(this).addClass('filterBlock__filter--active');
-				});*/
+				$('.fltr-controls[data-filter]').on('click', function () {
+					$('.fltr-controls[data-filter]').removeClass('filterBlock__filter--active active');
+					$(this).addClass('filterBlock__filter--active active');
+				});
 
 				$(".fancybox").fancybox({
 					keyboard: true,
@@ -199,6 +195,18 @@ export default {
 				});
 			});
 		})(jQuery);
+	},
+
+	methods: {
+		// isotope() {
+		// 	this.iso = new Isotope("#mixit-container", {
+		// 		itemSelector: ".grid-item",
+		// 		percentPosition: true,
+		// 		masonry: {
+		// 			columnWidth: ".grid-sizer"
+		// 		}
+		// 	});
+		// }
 	},
 
 	components: {
