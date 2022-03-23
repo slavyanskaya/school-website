@@ -1,7 +1,8 @@
 <template>
 	<!-- start single gallery image -->
-	<li
-		:class="['col-xl-4', 'col-lg-4', 'col-md-6', 'col-sm-12', 'col-12', 'galleryBlock__item', category, {'filtr-item': category}]"
+	<div
+		:data-category="category"
+		data-sort=""
 	>
 		<a :href="finalLink" :class="[{'fancybox.iframe': type === 'youtube'}, 'fancybox', 'galleryBlock__link']" data-fancybox-group="gallery">
 			<div class="galleryBlock__container">
@@ -37,7 +38,7 @@
 <!--				</div>-->
 <!--			</div>-->
 		</a>
-	</li>
+	</div>
 	<!-- start single gallery image END -->
 </template>
 
@@ -68,7 +69,7 @@ export default {
 		},
 		category: {
 			type: Boolean|String,
-			default: false
+			default: 'default'
 		},
 		alt: {
 			type: String,
@@ -88,5 +89,7 @@ export default {
 </script>
 
 <style scoped>
-
+	.aa-link {
+		color: white !important;
+	}
 </style>

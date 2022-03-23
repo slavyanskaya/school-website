@@ -31,7 +31,7 @@
 									<div class="mu-course-container mu-blog-archive">
 										<div class="row">
 <!--											@forelse($all_news as $news)-->
-											<div v-for="(article, index) in articles" :key="article.slug" class="col-md-12 col-sm-12">
+											<div v-for="(article, index) in articles" :key="article.slug" class="col-md-12 col-sm-12 my-5">
 												<article class="mu-blog-single-item">
 													<figure class="mu-blog-single-img">
 														<figcaption class="mu-blog-caption">

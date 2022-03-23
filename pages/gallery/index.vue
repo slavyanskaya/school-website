@@ -49,28 +49,39 @@
 					</div>
 				</div>
 
-				<div id="filtr-container" class="galleryBlock" style="text-align: center; margin-left: auto; margin-right: auto">
-						<gallery-item-lazy
-							v-for="(gallery_item, index) in allImages" :key="gallery_item.title + gallery_item.text + index"
-							:title="gallery_item.text"
-							:category="gallery_item.category"
-							:type="gallery_item.type"
-							:finalLink="gallery_item.link"
-							:thumbLink="gallery_item.thumb">
-						</gallery-item-lazy>
+				<div id="filtr-container" class="filtr-container galleryBlock">
+					<gallery-item-filterizr-lazy
+						:class="['col-xs-12', 'col-sm-12', 'col-md-6', 'col-lg-4', 'filtr-item', 'galleryBlock__item']"
+						v-for="(gallery_item, index) in allImages" :key="gallery_item.title + gallery_item.text + index"
+						:title="gallery_item.text"
+						:category="gallery_item.category"
+						:type="gallery_item.type"
+						:finalLink="gallery_item.link"
+						:thumbLink="gallery_item.thumb">
+					</gallery-item-filterizr-lazy>
 
-<!--					<template v-for="(gallery, index) in galleries">-->
-<!--						<gallery-item-lazy-->
-<!--							v-for="(gallery_item, index) in gallery.imgArray" :key="gallery_item.title + gallery_item.text + index"-->
-<!--							:title="gallery_item.text"-->
-<!--							:category="gallery_item.category"-->
-<!--							:type="gallery_item.type"-->
-<!--							:finalLink="gallery_item.link"-->
-<!--							:thumbLink="gallery_item.thumb">-->
-<!--						</gallery-item-lazy>-->
-<!--					</template>-->
+<!--					<div-->
+<!--						v-for="(gallery_item, index) in allImages" :key="gallery_item.title + gallery_item.text + index"-->
+<!--						class="col-xs-12 col-sm-12 col-md-6 col-lg-4 filtr-item galleryBlock__item"-->
+<!--						:data-category="gallery_item.category"-->
+<!--						data-sort="Busy streets">-->
+<!--						<a :href="gallery_item.link" :class="[{'fancybox.iframe': gallery_item.type === 'youtube'}, 'fancybox', 'galleryBlock__link']" data-fancybox-group="gallery">-->
+<!--							<div class="galleryBlock__container">-->
+<!--								<div class="galleryBlock__inner">-->
+<!--									<img v-lazyload :data-src="gallery_item.thumb ? gallery_item.thumb : gallery_item.link" src="https://via.placeholder.com/330x200/" class="galleryBlock__image" alt="">-->
+
+<!--									<div class="galleryBlock__info">-->
+<!--										&lt;!&ndash;										<h4>{{ title }}</h4>&ndash;&gt;-->
+<!--										&lt;!&ndash;															<p>Math</p>&ndash;&gt;-->
+<!--										<a v-if="gallery_item.type === 'image'" href="#" class="aa-link"><span class="fa fa-eye fa-3x"></span></a>-->
+<!--										<a v-else-if="gallery_item.type === 'youtube'" href="#" class="aa-link"><span class="fab fa-youtube fa-3x"></span></a>-->
+<!--										<a v-else href="#" class="aa-link"><span class="fa fa-link fa-3x"></span></a>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</a>-->
+<!--					</div>-->
 				</div>
-
 			</div>
 		</section>
 	</div>
@@ -78,9 +89,10 @@
 
 <script>
 import Filterizr from 'filterizr';
-import GalleryItemLazy from "~/components/GalleryItemLazy";
 import Pagination from "~/components/Pagination-nuxt-content";
 import mixitup from 'mixitup';
+import lazyload from "~/directives/lazyload";
+import GalleryItemFilterizrLazy from "~/components/GalleryItemFilterizrLazy";
 
 export default {
 	name: "gallery",
@@ -153,7 +165,7 @@ export default {
 					spinner: {
 						enabled: true,
 					},
-					gutterPixels: 15,
+					gutterPixels: 10,
 				});
 
 				$('.fltr-controls[data-filter]').on('click', function () {
@@ -211,11 +223,45 @@ export default {
 
 	components: {
 		Pagination,
-		GalleryItemLazy
-	}
+		GalleryItemFilterizrLazy
+	},
+	directives: {
+		lazyload
+	},
 }
 </script>
 
 <style scoped lang="scss">
+img {
+	max-width: 100%;
+}
 
+//.filtr-item {
+//	width: 100%;
+//}
+//
+//@media screen and (min-width: 767px) {
+//	.filtr-item {
+//		width: 33.3%;
+//	}
+//}
+//
+//@media screen and (min-width: 991px) {
+//	.filtr-item {
+//		width: 25%;
+//	}
+//}
+
+.item-desc {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	position: absolute;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1rem;
+	z-index: 1;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+}
 </style>

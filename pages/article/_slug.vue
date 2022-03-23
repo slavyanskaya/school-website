@@ -46,17 +46,32 @@
 													<div class="mu-blog-description">
 														<nuxt-content :document="article" />
 
-														<div class="container">
-															<ul class="row galleryBlock">
-																<gallery-item-lazy
-																	v-for="(gallery_item, index) in article.imgArray" :key="gallery_item.title + gallery_item.text + index"
-																	:title="gallery_item.text"
-																	:type="gallery_item.type"
-																	:finalLink="gallery_item.link"
-																	:thumbLink="gallery_item.thumb">
-																</gallery-item-lazy>
-															</ul>
+
+														<div class="d-flex flex-wrap galleryBlock">
+															<gallery-item-filterizr-lazy
+																style="min-width: 250px"
+																:class="['col-xs-12', 'col-sm-12', 'col-md-12', 'col-lg-6', 'galleryBlock__item']"
+																v-for="(gallery_item, index) in article.imgArray" :key="gallery_item.title + gallery_item.text + index"
+																:title="gallery_item.text"
+																:category="gallery_item.category"
+																:type="gallery_item.type"
+																:finalLink="gallery_item.link"
+																:thumbLink="gallery_item.thumb">
+															</gallery-item-filterizr-lazy>
 														</div>
+
+
+<!--														<div class="container">-->
+<!--															<ul class="row galleryBlock">-->
+<!--&lt;!&ndash;																<gallery-item-lazy&ndash;&gt;-->
+<!--&lt;!&ndash;																	v-for="(gallery_item, index) in article.imgArray" :key="gallery_item.title + gallery_item.text + index"&ndash;&gt;-->
+<!--&lt;!&ndash;																	:title="gallery_item.text"&ndash;&gt;-->
+<!--&lt;!&ndash;																	:type="gallery_item.type"&ndash;&gt;-->
+<!--&lt;!&ndash;																	:finalLink="gallery_item.link"&ndash;&gt;-->
+<!--&lt;!&ndash;																	:thumbLink="gallery_item.thumb">&ndash;&gt;-->
+<!--&lt;!&ndash;																</gallery-item-lazy>&ndash;&gt;-->
+<!--															</ul>-->
+<!--														</div>-->
 
 														<hr class="w-100 my-2">
 													</div>
@@ -353,7 +368,9 @@
 </template>
 
 <script>
-	import GalleryItemLazy from "~/components/GalleryItemLazy";
+	// import GalleryItemLazyLazy from "~/components/GalleryItemLazy";
+	import GalleryItemFilterizrLazy from "~/components/GalleryItemFilterizrLazy";
+
 
     export default {
         // name: "article",
@@ -422,7 +439,7 @@
 		},
 
 		components: {
-			GalleryItemLazy
+			GalleryItemFilterizrLazy
 		}
     }
 </script>
@@ -436,4 +453,8 @@
 	/*	float: left;*/
 	/*	margin: 0.2em 0.25em .01em 0;*/
 	/*}*/
+
+	img {
+		max-width: 100%;
+	}
 </style>

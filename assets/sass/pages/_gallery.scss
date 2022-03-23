@@ -53,11 +53,11 @@
 	//@include transition(all 0.5s);
 
 	&__item {
+		//min-width: 250px;
 		position: relative;
-		margin-bottom: 20px;
 		//padding-left: 0;
 		//padding-right: 0;
-		@include transition(all 0.5s);
+		//@include transition(all 0.5s); // provokes a bug at resizing with filterizr plugin. Is ok with other plugins
 
 		&:hover {
 			.galleryBlock__image {
@@ -74,8 +74,8 @@
 	}
 
 	&__container {
-		border: 10px solid #fff;
-		border-radius: 10px;
+		border: 5px solid #fff;
+		border-radius: 5px;
 		//margin-left: auto;
 		//margin-right: auto;
 	}
@@ -85,17 +85,19 @@
 		overflow: hidden;
 
 		width: 100%;
-		height: 200px;
+		height: 170px;
 
 		@media(max-width: 767px) {
 			///*min-width: 300px;*/
-			height: 300px;
+			height: 200px;
 			/*border: 0px;*/
 			/*padding: 15px;*/
 		}
 	}
 
 	&__image {
+		//height: auto;
+		//max-width:100%;
 		height: 100%;
 		width:100%;
 		//width: 200px; /* You can set the dimensions to whatever you want */
@@ -149,22 +151,6 @@
 			@include transition(all 0.5s);
 			//background-color: $theme-color;
 		}
-	}
-}
-
-.filtr-item {
-	width: 100%;
-}
-
-@media screen and (min-width: 767px) {
-	.filtr-item {
-		width: 33.3%;
-	}
-}
-
-@media screen and (min-width: 991px) {
-	.filtr-item {
-		width: 33.3%;
 	}
 }
 
