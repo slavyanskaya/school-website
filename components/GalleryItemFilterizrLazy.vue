@@ -8,7 +8,7 @@
 			<div class="galleryBlock__container">
 				<!--							<div  >-->
 				<div class="galleryBlock__inner">
-					<img v-lazyload :data-src="thumbLink ? thumbLink : finalLink" src="https://via.placeholder.com/330x200/" class="galleryBlock__image" alt="">
+					<img v-lazyload :data-src="thumbLink ? thumbLink : finalLink" src="/images/layouts/gallery/330x200.png" class="galleryBlock__image" alt="">
 
 					<div class="galleryBlock__info">
 						<!--										<h4>{{ title }}</h4>-->
