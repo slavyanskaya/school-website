@@ -39,7 +39,7 @@
 
 									<li
 										v-for="(gallery, index) in galleries" :key="gallery + '-filter-'+index"
-										:class="['filterBlock__filter', 'fltr-controls','my-2', {'filterBlock__filter--active': gallery.category == 'skupoy-ricar'} ]"
+										:class="['filterBlock__filter', 'fltr-controls','my-2', {'filterBlock__filter--active active': gallery.category == 'festival-zolotoy-klyuchik'} ]"
 										:data-filter="gallery.category">
 										{{ gallery.title }}
 									</li>
@@ -161,7 +161,7 @@ export default {
 					// gridItemsSelector: '.filtr-item',
 					// layout: 'sameWidth',
 					// layout: 'sameHeight',
-					filter: 'skupoy-ricar',
+					filter: 'festival-zolotoy-klyuchik',
 					spinner: {
 						enabled: true,
 					},
