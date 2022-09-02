@@ -3,19 +3,14 @@ manualCreatedAt: 1650346967
 title: "Познавательная экскурсия в Национальный аграрный университет Армении" 
 title-old: "Познавательная экскурсия в Национальный аграрный университет Армении"
 description: "Познавательная экскурсия в Национальный аграрный университет Армении"
-img: /images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/1.jpg
+img-old: /images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/1.jpg
+img: article-header-image.jpg
 alt: Познавательная экскурсия в Национальный аграрный университет Армении
 bodyText: "Недавно учащиеся СШ «Славянская» побывали на экскурсии в  Национальном аграрном университете Армении, где посетили  музей и получили полную информацию об образовании, становлении и развитии университета. В музее собраны богатые материалы по фауне и флоре Армении. Особый интерес у школьников вызвали механизмы и приспособления для проведения сельскохозяйственных работ, в том числе робот «Поливочный агрегат».  Учащиеся посетили  химическую лабораторию, увидели проведение опытов, парники, где выращивают цветы (розы отправляют в Ераблур), овощи и ягоды, которые поставляют в дома престарелых.  Побывали ребята и в биологической лаборатории  хлебобулочных и  кондитерских изделий и с особым удовольствием  посетили цех по производству  шоколадных конфет! Экскурсия получилась очень интересная и познавательная!"
 
 author:
   name: Венгржанович Мери Робертовна
-  
-imgArray: [
-  {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/1.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 1"},
-  {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/2.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 1"},
-  {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/3.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 2"},
-  {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/4.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 3"},
-]
+
 ---
 
 <!-- Normal images in images/articles/article-name folder. Will be rendered after Text content 
