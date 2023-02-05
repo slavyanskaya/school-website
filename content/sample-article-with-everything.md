@@ -16,9 +16,9 @@ author:
 <!-- Normal images in images/articles/article-name folder. Will be rendered after Text content 
 imgArray: [
   {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/1.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 1"},
-  {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/2.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 1"},
   {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/3.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 2"},
   {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/4.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 3"},
+  {thumb: false,  type: "image", link: "/images/articles/ekskursia-v-nacionalniy-agrarniy-universitet-armenii/content/4.jpg",  text: "Познавательная экскурсия в Национальный аграрный университет Армении - 4"},
 ]
 -->
 

@@ -28,9 +28,9 @@
 <!--									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/vardanyan-natalya-sergeevna.jpg" alt="teacher img">-->
 <!--								</div>-->
 
-								<div class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/hayrapetyan-lilit-valeryevna.jpg" alt="teacher img">
-								</div>
+<!--								<div class="slider__item">-->
+<!--									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/hayrapetyan-lilit-valeryevna.jpg" alt="teacher img">-->
+<!--								</div>-->
 
 								<div id="slider__item" class="slider__item">
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/mkrtchyan-marina-garasovna.jpg" alt="teacher img">
@@ -74,16 +74,16 @@
 <!--									<i class="slide__quote">СШ "Славянская" для меня - источник творческого вдохновения!</i>-->
 <!--								</div>-->
 
-								<div class="slider__item">
-									<h2>Айрапетян Лилит Валерьевна</h2>
-									<span class="slide__position">Преподаватель биологии и химии</span>
-									<p class="slide__start-time">Работает в школе с 2016 года</p>
-									<p>Кандидат химических наук</p>
-									<p>Научный сотрудник Инстутута Органической Химии Научно-Технологического Центра Органической и Фармацевтической Химии (НТЦОФХ) НАН РА</p>
-									<p>Автор более 50-ти научно - исследовательских публикаций</p>
-									<p>Награждена сертификатами за участие в международных научных конференциях в РФ, Японии, Великобритании, Италии, Испании, США и других странах ближнего зарубежья</p>
-									<i class="slide__quote">СШ "Славянская" - удивительное место, где каждый учитель - это добрый волшебник, творящий чудеса на наших глазах!</i>
-								</div>
+<!--								<div class="slider__item">-->
+<!--									<h2>Айрапетян Лилит Валерьевна</h2>-->
+<!--									<span class="slide__position">Преподаватель биологии и химии</span>-->
+<!--									<p class="slide__start-time">Работает в школе с 2016 года</p>-->
+<!--									<p>Кандидат химических наук</p>-->
+<!--									<p>Научный сотрудник Инстутута Органической Химии Научно-Технологического Центра Органической и Фармацевтической Химии (НТЦОФХ) НАН РА</p>-->
+<!--									<p>Автор более 50-ти научно - исследовательских публикаций</p>-->
+<!--									<p>Награждена сертификатами за участие в международных научных конференциях в РФ, Японии, Великобритании, Италии, Испании, США и других странах ближнего зарубежья</p>-->
+<!--									<i class="slide__quote">СШ "Славянская" - удивительное место, где каждый учитель - это добрый волшебник, творящий чудеса на наших глазах!</i>-->
+<!--								</div>-->
 
 								<div class="slider__item">
 									<h2>Мкртчян Марина Гарасовна</h2>
