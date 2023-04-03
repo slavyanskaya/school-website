@@ -51,6 +51,12 @@ imgArray: [
 <iframe style="width: 560px; max-width: 100%" height="315" src="https://www.youtube.com/embed/mdFR1HYVZD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+<!-- Facebook iFrame -->
+<div style="text-align: center; max-width: 100%">
+<iframe style="width: 560px; max-width: 100%" height="315" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F104073351306028%2Fvideos%2F142352067909072%2F&show_text=false&width=560&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+<!-- <iframe style="width: 560px; max-width: 100%" height="315" src="https://www.youtube.com/embed/mdFR1HYVZD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> -->
+</div>
+
 <br>
 <br>
 <br>
