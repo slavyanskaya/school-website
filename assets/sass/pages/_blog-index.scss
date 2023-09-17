@@ -103,7 +103,15 @@
                     li{
                         a, button{
                             &:before{
-                                content: '\f0da';
+								font-family: "Font Awesome 5 Free";
+								font-weight: 900;
+								font-style: normal;
+
+								//font-weight: 900;
+								//content: "\f00c" !important; /* Use the correct Unicode character code for your desired icon */
+                                content: "\f0da" ;
+                                //content: "\f64f" !important;
+                                //content: '&nbsp;';
                             }
                             span{
                                 margin-left: 5px;
