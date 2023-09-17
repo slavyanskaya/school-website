@@ -32,9 +32,9 @@
 <!--									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/hayrapetyan-lilit-valeryevna.jpg" alt="teacher img">-->
 <!--								</div>-->
 
-								<div id="slider__item" class="slider__item">
-									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/mkrtchyan-marina-garasovna.jpg" alt="teacher img">
-								</div>
+<!--								<div id="slider__item" class="slider__item">-->
+<!--									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/mkrtchyan-marina-garasovna.jpg" alt="teacher img">-->
+<!--								</div>-->
 
 								<div class="slider__item">
 									<img width="200" height="200" style="border-radius: 50%" src="/images/layouts/teachers/tatyana-stepanovna-belousova.jpg" alt="teacher img">
@@ -85,12 +85,12 @@
 <!--									<i class="slide__quote">СШ "Славянская" - удивительное место, где каждый учитель - это добрый волшебник, творящий чудеса на наших глазах!</i>-->
 <!--								</div>-->
 
-								<div class="slider__item">
-									<h2>Мкртчян Марина Гарасовна</h2>
-									<span class="slide__position">Преподаватель начальных классов</span>
-									<p class="slide__start-time">Работает в школе с 2016 года</p>
-									<i class="slide__quote">СШ "Славянская" - это источник радости, энергии и молодости!</i>
-								</div>
+<!--								<div class="slider__item">-->
+<!--									<h2>Мкртчян Марина Гарасовна</h2>-->
+<!--									<span class="slide__position">Преподаватель начальных классов</span>-->
+<!--									<p class="slide__start-time">Работает в школе с 2016 года</p>-->
+<!--									<i class="slide__quote">СШ "Славянская" - это источник радости, энергии и молодости!</i>-->
+<!--								</div>-->
 
 								<div class="slider__item">
 									<h2>Белоусова Татьяна Степановна</h2>
@@ -141,7 +141,7 @@
 				});
 
 				$('#teacher .slider-nav').slick({
-					slidesToShow: 3,
+					slidesToShow: 1,
 					slidesToScroll: 1,
 					dots: false,
 					centerMode: true,
@@ -150,7 +150,7 @@
 					variableWidth: true,
 					asNavFor: '#slider-for',
 					autoplay: true,
-					autoplaySpeed: 3500,
+					autoplaySpeed: 223500,
 					accessibility: true,
 					infinite: true,
 					centerPadding: '0',
@@ -236,10 +236,10 @@
 	}
 
 	#teacher .slider-nav {
-		/*display: flex;*/
-		/*flex-wrap: wrap;*/
-		/*width: 400px;*/
-		/*margin: auto;*/
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 780px;
+		margin: auto;
 	}
 
 	#teacher .slider-nav .slick-current img{
@@ -295,6 +295,7 @@
 		/*background-color: green;*/
 		display: flex !important;
 		align-items: center;
+		padding: 30px;
 	}
 
 	#teacher .slider-nav .slick-list {
