@@ -129,12 +129,21 @@ export default {
 	** Nuxt.js dev-modules
 	*/
 	buildModules: [
-		'@nuxtjs/google-analytics',
+		// '@nuxtjs/google-analytics', // old legacy
+		'@nuxtjs/google-gtag'
 	],
 
-	googleAnalytics: {
-		id: 'UA-174236294-1', // Used as fallback if no runtime config is provided
+	'google-gtag': {
+		id: 'G-YKH9WPJ8GM', // Replace with your GA4 Measurement ID
+		config: {
+			anonymize_ip: true, // anonymize IP
+			send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+		},
+		debug: true, // Enable to track in development mode
 	},
+	// googleAnalytics: {
+	// 	id: 'UA-174236294-1', // Used as fallback if no runtime config is provided
+	// },
 
 	/*
 	** Nuxt.js modules
