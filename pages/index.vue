@@ -8,7 +8,7 @@
 <!--		<LatestCourses/>-->
 <!--		<hr>-->
 
-		<Teachers/>
+<!--		<Teachers/>-->
 		<Testimonials/>
 		<Modal/>
 	</div>

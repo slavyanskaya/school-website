@@ -28,23 +28,13 @@ imgArray: [
 
 ---
 
-<!-- Gallery images in images/galleries/gallery-folder-name. Will be rendered after Text content 
-imgArray: [
-  {thumb: false,  type: "image", link: "/images/galleries/фестиваль-золотой-ключик/article-header-image.jpg",  text: "Фестиваль золотой ключик - 1",  category: "festival-zolotoy-klyuchik"},
-  {thumb: false,  type: "image", link: "/images/galleries/фестиваль-золотой-ключик/1.jpg",  text: "Фестиваль золотой ключик - 1",  category: "festival-zolotoy-klyuchik"},
-  {thumb: false,  type: "image", link: "/images/galleries/фестиваль-золотой-ключик/2.jpg",  text: "Фестиваль золотой ключик - 2",  category: "festival-zolotoy-klyuchik"},
-  {thumb: false,  type: "image", link: "/images/galleries/фестиваль-золотой-ключик/3.jpg",  text: "Фестиваль золотой ключик - 3",  category: "festival-zolotoy-klyuchik"},
-  {thumb: false, type: "image", link: "/images/galleries/фестиваль-золотой-ключик/4.jpg", text: "Фестиваль золотой ключик - 4", category: "festival-zolotoy-klyuchik"},
-  {thumb: false, type: "image", link: "/images/galleries/фестиваль-золотой-ключик/5.jpg", text: "Фестиваль золотой ключик - 5", category: "festival-zolotoy-klyuchik"},
-  {thumb: false, type: "image", link: "/images/galleries/фестиваль-золотой-ключик/6.jpg", text: "Фестиваль золотой ключик - 6", category: "festival-zolotoy-klyuchik"},
-]
--->
-
 <!-- Text -->
-<p>Вот и настал час прощания,<br>
+<p>
+Вот и настал час прощания,<br>
 День окончания школы! <br>
 Пусть это станет событием <br> 
-Праздничным, ярким, веселым! </p> 
+Праздничным, ярким, веселым! 
+</p> 
 
 <p>
 В школе «Славянская» в день Последнего звонка учащиеся устроили настоящий фейерверк красочных выступлений!
@@ -53,9 +43,7 @@ imgArray: [
 Прощаясь с детством, ребята поблагодарили своих педагогов по-молодежному смешно и современно.
 С первых  минут этого замечательного дня в школе царил особый настрой: ученики делились со  зрителями неповторимыми эмоциями, которые испытывали сами! Педагоги, родители, ученики, многочисленные гости из Посольства РФ в РА, РЦНКа и  Дома Москвы в Ереване были рады окунуться в волшебную атмосферу школьного праздника в «Славянской»!
 Это был день радости, гордости, незабываемых воспоминаний, который останется в  памяти присутствующих навсегда!
-
 </p> 
-
 
 <br>
 <br>
