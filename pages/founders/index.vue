@@ -44,7 +44,7 @@
 				<!-- Text-Photo 1 END -->
 
 				<!-- Text-Photo 2 -->
-				<div class="row align-items-center my-5">
+				<div class="row align-items-center my-lg-5">
 					<div class="col-lg-6">
 						<img src="/images/layouts/founders/1.jpg" class="img-fluid mb-4 mb-lg-0" alt="">
 					</div>
@@ -59,7 +59,7 @@
 				<!-- Text-Photo 2 END -->
 
 				<!-- Text-Photo 3 -->
-				<div class="row align-items-center my-5">
+				<div class="row align-items-center my-lg-5">
 					<div class="col-lg-6 order-2 order-lg-1">
 						<p class="font-italic my-4">
 							В 2004 году «Общество» было перерегистрировано как Общественная Организация «Россия», а в 2008 году получило право  именоваться как Общественная Организация Республики Армения.
@@ -78,7 +78,7 @@
 				<hr>
 
 				<!-- Image Gallery -->
-				<div class="row my-5">
+				<div class="row my-lg-5">
 					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
 						<a href="images/layouts/founders/3.jpg" class="mancybox" rel="ligthbox">
 							<img  src="/images/layouts/founders/3.jpg" class="zoom img-fluid" style="object-position: 5% 5%"  alt="">

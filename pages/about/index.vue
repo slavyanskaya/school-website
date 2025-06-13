@@ -27,7 +27,7 @@
 						<div class="mu-contact-area">
 							<!-- start title -->
 							<div class="mu-title">
-								<h2>О школе</h2>
+<!--								<h2>О школе</h2>-->
 								<p>Средняя школа «Славянская» – единственное в Республике Армения негосударственное
 									общеобразовательное учреждение с русским языком обучения. Учредитель школы –
 									Общественная организация «Россия» Республики Армения (решение Координационного
@@ -38,7 +38,7 @@
 							<!-- end title -->
 
 							<!-- start contact content -->
-							<br><br><br>
+
 							<div class="mu-contact-content">
 								<div class="row">
 									<div class="col-md-10 col-md-offset-1">
@@ -48,7 +48,7 @@
 								</div>
 							</div>
 
-							<br><br><br><br><br><br>
+							<br>
 							<div class="mu-contact-content">
 								<div class="row">
 									<div class="col-md-10 col-md-offset-1">
@@ -59,7 +59,7 @@
 								</div>
 							</div>
 
-							<br><br><br><br><br><br>
+							<br>
 							<div class="mu-contact-content">
 								<div class="row">
 									<div class="col-md-10 col-md-offset-1">
@@ -75,7 +75,7 @@
 								</div>
 							</div>
 
-							<br><br><br><br><br><br>
+							<br>
 							<div class="mu-contact-content">
 								<div class="row">
 									<div class="col-md-10 col-md-offset-1">
@@ -110,7 +110,7 @@
 
 <!--				<hr class="w-100">-->
 
-				<div class="row align-items-center mb-5">
+				<div class="row align-items-center mb-md-2">
 					<div class="col-lg-3 offset-lg-1 order-1 order-lg-1 text-center">
 						<img src="/images/layouts/founders/director-vengrzhanovich.png" class="img-fluid mb-4 mb-lg-0" alt="">
 					</div>
