@@ -19,10 +19,6 @@ imgArray: [
   {thumb: false,  type: "image", link: "/images/articles/prazdnik-poslednego-zvonka/content/4.jpg",  text: "Ярко и красочно в средней школе «Славянская»  был проведен Праздник Детства и Последнего звонка - 4"},
   {thumb: false,  type: "image", link: "/images/articles/prazdnik-poslednego-zvonka/content/5.jpg",  text: "Ярко и красочно в средней школе «Славянская»  был проведен Праздник Детства и Последнего звонка - 5"},
   {thumb: false,  type: "image", link: "/images/articles/prazdnik-poslednego-zvonka/content/6.jpg",  text: "Ярко и красочно в средней школе «Славянская»  был проведен Праздник Детства и Последнего звонка - 6"},
-  {thumb: false,  type: "image", link: "/images/articles/prazdnik-poslednego-zvonka/content/6.jpg",  text: "Ярко и красочно в средней школе «Славянская»  был проведен Праздник Детства и Последнего звонка - 7"},
-  {thumb: false,  type: "image", link: "/images/articles/prazdnik-poslednego-zvonka/content/6.jpg",  text: "Ярко и красочно в средней школе «Славянская»  был проведен Праздник Детства и Последнего звонка - 8"},
-  {thumb: false,  type: "image", link: "/images/articles/prazdnik-poslednego-zvonka/content/6.jpg",  text: "Ярко и красочно в средней школе «Славянская»  был проведен Праздник Детства и Последнего звонка - 9"},
-  {thumb: false,  type: "image", link: "/images/articles/prazdnik-poslednego-zvonka/content/6.jpg",  text: "Ярко и красочно в средней школе «Славянская»  был проведен Праздник Детства и Последнего звонка - 10"},
 ]
 
 ---
