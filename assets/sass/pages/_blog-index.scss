@@ -102,10 +102,19 @@
                 .mu-sidebar-archives{
                     li{
                         a, button{
+
+							@include transition(all 0.5s ease 0s);
+							&:hover{
+								margin-left: 5px;
+							}
+							outline: none;
                             &:before{
 								font-family: "Font Awesome 5 Free";
 								font-weight: 900;
 								font-style: normal;
+								display: inline-block;
+								width: 0.2em; /* Fixed width */
+								text-align: center; /* Center the arrow */
 
 								//font-weight: 900;
 								//content: "\f00c" !important; /* Use the correct Unicode character code for your desired icon */
@@ -114,10 +123,18 @@
                                 //content: '&nbsp;';
                             }
                             span{
-                                margin-left: 5px;
+                                margin-left: 1px;
                             }
+
+							&.active {
+								&:before {
+									//content: "\f0d7" ;
+								}
+							}
                         }
-                    }
+
+
+						                    }
                 }
                 .tag-cloud{
                     margin-top: 5px;
